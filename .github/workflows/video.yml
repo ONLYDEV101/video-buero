@@ -31,6 +31,7 @@ jobs:
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_BUSINESS_ID: "1910359486633208"
     steps:
       - uses: actions/checkout@v4
         with:

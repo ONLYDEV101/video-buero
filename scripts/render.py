@@ -18,7 +18,7 @@ PAUSE = 0.22             # Pause nach jeder Szene
 STIMMEN = {"de": "voices/de.onnx", "en": "voices/en.onnx"}
 GELB = "&H0000E6FF&"     # ASS-Farbe (BGR)
 LOOK = ("eq=contrast=1.15:saturation=0.70:brightness=-0.06,colorbalance=rs=-0.04:bs=0.07:bm=0.03,"
-        "vignette=PI/4.2,noise=alls=9:allf=t")
+        "vignette=PI/4.2,noise=alls=4:allf=t")
 
 
 def run(cmd, **kw):
@@ -284,7 +284,7 @@ def episode(pfad):
         run(["ffmpeg", "-y", "-i", "bild.mp4", "-i", "stimme.wav", "-i", "musik.wav",
              "-f", "lavfi", "-i", f"color=c=0xD81A1A:s={W}x12:r={FPS}:d={gesamt:.3f}",
              "-filter_complex", filt, "-map", "[v]", "-map", "[a]", "-t", f"{gesamt:.3f}",
-             "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(FPS),
+             "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p", "-r", str(FPS),
              "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-movflags", "+faststart", ziel], cwd=tmp)
     caption = (ep.get("caption", "").strip() + "\n\n" + " ".join(ep.get("hashtags", []))).strip()
     open(os.path.join(OUT, f"{eid}.txt"), "w", encoding="utf-8").write(caption)

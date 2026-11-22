@@ -38,7 +38,12 @@ def konto_finden(token):
                 return ig["id"]
     except RuntimeError as e:
         print("me/accounts:", str(e)[:200])
-    for b in q("me/businesses", "id,name").get("data", []):   # Business-Portfolio (Systemnutzer)
+    portfolios = [{"id": os.environ["IG_BUSINESS_ID"], "name": "IG_BUSINESS_ID"}] if os.environ.get("IG_BUSINESS_ID") else []
+    try:
+        portfolios += q("me/businesses", "id,name").get("data", [])
+    except RuntimeError as e:
+        print("me/businesses:", str(e)[:200])
+    for b in portfolios:   # Business-Portfolio (Systemnutzer)
         for feld in ("instagram_accounts", "owned_instagram_accounts"):
             try:
                 daten = q(f"{b['id']}/{feld}", "id,username").get("data", [])
