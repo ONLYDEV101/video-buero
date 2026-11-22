@@ -134,7 +134,9 @@ class Pexels:
                     continue
                 self.benutzt.add(vid)
                 try:
-                    urllib.request.urlretrieve(link, ziel)
+                    req = urllib.request.Request(link, headers={"User-Agent": "video-buero/2 (+https://github.com/ONLYDEV101/video-buero)"})
+                    with urllib.request.urlopen(req, timeout=60) as r, open(ziel, "wb") as f:
+                        shutil.copyfileobj(r, f)
                     return lang
                 except Exception as e:
                     print("  Download ging nicht:", str(e)[:150])
