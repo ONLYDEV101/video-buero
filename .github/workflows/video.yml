@@ -1,0 +1,72 @@
+name: Video bauen
+
+on:
+  push:
+    paths: ["episoden/**.json"]
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Pfad zur Episode (leer = zuletzt geänderte)"
+        required: false
+      posten:
+        description: "Auf Instagram posten?"
+        type: boolean
+        default: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Werkzeuge installieren
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core espeak-ng
+          pip install -q piper-tts
+
+      - name: Stimmen laden (Piper, kostenlos)
+        run: |
+          mkdir -p voices
+          HF=https://huggingface.co/rhasspy/piper-voices/resolve/main
+          curl -sfL -o voices/de.onnx      $HF/de/de_DE/thorsten/high/de_DE-thorsten-high.onnx
+          curl -sfL -o voices/de.onnx.json $HF/de/de_DE/thorsten/high/de_DE-thorsten-high.onnx.json
+          curl -sfL -o voices/en.onnx      $HF/en/en_US/ryan/high/en_US-ryan-high.onnx
+          curl -sfL -o voices/en.onnx.json $HF/en/en_US/ryan/high/en_US-ryan-high.onnx.json
+          ls -la voices
+
+      - name: Episoden bestimmen
+        id: ep
+        run: |
+          if [ -n "${{ github.event.inputs.episode }}" ]; then
+            LISTE="${{ github.event.inputs.episode }}"
+          elif git rev-parse HEAD~1 >/dev/null 2>&1; then
+            LISTE=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'episoden/*.json' | tr '\n' ' ')
+          fi
+          [ -z "$LISTE" ] && LISTE=$(ls -t episoden/*.json | head -1)
+          echo "liste=$LISTE" >> "$GITHUB_OUTPUT"
+          echo "Episoden: $LISTE"
+
+      - name: Video bauen
+        run: python scripts/render.py ${{ steps.ep.outputs.liste }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: out/
+          retention-days: 14
+
+      - name: Auf Instagram posten
+        if: env.IG_TOKEN != '' && (vars.AUTO_POST == 'true' || github.event.inputs.posten == 'true')
+        run: python scripts/post_instagram.py out/*.mp4

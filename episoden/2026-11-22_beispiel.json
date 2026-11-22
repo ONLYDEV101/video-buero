@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-22_beispiel",
+  "sprache": "de",
+  "titel": "Testvideo: So arbeitet das Video-Büro",
+  "szenen": [
+    { "text": "Dieses Video hat kein Mensch geschnitten.", "suche": "neon city night" },
+    { "text": "Eine KI hat das Thema gefunden, das Skript geschrieben und die Szenen ausgewählt.", "suche": "computer code screen" },
+    { "text": "Die Stimme, die Untertitel und der Schnitt entstehen automatisch in der Cloud.", "suche": "data center servers" },
+    { "text": "Folge für mehr, ab morgen jeden Tag ein neues Video.", "suche": "smartphone scrolling" }
+  ],
+  "caption": "Testlauf vom automatischen Video-Büro 🤖 Dieses Video ist KI-generiert.",
+  "hashtags": ["#KI", "#KIgeneriert", "#Automatisierung", "#Technik", "#Zukunft"]
+}
