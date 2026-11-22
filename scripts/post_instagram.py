@@ -68,7 +68,8 @@ def posten(video):
     groesse = os.path.getsize(video)
     with open(video, "rb") as f:
         r = anfrage(f"https://rupload.facebook.com/ig-api-upload/{VERSION}/{cid}", f.read(),
-                    {"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(groesse)}, "POST")
+                    {"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(groesse),
+                     "Content-Type": "application/octet-stream", "Content-Length": str(groesse)}, "POST")
     if not r.get("success", True):
         raise RuntimeError(f"Upload fehlgeschlagen: {r}")
     # 3) Warten bis Instagram das Video verarbeitet hat
