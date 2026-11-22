@@ -37,7 +37,30 @@ def sauber(text):
 
 
 # ------------------------------------------------------------------ Stimme
-def stimme(text, sprache, ziel, tempo):
+_KOKORO = []
+
+
+def kokoro(text, sprache, ziel, stimme_name, tempo):
+    """Kokoro-82M (Apache 2.0): sehr natürliche Stimme, läuft auf CPU."""
+    modell, stimmen = os.path.join(BASIS, "voices/kokoro.onnx"), os.path.join(BASIS, "voices/kokoro-voices.bin")
+    if not (os.path.exists(modell) and os.path.exists(stimmen)):
+        return False
+    try:
+        if not _KOKORO:
+            from kokoro_onnx import Kokoro
+            _KOKORO.append(Kokoro(modell, stimmen))
+        import soundfile
+        proben, rate = _KOKORO[0].create(text, voice=stimme_name, speed=tempo, lang="en-us" if sprache == "en" else sprache)
+        soundfile.write(ziel, proben, rate)
+        return os.path.getsize(ziel) > 1000
+    except Exception as e:
+        print("  Kokoro ging nicht:", str(e)[:300])
+        return False
+
+
+def stimme(text, sprache, ziel, tempo, stimme_name="am_michael"):
+    if sprache == "en" and kokoro(text, sprache, ziel, stimme_name, 1.0 / tempo):
+        return "kokoro"
     modell = os.path.join(BASIS, STIMMEN.get(sprache, STIMMEN["en"]))
     if os.path.exists(modell):
         for extra in (["--length-scale", str(tempo)], []):
@@ -83,6 +106,22 @@ class Pexels:
                 print(f"  Pexels '{q}': {len(treffer)} Clips")
             except Exception as e:
                 print(f"  Pexels '{q}' ging nicht:", str(e)[:200])
+        pix = os.environ.get("PIXABAY_API_KEY")
+        if pix and len(treffer) < 4:
+            try:
+                url = "https://pixabay.com/api/videos/?" + urllib.parse.urlencode({"key": pix, "q": q, "per_page": 15, "safesearch": "true"})
+                daten = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "video-buero/2"}), timeout=30))
+                extra = []
+                for v in daten.get("hits", []):
+                    groessen = [f for f in v.get("videos", {}).values() if f.get("url") and f.get("width", 0) >= 960]
+                    wahl = sorted(groessen, key=lambda f: abs(f["width"] - 1920))
+                    if wahl:
+                        extra.append(("pb%s" % v["id"], wahl[0]["url"], float(v.get("duration") or 5)))
+                self.zufall.shuffle(extra)
+                treffer += extra
+                print(f"  Pixabay '{q}': {len(extra)} Clips")
+            except Exception as e:
+                print(f"  Pixabay '{q}' ging nicht:", str(e)[:200])
         self.cache[q] = treffer
         return treffer
 
@@ -201,7 +240,7 @@ def episode(pfad):
         wavs, laengen, zeitplan, t = [], [], [], 0.0
         for i, sz in enumerate(ep["szenen"]):
             wav = os.path.join(tmp, f"s{i}.wav")
-            art = stimme(sauber(sz["text"]), sprache, wav, ep.get("tempo", 0.92))
+            art = stimme(sauber(sz["text"]), sprache, wav, ep.get("tempo", 0.92), ep.get("stimme", "am_michael"))
             sprech = dauer(wav)
             wavs.append(wav); laengen.append(sprech + PAUSE)
             zeitplan.append((t, sprech, sz["text"]))
@@ -228,7 +267,7 @@ def episode(pfad):
         liste = os.path.join(tmp, "liste.txt")
         open(liste, "w", encoding="utf-8").write("".join(f"file '{os.path.basename(x)}'\n" for x in teile))
         run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", "liste.txt", "-c", "copy", "bild.mp4"], cwd=tmp)
-        print(f"  {nr} Einstellungen, davon {pex} echte Pexels-Clips")
+        print(f"  {nr} Einstellungen, davon {pex} echte Clips (Pexels/Pixabay)")
         # 4) Untertitel + Klang
         untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"))
         klangteppich(gesamt, [z[0] for z in zeitplan], os.path.join(tmp, "musik.wav"))

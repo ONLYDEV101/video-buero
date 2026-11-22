@@ -10,7 +10,9 @@ API-Version über IG_API_VERSION änderbar (Standard v24.0).
 import json, os, sys, time, urllib.parse, urllib.request
 
 VERSION = os.environ.get("IG_API_VERSION", "v24.0")
-GRAPH = f"https://graph.facebook.com/{VERSION}"
+TOKEN = os.environ.get("IG_TOKEN", "")
+# Token aus "Instagram-Login" (beginnt mit IG...) -> graph.instagram.com, sonst Facebook-Login -> graph.facebook.com
+GRAPH = f"https://graph.{'instagram' if TOKEN.startswith('IG') else 'facebook'}.com/{VERSION}"
 
 
 def anfrage(url, daten=None, kopf=None, methode=None):
@@ -22,7 +24,11 @@ def anfrage(url, daten=None, kopf=None, methode=None):
 
 
 def posten(video):
-    token, nutzer = os.environ["IG_TOKEN"], os.environ["IG_USER_ID"]
+    token, nutzer = TOKEN, os.environ.get("IG_USER_ID", "")
+    if not nutzer:   # bei Instagram-Login reicht der Token, die ID holen wir selbst
+        me = anfrage(f"{GRAPH}/me?" + urllib.parse.urlencode({"fields": "user_id,username", "access_token": token}))
+        nutzer = str(me.get("user_id") or me["id"])
+        print(f"Konto: @{me.get('username')} ({nutzer})")
     caption = open(os.path.splitext(video)[0] + ".txt", encoding="utf-8").read() if os.path.exists(os.path.splitext(video)[0] + ".txt") else ""
     # 1) Container anlegen (Upload in Teilen über rupload)
     c = anfrage(f"{GRAPH}/{nutzer}/media", urllib.parse.urlencode({"media_type": "REELS", "upload_type": "resumable",
