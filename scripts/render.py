@@ -200,6 +200,7 @@ def untertitel(szenen, gesamt, label, ziel):
     if label:
         zeilen.append(f"Dialogue: 1,{zeit(0)},{zeit(gesamt)},Label,,0,0,0,,{{\\an8\\pos(540,120)}}{label.upper()}")
     for start, sprech, text in szenen:
+        text = re.sub(r"\*([^*]+)\*", lambda m: " ".join("*" + w + "*" for w in m.group(1).split()), text)
         teile = bloecke(text)
         gewicht = [len(sauber(" ".join(t))) + (5 if re.search(r"[.,!?:;…]", t[-1]) else 1) for t in teile]
         summe, t = sum(gewicht), start + 0.05
