@@ -113,6 +113,8 @@ class Pexels:
                 daten = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "video-buero/2"}), timeout=30))
                 extra = []
                 for v in daten.get("hits", []):
+                    if re.search(r"green ?screen|chroma|blue ?screen|alpha", v.get("tags", ""), re.I):
+                        continue
                     groessen = [f for f in v.get("videos", {}).values() if f.get("url") and f.get("width", 0) >= 960]
                     wahl = sorted(groessen, key=lambda f: abs(f["width"] - 1920))
                     if wahl:
