@@ -2,16 +2,25 @@ name: Video bauen
 
 on:
   push:
-    paths: ["episoden/**.json"]
+    paths: ["episoden/*.json"]          # einzelne Test-Episoden (nur bauen)
+  schedule:
+    - cron: "17 */3 * * *"              # alle 3 Stunden: nächste Folge aus der Warteschlange
   workflow_dispatch:
     inputs:
       episode:
-        description: "Pfad zur Episode (leer = zuletzt geänderte)"
+        description: "Pfad zur Episode (leer = nächste aus der Warteschlange)"
         required: false
       posten:
         description: "Auf Instagram posten?"
         type: boolean
         default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video
+  cancel-in-progress: false
 
 jobs:
   bauen:
@@ -27,22 +36,45 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Episode bestimmen
+        id: ep
+        run: |
+          MODUS=bauen
+          if [ -n "${{ github.event.inputs.episode }}" ]; then
+            LISTE="${{ github.event.inputs.episode }}"
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            LISTE=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'episoden/*.json' | tr '\n' ' ')
+          else
+            LISTE=$(ls episoden/warteschlange/*.json 2>/dev/null | sort | head -1)
+            MODUS=warteschlange
+          fi
+          if [ "$MODUS" = "warteschlange" ] && [ -z "$IG_TOKEN" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Noch kein IG_TOKEN – Zeitplan pausiert."; LISTE=""
+          fi
+          echo "liste=$LISTE" >> "$GITHUB_OUTPUT"
+          echo "modus=$MODUS" >> "$GITHUB_OUTPUT"
+          echo "Episoden: ${LISTE:-keine}"
+
       - uses: actions/setup-python@v5
+        if: steps.ep.outputs.liste != ''
         with:
           python-version: "3.12"
 
       - name: Werkzeuge installieren
+        if: steps.ep.outputs.liste != ''
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu-core espeak-ng
           pip install -q piper-tts kokoro-onnx soundfile
 
       - uses: actions/cache@v4
+        if: steps.ep.outputs.liste != ''
         with:
           path: voices
           key: stimmen-v2
 
       - name: Stimmen laden (Kokoro + Piper, kostenlos)
+        if: steps.ep.outputs.liste != ''
         run: |
           mkdir -p voices
           KO=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
@@ -56,27 +88,28 @@ jobs:
           curl -sfL -o voices/en.onnx.json $HF/en/en_US/ryan/high/en_US-ryan-high.onnx.json
           ls -la voices
 
-      - name: Episoden bestimmen
-        id: ep
-        run: |
-          if [ -n "${{ github.event.inputs.episode }}" ]; then
-            LISTE="${{ github.event.inputs.episode }}"
-          elif git rev-parse HEAD~1 >/dev/null 2>&1; then
-            LISTE=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'episoden/*.json' | tr '\n' ' ')
-          fi
-          [ -z "$LISTE" ] && LISTE=$(ls -t episoden/*.json | head -1)
-          echo "liste=$LISTE" >> "$GITHUB_OUTPUT"
-          echo "Episoden: $LISTE"
-
       - name: Video bauen
+        if: steps.ep.outputs.liste != ''
         run: python scripts/render.py ${{ steps.ep.outputs.liste }}
 
       - uses: actions/upload-artifact@v4
+        if: steps.ep.outputs.liste != ''
         with:
           name: videos
           path: out/
           retention-days: 14
 
       - name: Auf Instagram posten
-        if: env.IG_TOKEN != '' && (vars.AUTO_POST == 'true' || github.event.inputs.posten == 'true')
+        id: post
+        if: steps.ep.outputs.liste != '' && env.IG_TOKEN != '' && (steps.ep.outputs.modus == 'warteschlange' || vars.AUTO_POST == 'true' || github.event.inputs.posten == 'true')
         run: python scripts/post_instagram.py out/*.mp4
+
+      - name: Folge als gepostet ablegen
+        if: steps.post.outcome == 'success' && steps.ep.outputs.modus == 'warteschlange'
+        run: |
+          mkdir -p episoden/gepostet
+          git mv ${{ steps.ep.outputs.liste }} episoden/gepostet/
+          git config user.name "video-buero-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Gepostet: $(basename ${{ steps.ep.outputs.liste }})"
+          git push
