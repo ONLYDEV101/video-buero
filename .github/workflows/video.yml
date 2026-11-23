@@ -114,3 +114,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Gepostet: $(basename ${{ steps.ep.outputs.liste }})"
           git push
+
+      - name: Kommentare (Antworten senden, neue holen)
+        if: env.IG_TOKEN != '' && github.event_name != 'push'
+        continue-on-error: true
+        run: |
+          python3 scripts/kommentare.py antworten holen
+          git config user.name "video-buero-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kommentare/ 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Kommentare aktualisiert"
+            git pull --rebase -q && git push
+          fi
