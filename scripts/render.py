@@ -128,7 +128,7 @@ class Pexels:
                 for v in daten.get("hits", []):
                     tags = v.get("tags", "").lower()
                     tiere = r"\b(animal|squirrel|bird|flower|cat|dog)s?\b"
-                    if re.search(r"green ?screen|chroma|blue ?screen|\balpha\b|cartoon|animation", tags) or \
+                    if re.search(r"green ?screen|chroma|blue ?screen|\balpha\b|cartoon|animation|fantasy|monster|anime|demon|dragon|wizard", tags) or \
                             (re.search(tiere, tags) and not re.search(tiere, q.lower())):
                         continue
                     passend = any(w[:5] in tags for w in stich)
