@@ -89,7 +89,13 @@ def posten(video):
     mid = hochladen(token, nutzer, video, {"media_type": "REELS", "caption": caption[:2200], "share_to_feed": "true"})
     print(f"Veröffentlicht: {video} -> Medien-ID {mid}")
     # Storys: erst Quiz-Karte ("TRUE or FAKE?"), dann das Reel selbst. Fehler hier stoppen nichts.
-    if os.environ.get("STORIES", "true") != "true":
+    modus = os.environ.get("STORIES", "true")
+    if modus == "auto":   # nur jedes zweite Reel (Posts um 01/05/09/13/17/21 UTC -> Storys um 01, 09, 17)
+        import datetime
+        if datetime.datetime.utcnow().hour % 8 >= 4:
+            print("Story diesmal ausgelassen (nur jedes zweite Reel)")
+            return
+    elif modus != "true":
         return
     for datei in (basis + "_story.mp4", video):
         if not os.path.exists(datei):
