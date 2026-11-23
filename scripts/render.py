@@ -115,7 +115,9 @@ class Pexels:
                 stich = {w for w in re.findall(r"[a-z]{4,}", q.lower())}
                 for v in daten.get("hits", []):
                     tags = v.get("tags", "").lower()
-                    if re.search(r"green ?screen|chroma|blue ?screen|alpha|cartoon|animation|(animal|squirrel|bird|flower|cat|dog)s?", tags)                             and not re.search(r"animal|bird|cat|dog|flower", q.lower()):
+                    tiere = r"\b(animal|squirrel|bird|flower|cat|dog)s?\b"
+                    if re.search(r"green ?screen|chroma|blue ?screen|\balpha\b|cartoon|animation", tags) or \
+                            (re.search(tiere, tags) and not re.search(tiere, q.lower())):
                         continue
                     passend = any(w[:5] in tags for w in stich)
                     groessen = [f for f in v.get("videos", {}).values() if f.get("url") and f.get("width", 0) >= 960]
