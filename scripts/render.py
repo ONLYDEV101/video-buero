@@ -289,7 +289,40 @@ def episode(pfad):
     caption = (ep.get("caption", "").strip() + "\n\n" + " ".join(ep.get("hashtags", []))).strip()
     open(os.path.join(OUT, f"{eid}.txt"), "w", encoding="utf-8").write(caption)
     print(f"  fertig: {ziel} ({dauer(ziel):.1f}s)")
+    try:
+        story_karte(ep, eid, px, zufall)
+    except Exception as e:
+        print(f"  Story-Karte übersprungen: {e}")
     return ziel
+
+
+def story_karte(ep, eid, px, zufall):
+    """6-Sekunden-Story: 'TRUE or FAKE?' + Behauptung, Auflösung im Reel."""
+    frage = ep.get("story_frage") or ep.get("titel", "")
+    sek = 6.0
+    ziel = os.path.join(OUT, f"{eid}_story.mp4")
+    with tempfile.TemporaryDirectory() as tmp:
+        shutil.copytree(os.path.join(BASIS, "fonts"), os.path.join(tmp, "fonts"))
+        anfragen = ep["szenen"][0].get("suche") or ["old documents"]
+        anfragen = [anfragen] if isinstance(anfragen, str) else list(anfragen)
+        bild, _ = einstellung(900, sek, anfragen, px, tmp, zufall)
+        ass = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0", "",
+               "[V4+ Styles]",
+               "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
+               "Style: Big,Anton,150,&H0000E5FF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,9,5,8,60,60,330,1",
+               "Style: Q,Anton,92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,1,0,1,7,4,5,90,90,0,1",
+               "Style: Tag,Anton,62,&H00FFFFFF,&H00FFFFFF,&H001A1AD8,&H00000000,0,0,0,0,100,100,3,0,3,16,0,2,60,60,300,1",
+               "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
+               f"Dialogue: 0,0:00:00.00,{zeit(sek)},Big,,0,0,0,,{{\\fscx70\\fscy70\\t(0,250,\\fscx100\\fscy100)}}TRUE OR FAKE?",
+               f"Dialogue: 0,0:00:00.40,{zeit(sek)},Q,,0,0,0,,{{\\fad(250,0)}}" + sauber(frage).replace("*", ""),
+               f"Dialogue: 0,0:00:01.50,{zeit(sek)},Tag,,0,0,0,,{{\\fad(200,0)}}ANSWER: NEW REEL ON MY PROFILE"]
+        open(os.path.join(tmp, "karte.ass"), "w", encoding="utf-8").write("\n".join(ass) + "\n")
+        klangteppich(sek, [0.0, 1.5], os.path.join(tmp, "musik.wav"))
+        run(["ffmpeg", "-y", "-i", os.path.basename(bild), "-i", "musik.wav",
+             "-filter_complex", "[0:v]eq=brightness=-0.18:saturation=0.6,subtitles=karte.ass:fontsdir=fonts[v];[1:a]loudnorm=I=-16[a]",
+             "-map", "[v]", "-map", "[a]", "-t", f"{sek:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "21",
+             "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-movflags", "+faststart", ziel], cwd=tmp)
+    print(f"  Story-Karte: {ziel}")
 
 
 if __name__ == "__main__":

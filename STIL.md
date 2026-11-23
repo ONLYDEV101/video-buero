@@ -1,6 +1,14 @@
 # Kanal-Leitfaden (für den täglichen Agenten)
 
-Kanal: englischsprachige Kurzvideos (Instagram Reels / TikTok) über **Verschwörungen, die sich als wahr herausgestellt haben**, und **echte ungelöste Rätsel/Mysterien**. Label oben im Video: `Conspiracy that was TRUE` oder `Unsolved Mystery`.
+Kanal: englischsprachige Kurzvideos (Instagram Reels / TikTok) über **Verschwörungen, die sich als wahr herausgestellt haben**, und **echte ungelöste Rätsel/Mysterien**. Label oben im Video (eins davon): `Conspiracy that was TRUE`, `State Secret`, `Declassified`, `Unsolved Mystery`, `Cold War Files`.
+
+## Themen-Mix (pro Tag abwechseln, nie 2× dieselbe Kategorie hintereinander)
+1. **Verschwörungen, die wahr waren** (MKUltra, Northwoods, COINTELPRO, Tuskegee …)
+2. **Staatsgeheimnisse** – geheime Bunker/Basen, geheime Programme, die jahrzehntelang geleugnet wurden (Area 51 offiziell bestätigt 2013, Project Greek Island, Operation Mockingbird, Project Azorian, Stargate-Programm …)
+3. **Freigegebene Akten / Spionage** – echte Spionage-Operationen, Doppelagenten, Abhörprogramme (Operation Gold, Crypto AG, Venona, Snowden-Enthüllungen als belegte Fakten)
+4. **Kalter Krieg** – Beinahe-Atomkriege, verlorene Atombomben (Broken Arrows), Projekte wie A119 (Mond-Atombombe)
+5. **Ungelöste Mysterien** – Dyatlov Pass, D. B. Cooper, Wow!-Signal, Mary Celeste, Voynich-Manuskript …
+Von jeder Kategorie mindestens 1 Folge pro Tag (8 Folgen = Mix).
 
 ## Eiserne Regeln
 - Nur **belegte Fakten** (freigegebene Akten, Gerichtsurteile, Parlaments-/Senatsberichte, seriöse Historiker). Jede Folge braucht im Feld `quellen` mindestens eine echte Quelle (Name des Berichts/Dokuments, Jahr). Im Zweifel: Thema weglassen.
@@ -27,6 +35,7 @@ Dateiname: `episoden/warteschlange/JJJJMMTT-NN_stichwort.json` (NN = 01..08, bes
   "szenen": [ { "text": "…", "suche": ["…", "…"] } ],
   "caption": "1–2 Sätze + Frage an die Zuschauer. Endet mit: AI voice & edit. Footage: Pixabay/Pexels.",
   "hashtags": ["#conspiracy", "#declassified", "…max 10"],
-  "quellen": ["…"]
+  "quellen": ["…"],
+  "story_frage": "Kurze TRUE-or-FAKE-Behauptung für die Story, max. 12 Wörter, z. B. \"The CIA once tried to bug a cat.\""
 }
 ```

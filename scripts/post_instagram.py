@@ -55,16 +55,11 @@ def konto_finden(token):
     raise RuntimeError("Kein Instagram-Konto zum Token gefunden – Secret IG_USER_ID setzen")
 
 
-def posten(video):
-    token, nutzer = TOKEN, os.environ.get("IG_USER_ID", "")
-    if not nutzer:
-        nutzer = konto_finden(token)
-    caption = open(os.path.splitext(video)[0] + ".txt", encoding="utf-8").read() if os.path.exists(os.path.splitext(video)[0] + ".txt") else ""
-    # 1) Container anlegen (Upload in Teilen über rupload)
-    c = anfrage(f"{GRAPH}/{nutzer}/media", urllib.parse.urlencode({"media_type": "REELS", "upload_type": "resumable",
-                "caption": caption[:2200], "share_to_feed": "true", "access_token": token}).encode())
+def hochladen(token, nutzer, video, felder):
+    """Video als Container hochladen (resumable), warten, veröffentlichen. Gibt Medien-ID zurück."""
+    c = anfrage(f"{GRAPH}/{nutzer}/media", urllib.parse.urlencode({**felder, "upload_type": "resumable",
+                "access_token": token}).encode())
     cid = c["id"]
-    # 2) Datei hochladen
     groesse = os.path.getsize(video)
     with open(video, "rb") as f:
         r = anfrage(f"https://rupload.facebook.com/ig-api-upload/{VERSION}/{cid}", f.read(),
@@ -72,7 +67,6 @@ def posten(video):
                      "Content-Type": "application/octet-stream", "Content-Length": str(groesse)}, "POST")
     if not r.get("success", True):
         raise RuntimeError(f"Upload fehlgeschlagen: {r}")
-    # 3) Warten bis Instagram das Video verarbeitet hat
     for _ in range(60):
         s = anfrage(f"{GRAPH}/{cid}?" + urllib.parse.urlencode({"fields": "status_code,status", "access_token": token}))
         if s.get("status_code") == "FINISHED":
@@ -82,12 +76,32 @@ def posten(video):
         time.sleep(10)
     else:
         raise RuntimeError("Zeitüberschreitung bei der Verarbeitung")
-    # 4) Veröffentlichen
     p = anfrage(f"{GRAPH}/{nutzer}/media_publish", urllib.parse.urlencode({"creation_id": cid, "access_token": token}).encode())
-    print(f"Veröffentlicht: {video} -> Medien-ID {p.get('id')}")
+    return p.get("id")
+
+
+def posten(video):
+    token, nutzer = TOKEN, os.environ.get("IG_USER_ID", "")
+    if not nutzer:
+        nutzer = konto_finden(token)
+    basis = os.path.splitext(video)[0]
+    caption = open(basis + ".txt", encoding="utf-8").read() if os.path.exists(basis + ".txt") else ""
+    mid = hochladen(token, nutzer, video, {"media_type": "REELS", "caption": caption[:2200], "share_to_feed": "true"})
+    print(f"Veröffentlicht: {video} -> Medien-ID {mid}")
+    # Storys: erst Quiz-Karte ("TRUE or FAKE?"), dann das Reel selbst. Fehler hier stoppen nichts.
+    if os.environ.get("STORIES", "true") != "true":
+        return
+    for datei in (basis + "_story.mp4", video):
+        if not os.path.exists(datei):
+            continue
+        try:
+            sid = hochladen(token, nutzer, datei, {"media_type": "STORIES"})
+            print(f"Story: {datei} -> {sid}")
+        except Exception as e:
+            print(f"Story übersprungen ({datei}): {str(e)[:300]}")
 
 
 if __name__ == "__main__":
     for v in sys.argv[1:]:
-        if v.endswith(".mp4"):
+        if v.endswith(".mp4") and not v.endswith("_story.mp4"):
             posten(v)
