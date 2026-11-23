@@ -22,7 +22,7 @@ Von jeder Kategorie mindestens 1 Folge pro Tag (8 Folgen = Mix).
 3. Wendepunkt/Beweis: „In 1997, the documents were *declassified.*“
 4. Schluss: Frage oder Cliffhanger + Follow-Aufruf („Follow for part two.“ / „Which one should I cover next?“)
 - Wichtige Wörter mit `*Sternchen*` markieren (werden gelb). Pro Szene höchstens 1–2 Markierungen.
-- `suche`: 2–3 kurze englische Stock-Footage-Begriffe je Szene (z. B. „old documents“, „dark corridor“, „military jet“). Keine Personennamen (Stockvideos zeigen keine echten Personen).
+- `suche`: 2–3 kurze, **konkrete, sichtbare** englische Stock-Footage-Begriffe je Szene (Dinge, die man filmen kann: „submarine underwater“, „cia headquarters“, „old typewriter“, „radar screen“ – keine abstrakten Wörter wie „secret“, „mystery“, „truth“) (z. B. „old documents“, „dark corridor“, „military jet“). Keine Personennamen (Stockvideos zeigen keine echten Personen).
 
 ## Dateiformat
 Dateiname: `episoden/warteschlange/JJJJMMTT-NN_stichwort.json` (NN = 01..08, bestimmt die Reihenfolge).

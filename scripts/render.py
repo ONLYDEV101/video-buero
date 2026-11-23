@@ -111,16 +111,19 @@ class Pexels:
             try:
                 url = "https://pixabay.com/api/videos/?" + urllib.parse.urlencode({"key": pix, "q": q, "per_page": 15, "safesearch": "true"})
                 daten = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "video-buero/2"}), timeout=30))
-                extra = []
+                extra, schwach = [], []
+                stich = {w for w in re.findall(r"[a-z]{4,}", q.lower())}
                 for v in daten.get("hits", []):
-                    if re.search(r"green ?screen|chroma|blue ?screen|alpha", v.get("tags", ""), re.I):
+                    tags = v.get("tags", "").lower()
+                    if re.search(r"green ?screen|chroma|blue ?screen|alpha|cartoon|animation|(animal|squirrel|bird|flower|cat|dog)s?", tags)                             and not re.search(r"animal|bird|cat|dog|flower", q.lower()):
                         continue
+                    passend = any(w[:5] in tags for w in stich)
                     groessen = [f for f in v.get("videos", {}).values() if f.get("url") and f.get("width", 0) >= 960]
                     wahl = sorted(groessen, key=lambda f: abs(f["width"] - 1920))
                     if wahl:
-                        extra.append(("pb%s" % v["id"], wahl[0]["url"], float(v.get("duration") or 5)))
+                        (extra if passend else schwach).append(("pb%s" % v["id"], wahl[0]["url"], float(v.get("duration") or 5)))
                 self.zufall.shuffle(extra)
-                treffer += extra
+                treffer += extra + (schwach[:2] if len(extra) < 3 else [])
                 print(f"  Pixabay '{q}': {len(extra)} Clips")
             except Exception as e:
                 print(f"  Pixabay '{q}' ging nicht:", str(e)[:200])
