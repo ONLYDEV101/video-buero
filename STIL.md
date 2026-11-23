@@ -14,7 +14,7 @@ Von jeder Kategorie mindestens 1 Folge pro Tag (8 Folgen = Mix).
 - Nur **belegte Fakten** (freigegebene Akten, Gerichtsurteile, Parlaments-/Senatsberichte, seriöse Historiker). Jede Folge braucht im Feld `quellen` mindestens eine echte Quelle (Name des Berichts/Dokuments, Jahr). Im Zweifel: Thema weglassen.
 - Bei Mysterien klar sagen, was bekannt ist und was **nicht** bekannt ist – keine erfundenen Details.
 - **Tabu:** Gesundheits-/Impf-Falschinfos, Wahlbetrugs-Behauptungen, Hetze gegen Gruppen (Religion, Herkunft …), Anschuldigungen gegen lebende Privatpersonen, aktuelle Tragödien/Anschläge, Flat Earth/Fake-Wissenschaft.
-- Keine Wiederholung: vorher `episoden/gepostet/` und `episoden/warteschlange/` prüfen.
+- Keine Wiederholung: vorher `episoden/gepostet/` und `episoden/warteschlange/` prüfen. Ein Thema nur in Ausnahmefällen erneut – dann mit klar neuem Blickwinkel ("Part 2") und frühestens nach 30 Tagen.
 
 ## Aufbau einer Folge (25–40 Sekunden, 7–10 Szenen)
 1. **Hook in Szene 1** (max. ~10 Wörter): Neugier + Fallhöhe. Muster: „This sounds like a conspiracy theory. But it's *100% real.*“, „The U.S. government once planned to …“, „Nobody can explain what happened on …“
@@ -39,9 +39,3 @@ Dateiname: `episoden/warteschlange/JJJJMMTT-NN_stichwort.json` (NN = 01..08, bes
   "story_frage": "Kurze TRUE-or-FAKE-Behauptung für die Story, max. 12 Wörter, z. B. \"The CIA once tried to bug a cat.\""
 }
 ```
-
-## FLASH NEWS (höchstens 1 pro Tag, meistens keine)
-- Nur große, **frische** Nachrichten (letzte 48 h), die zum Kanal passen: Regierung gibt geheime Akten frei, offizielle Bestätigung eines geheimen Programms, offizielle UAP-/Weltraum-/Wissenschafts-Rätsel-Meldungen, große Enthüllungen per Gericht/Untersuchungsausschuss.
-- Bestätigt von **mindestens 2 großen Medien** (AP, Reuters, BBC, NYT, Guardian) oder offizieller Regierungsseite. Nur berichten, was belegt ist – keine Spekulation als Fakt.
-- **Nie:** Katastrophen, Kriege/Anschläge mit Opfern, Todesfälle, Wahlen, Gesundheit, Gerüchte.
-- Datei: `episoden/warteschlange/00-flash-JJJJMMTT_stichwort.json` (wird dadurch als Nächstes gepostet), `label`: `FLASH NEWS`, 6–8 Szenen, Hook z. B. „This just got *declassified.*“
