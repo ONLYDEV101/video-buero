@@ -13,7 +13,7 @@ import json, math, os, random, re, shutil, subprocess, sys, tempfile, urllib.par
 BASIS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(BASIS, "out")
 W, H, FPS = 1080, 1920, 30
-SCHNITT = 2.6            # max. Sekunden pro Einstellung
+SCHNITT = 1.9            # max. Sekunden pro Einstellung
 PAUSE = 0.22             # Pause nach jeder Szene
 STIMMEN = {"de": "voices/de.onnx", "en": "voices/en.onnx"}
 GELB = "&H0000E6FF&"     # ASS-Farbe (BGR)
@@ -144,11 +144,15 @@ class Pexels:
 
 
 # ------------------------------------------------------------------ Bild
-def einstellung(nr, sek, anfragen, px, tmp, zufall):
+def einstellung(nr, sek, anfragen, px, tmp, zufall, blitz=False):
     roh, ziel = os.path.join(tmp, f"roh{nr}.mp4"), os.path.join(tmp, f"e{nr}.mp4")
     lang = px.clip(anfragen, roh)
     richtung = ["(iw-ow)*t/{d}", "(iw-ow)*(1-t/{d})"][nr % 2].format(d=f"{sek:.3f}")
-    bewegung = f"scale={int(W*1.1)}:{int(H*1.1)}:force_original_aspect_ratio=increase,crop={int(W*1.1)}:{int(H*1.1)},crop={W}:{H}:x='{richtung}':y='(ih-oh)/2'"
+    ruck = "+if(lt(t,0.3),22*sin(t*95)*(0.3-t)/0.3,0)" if blitz else ""
+    bewegung = (f"scale={int(W*1.15)}:{int(H*1.15)}:force_original_aspect_ratio=increase,crop={int(W*1.15)}:{int(H*1.15)},"
+                f"crop={W}:{H}:x='{richtung}{ruck}':y='(ih-oh)/2{ruck}'")
+    if blitz:
+        bewegung += ",fade=t=in:st=0:d=0.14:color=white"
     if lang:
         start = zufall.uniform(0, max(0.0, lang - sek - 0.5))
         quelle = ["-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", roh]
@@ -196,10 +200,24 @@ def untertitel(szenen, gesamt, label, ziel):
               "Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
               "Style: Cap,Anton,140,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,1,0,1,8,5,5,70,70,0,1",
               "Style: Label,Anton,62,&H00FFFFFF,&H00FFFFFF,&H001A1AD8,&H00000000,0,0,0,0,100,100,3,0,3,16,0,8,40,40,0,1",
+              "Style: Stamp,Anton,150,&H002020E0,&H00FFFFFF,&H002020E0,&H00000000,0,0,0,0,100,100,6,0,1,9,0,5,40,40,0,1",
+              "Style: CTA,Anton,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,5,3,5,40,40,0,1",
               "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     if label:
         zeilen.append(f"Dialogue: 1,{zeit(0)},{zeit(gesamt)},Label,,0,0,0,,{{\\an8\\pos(540,120)}}{label.upper()}")
-    for start, sprech, text in szenen:
+    stempel = False
+    for nr, (start, sprech, text) in enumerate(szenen):
+        roh = sauber(text).lower()
+        wort = next((w for k, w in [("declassif", "DECLASSIFIED"), ("confirm", "CONFIRMED"), ("admitted", "ADMITTED"),
+                                    ("classified", "CLASSIFIED"), ("top secret", "TOP SECRET"), ("cover", "COVERED UP"),
+                                    ("unsolved", "UNSOLVED"), ("never found", "NEVER FOUND")] if k in roh), None)
+        if wort and not stempel and nr > 0:
+            stempel = True
+            e = start + sprech * 0.55
+            zeilen.append(f"Dialogue: 2,{zeit(e)},{zeit(e + 1.4)},Stamp,,0,0,0,,{{\\an5\\pos(540,720)\\frz12\\fscx260\\fscy260\\alpha&HFF&"
+                          f"\\t(0,90,\\fscx100\\fscy100\\alpha&H00&)\\t(1150,1400,\\alpha&HFF&)}}{wort}")
+        if nr == len(szenen) - 1:
+            zeilen.append(f"Dialogue: 1,{zeit(start)},{zeit(gesamt)},CTA,,0,0,0,,{{\\an5\\pos(540,1520)\\fad(300,0)}}FOLLOW FOR MORE FILES")
         text = re.sub(r"\*([^*]+)\*", lambda m: " ".join("*" + w + "*" for w in m.group(1).split()), text)
         teile = bloecke(text)
         gewicht = [len(sauber(" ".join(t))) + (5 if re.search(r"[.,!?:;…]", t[-1]) else 1) for t in teile]
@@ -267,7 +285,7 @@ def episode(pfad):
             n = max(1, math.ceil(laenge / SCHNITT))
             for j in range(n):
                 folge = anfragen[j % len(anfragen):] + anfragen[:j % len(anfragen)]
-                datei, echt = einstellung(nr, laenge / n, folge, px, tmp, zufall)
+                datei, echt = einstellung(nr, laenge / n, folge, px, tmp, zufall, blitz=(j == 0 and i > 0))
                 teile.append(datei); nr += 1; pex += echt
         liste = os.path.join(tmp, "liste.txt")
         open(liste, "w", encoding="utf-8").write("".join(f"file '{os.path.basename(x)}'\n" for x in teile))
