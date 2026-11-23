@@ -39,3 +39,9 @@ Dateiname: `episoden/warteschlange/JJJJMMTT-NN_stichwort.json` (NN = 01..08, bes
   "story_frage": "Kurze TRUE-or-FAKE-Behauptung für die Story, max. 12 Wörter, z. B. \"The CIA once tried to bug a cat.\""
 }
 ```
+
+## FLASH NEWS (höchstens 1 pro Tag, meistens keine)
+- Nur große, **frische** Nachrichten (letzte 48 h), die zum Kanal passen: Regierung gibt geheime Akten frei, offizielle Bestätigung eines geheimen Programms, offizielle UAP-/Weltraum-/Wissenschafts-Rätsel-Meldungen, große Enthüllungen per Gericht/Untersuchungsausschuss.
+- Bestätigt von **mindestens 2 großen Medien** (AP, Reuters, BBC, NYT, Guardian) oder offizieller Regierungsseite. Nur berichten, was belegt ist – keine Spekulation als Fakt.
+- **Nie:** Katastrophen, Kriege/Anschläge mit Opfern, Todesfälle, Wahlen, Gesundheit, Gerüchte.
+- Datei: `episoden/warteschlange/00-flash-JJJJMMTT_stichwort.json` (wird dadurch als Nächstes gepostet), `label`: `FLASH NEWS`, 6–8 Szenen, Hook z. B. „This just got *declassified.*“
