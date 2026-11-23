@@ -1,0 +1,95 @@
+{
+  "id": "20261123-06_tuskegee",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "They Lied to 600 Men",
+  "szenen": [
+    {
+      "text": "This sounds *impossible.* It was real.",
+      "suche": [
+        "old hospital",
+        "vintage doctor"
+      ]
+    },
+    {
+      "text": "From 1932, U.S. health officials ran a study in *Alabama.*",
+      "suche": [
+        "rural alabama",
+        "old clinic"
+      ]
+    },
+    {
+      "text": "It involved *600 Black men.* Most had syphilis.",
+      "suche": [
+        "old photograph",
+        "vintage"
+      ]
+    },
+    {
+      "text": "They were told they had *'bad blood.'*",
+      "suche": [
+        "doctor desk",
+        "medical papers"
+      ]
+    },
+    {
+      "text": "They were never told the truth, or *offered a cure.*",
+      "suche": [
+        "pill bottle",
+        "empty room"
+      ]
+    },
+    {
+      "text": "By the 1940s, *penicillin* was the standard treatment.",
+      "suche": [
+        "medicine lab",
+        "microscope"
+      ]
+    },
+    {
+      "text": "It still wasn't given. The study ran *40 years.*",
+      "suche": [
+        "calendar",
+        "old documents"
+      ]
+    },
+    {
+      "text": "In 1972, the press *exposed it.*",
+      "suche": [
+        "newspaper print",
+        "newsroom"
+      ]
+    },
+    {
+      "text": "In 1997, a U.S. president *formally apologized.*",
+      "suche": [
+        "white house",
+        "podium"
+      ]
+    },
+    {
+      "text": "Why did it take so long? *Follow* for more true files.",
+      "suche": [
+        "dark corridor",
+        "old documents"
+      ]
+    }
+  ],
+  "caption": "The U.S. government once deceived hundreds of men in a 40-year study. Did you learn this in school? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#conspiracy",
+    "#history",
+    "#truestory",
+    "#declassified",
+    "#ethics",
+    "#usa",
+    "#secret",
+    "#reels"
+  ],
+  "quellen": [
+    "CDC: The Untreated Syphilis Study at Tuskegee Timeline",
+    "Britannica: Tuskegee syphilis study",
+    "History.com: The Infamous 40-Year Tuskegee Study"
+  ],
+  "story_frage": "U.S. health officials once withheld treatment from men in a 40-year study."
+}

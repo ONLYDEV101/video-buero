@@ -1,0 +1,95 @@
+{
+  "id": "20261123-08_voynich",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "The Book Nobody Can Read",
+  "szenen": [
+    {
+      "text": "One book has defeated *every codebreaker* for 100 years.",
+      "suche": [
+        "old book",
+        "library"
+      ]
+    },
+    {
+      "text": "It's called the *Voynich manuscript.*",
+      "suche": [
+        "ancient manuscript",
+        "candlelight"
+      ]
+    },
+    {
+      "text": "It has around *240 pages* of strange handwriting.",
+      "suche": [
+        "old pages",
+        "handwriting"
+      ]
+    },
+    {
+      "text": "No one can read the *language.*",
+      "suche": [
+        "mysterious symbols",
+        "calligraphy"
+      ]
+    },
+    {
+      "text": "It's full of drawings of *unknown plants.*",
+      "suche": [
+        "plants drawing",
+        "herbs"
+      ]
+    },
+    {
+      "text": "In 2009, scientists *carbon-dated* the parchment.",
+      "suche": [
+        "laboratory",
+        "microscope"
+      ]
+    },
+    {
+      "text": "It dates to the *early 1400s.*",
+      "suche": [
+        "medieval",
+        "castle"
+      ]
+    },
+    {
+      "text": "That ruled out some famous guesses about the author.",
+      "suche": [
+        "old map",
+        "dusty book"
+      ]
+    },
+    {
+      "text": "Is it a code, a lost language, or a *hoax?*",
+      "suche": [
+        "question mark",
+        "puzzle"
+      ]
+    },
+    {
+      "text": "Nobody knows. *Follow* for more mysteries.",
+      "suche": [
+        "dark library",
+        "candle"
+      ]
+    }
+  ],
+  "caption": "A 600-year-old book written in an unknown script has never been decoded. Code or hoax? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#voynich",
+    "#mystery",
+    "#unsolved",
+    "#history",
+    "#codebreaking",
+    "#medieval",
+    "#secret",
+    "#reels"
+  ],
+  "quellen": [
+    "University of Arizona radiocarbon dating, 2009 (EurekAlert / Tucson.com)",
+    "Yale Beinecke Library, MS 408",
+    "Britannica: Voynich manuscript"
+  ],
+  "story_frage": "The Voynich manuscript has been fully deciphered."
+}

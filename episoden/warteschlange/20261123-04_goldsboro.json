@@ -1,0 +1,95 @@
+{
+  "id": "20261123-04_goldsboro",
+  "sprache": "en",
+  "label": "Cold War Files",
+  "titel": "The Bomb That Almost Went Off",
+  "szenen": [
+    {
+      "text": "In 1961, the U.S. *nearly nuked itself.*",
+      "suche": [
+        "mushroom cloud",
+        "military jet"
+      ]
+    },
+    {
+      "text": "A B-52 bomber broke apart over *North Carolina.*",
+      "suche": [
+        "bomber plane",
+        "storm clouds"
+      ]
+    },
+    {
+      "text": "It carried *two hydrogen bombs.*",
+      "suche": [
+        "bomb silo",
+        "military"
+      ]
+    },
+    {
+      "text": "Each was hundreds of times stronger than *Hiroshima.*",
+      "suche": [
+        "explosion",
+        "atomic test"
+      ]
+    },
+    {
+      "text": "One bomb's parachute opened. It hung from a *tree.*",
+      "suche": [
+        "parachute",
+        "forest"
+      ]
+    },
+    {
+      "text": "Several safety steps had already failed.",
+      "suche": [
+        "control panel",
+        "warning light"
+      ]
+    },
+    {
+      "text": "One *single low-voltage switch* stopped detonation.",
+      "suche": [
+        "electric switch",
+        "circuit board"
+      ]
+    },
+    {
+      "text": "A safety expert wrote this in a *1969 report.*",
+      "suche": [
+        "old documents",
+        "laboratory"
+      ]
+    },
+    {
+      "text": "The report was declassified, and published in *2013.*",
+      "suche": [
+        "archive",
+        "classified stamp"
+      ]
+    },
+    {
+      "text": "How many more close calls were there? *Follow.*",
+      "suche": [
+        "radar screen",
+        "dark sky"
+      ]
+    }
+  ],
+  "caption": "A 1961 bomber crash nearly detonated a hydrogen bomb on U.S. soil. Did you know this? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#coldwar",
+    "#nuclear",
+    "#declassified",
+    "#brokenarrow",
+    "#history",
+    "#truestory",
+    "#military",
+    "#reels"
+  ],
+  "quellen": [
+    "Sandia National Laboratories, Parker F. Jones memo, 1969 (published by The Guardian, 2013)",
+    "National Archives Prologue blog: 'Brush with Catastrophe', 2021",
+    "PBS American Experience: Goldsboro 1961"
+  ],
+  "story_frage": "In 1961, one switch stopped a U.S. hydrogen bomb from detonating."
+}

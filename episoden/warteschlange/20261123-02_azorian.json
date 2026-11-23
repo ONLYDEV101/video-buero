@@ -1,0 +1,94 @@
+{
+  "id": "20261123-02_azorian",
+  "sprache": "en",
+  "label": "State Secret",
+  "titel": "The CIA's Secret Ship",
+  "szenen": [
+    {
+      "text": "The CIA built a ship to *steal a submarine.*",
+      "suche": [
+        "ocean ship",
+        "deep sea"
+      ]
+    },
+    {
+      "text": "In 1968, a Soviet sub, *K-129,* sank in the Pacific.",
+      "suche": [
+        "submarine",
+        "dark ocean"
+      ]
+    },
+    {
+      "text": "It lay about *three miles* deep.",
+      "suche": [
+        "underwater",
+        "sea floor"
+      ]
+    },
+    {
+      "text": "The CIA found it. Moscow never knew.",
+      "suche": [
+        "sonar screen",
+        "navy"
+      ]
+    },
+    {
+      "text": "The cover story? A billionaire's *deep-sea mining* ship.",
+      "suche": [
+        "mining ship",
+        "industrial vessel"
+      ]
+    },
+    {
+      "text": "The real name: *Project Azorian.*",
+      "suche": [
+        "secret folder",
+        "classified stamp"
+      ]
+    },
+    {
+      "text": "In 1974, the giant claw lifted part of the sub.",
+      "suche": [
+        "crane machinery",
+        "ship deck"
+      ]
+    },
+    {
+      "text": "But the claw failed. Part of it *fell back* down.",
+      "suche": [
+        "rough sea",
+        "storm waves"
+      ]
+    },
+    {
+      "text": "The CIA declassified its history in *2010.*",
+      "suche": [
+        "old documents",
+        "archive"
+      ]
+    },
+    {
+      "text": "What was truly recovered is *still secret.* Follow for more.",
+      "suche": [
+        "dark ocean",
+        "ship night"
+      ]
+    }
+  ],
+  "caption": "The CIA used a fake mining ship to try lifting a Soviet submarine. What do you think they found? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#cia",
+    "#coldwar",
+    "#declassified",
+    "#statesecret",
+    "#submarine",
+    "#history",
+    "#secret",
+    "#reels"
+  ],
+  "quellen": [
+    "CIA, 'Project AZORIAN: The Story of the Hughes Glomar Explorer', Studies in Intelligence, 1985 (declassified 2010)",
+    "National Security Archive Briefing Book 305"
+  ],
+  "story_frage": "The CIA once used a fake mining ship to raise a Soviet submarine."
+}
