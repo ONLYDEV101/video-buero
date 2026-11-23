@@ -80,6 +80,18 @@ def stimme(text, sprache, ziel, tempo, stimme_name="am_michael"):
     return "stille"
 
 
+def gruenschirm(datei):
+    """True, wenn der Clip überwiegend knallgrün/-blau ist (Chroma-Key-Hintergrund)."""
+    try:
+        roh = subprocess.run(["ffmpeg", "-v", "error", "-ss", "1", "-i", datei, "-frames:v", "1", "-vf", "scale=8:8",
+                              "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, timeout=30).stdout
+        px = [roh[i:i + 3] for i in range(0, len(roh) - 2, 3)]
+        knall = sum(1 for r, g, b in px if (g > 140 and g > r + 60 and g > b + 60) or (b > 150 and b > r + 80 and b > g + 40))
+        return len(px) > 0 and knall / len(px) > 0.35
+    except Exception:
+        return False
+
+
 # ------------------------------------------------------------------ Pexels
 class Pexels:
     def __init__(self, zufall):
@@ -142,6 +154,9 @@ class Pexels:
                     req = urllib.request.Request(link, headers={"User-Agent": "video-buero/2 (+https://github.com/ONLYDEV101/video-buero)"})
                     with urllib.request.urlopen(req, timeout=60) as r, open(ziel, "wb") as f:
                         shutil.copyfileobj(r, f)
+                    if gruenschirm(ziel):
+                        print("  Greenscreen erkannt, übersprungen:", vid)
+                        continue
                     return lang
                 except Exception as e:
                     print("  Download ging nicht:", str(e)[:150])
