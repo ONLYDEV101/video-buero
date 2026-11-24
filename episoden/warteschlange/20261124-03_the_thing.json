@@ -1,0 +1,88 @@
+{
+  "id": "20261124-03_the_thing",
+  "sprache": "en",
+  "label": "Declassified",
+  "titel": "The Gift That Was Listening",
+  "szenen": [
+    {
+      "text": "A gift hung in the U.S. ambassador's office. It was *spying.*",
+      "suche": [
+        "wooden carving",
+        "embassy office"
+      ]
+    },
+    {
+      "text": "In 1945, Soviet schoolchildren gave it to ambassador Averell Harriman.",
+      "suche": [
+        "children school",
+        "wooden plaque"
+      ]
+    },
+    {
+      "text": "It was a carved wooden *Great Seal* of the United States.",
+      "suche": [
+        "eagle sculpture",
+        "wood carving"
+      ]
+    },
+    {
+      "text": "Inside was a tiny device with *no battery.*",
+      "suche": [
+        "microphone",
+        "electronic circuit"
+      ]
+    },
+    {
+      "text": "It only worked when Soviet radio beams *hit it.*",
+      "suche": [
+        "radio antenna",
+        "radio waves"
+      ]
+    },
+    {
+      "text": "Nobody noticed for *seven years.*",
+      "suche": [
+        "calendar pages",
+        "old office"
+      ]
+    },
+    {
+      "text": "In 1952, U.S. technicians finally *discovered* it.",
+      "suche": [
+        "radio receiver",
+        "engineer working"
+      ]
+    },
+    {
+      "text": "Today it's known as *The Thing.* Its design shocked engineers.",
+      "suche": [
+        "museum exhibit",
+        "vintage electronics"
+      ]
+    },
+    {
+      "text": "What gifts are *listening* today? Follow for more.",
+      "suche": [
+        "gift box",
+        "microphone"
+      ]
+    }
+  ],
+  "caption": "A wooden seal gifted by Soviet children bugged a U.S. ambassador's office for years, with no battery at all. Would you have spotted it? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#coldwar",
+    "#spy",
+    "#declassified",
+    "#thething",
+    "#espionage",
+    "#history",
+    "#nsa",
+    "#secrets"
+  ],
+  "quellen": [
+    "NSA National Cryptologic Museum, 'Cold War Great Seal'",
+    "CIA, 'Compromise of the Great Seal'",
+    "Crypto Museum, 'The Thing'"
+  ],
+  "story_frage": "A Soviet gift bugged a U.S. embassy for seven years."
+}

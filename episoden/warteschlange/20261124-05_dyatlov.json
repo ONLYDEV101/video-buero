@@ -1,0 +1,88 @@
+{
+  "id": "20261124-05_dyatlov",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "Nine Hikers. One Frozen Night.",
+  "szenen": [
+    {
+      "text": "Nine hikers died in the Ural Mountains. *Nobody* fully knows why.",
+      "suche": [
+        "snowy mountains",
+        "hiker tent snow"
+      ]
+    },
+    {
+      "text": "It happened in *February 1959.* They were experienced skiers.",
+      "suche": [
+        "skiing winter",
+        "snow forest"
+      ]
+    },
+    {
+      "text": "Their tent was found torn open from the *inside.*",
+      "suche": [
+        "torn tent",
+        "snow campsite"
+      ]
+    },
+    {
+      "text": "They fled into freezing cold, many *barely dressed.*",
+      "suche": [
+        "blizzard",
+        "snowstorm forest"
+      ]
+    },
+    {
+      "text": "Some bodies had *severe injuries.* Others died of cold.",
+      "suche": [
+        "frozen forest",
+        "dark night snow"
+      ]
+    },
+    {
+      "text": "Theories ranged from secret tests to *aliens.* None proven.",
+      "suche": [
+        "night sky",
+        "old documents"
+      ]
+    },
+    {
+      "text": "In 2021, scientists modeled a rare *slab avalanche.*",
+      "suche": [
+        "avalanche snow",
+        "computer simulation"
+      ]
+    },
+    {
+      "text": "They said it's *plausible.* Not proven.",
+      "suche": [
+        "mountain slope",
+        "snow wind"
+      ]
+    },
+    {
+      "text": "What really happened? *Tell me* your theory.",
+      "suche": [
+        "snowy mountains",
+        "dark forest"
+      ]
+    }
+  ],
+  "caption": "Nine experienced hikers died in 1959 after fleeing their tent. A 2021 study says an avalanche is plausible, but no one survived to tell. What's your theory? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#unsolvedmystery",
+    "#dyatlovpass",
+    "#mystery",
+    "#coldcase",
+    "#history",
+    "#russia",
+    "#unexplained",
+    "#truecrime"
+  ],
+  "quellen": [
+    "Gaume & Puzrin, 'Mechanisms of slab avalanche release and impact in the Dyatlov Pass incident', Communications Earth & Environment, 2021",
+    "Follow-up paper, Communications Earth & Environment, 2022",
+    "Live Science coverage of the 2021 study"
+  ],
+  "story_frage": "Nine hikers died in 1959 and the case is still debated."
+}

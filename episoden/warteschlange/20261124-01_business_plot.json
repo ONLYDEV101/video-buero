@@ -1,0 +1,88 @@
+{
+  "id": "20261124-01_business_plot",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "The Plot to Overthrow a President",
+  "szenen": [
+    {
+      "text": "This sounds like fiction. But a general *testified* under oath about it.",
+      "suche": [
+        "white house",
+        "old documents"
+      ]
+    },
+    {
+      "text": "It was 1933. America was deep in the *Great Depression.*",
+      "suche": [
+        "great depression bread line",
+        "old city street"
+      ]
+    },
+    {
+      "text": "Retired Marine General Smedley Butler said wealthy men approached him.",
+      "suche": [
+        "military medals",
+        "old photograph soldier"
+      ]
+    },
+    {
+      "text": "Their alleged goal: overthrow President Roosevelt and install a *dictator.*",
+      "suche": [
+        "white house",
+        "government building"
+      ]
+    },
+    {
+      "text": "A financier named Gerald MacGuire made the approach, Butler said.",
+      "suche": [
+        "man in suit",
+        "wall street"
+      ]
+    },
+    {
+      "text": "In 1934, a House committee heard secret *testimony* in New York.",
+      "suche": [
+        "courtroom",
+        "committee hearing"
+      ]
+    },
+    {
+      "text": "It found Butler credible. The New York Times called it a *hoax.*",
+      "suche": [
+        "newspaper printing",
+        "old newspaper"
+      ]
+    },
+    {
+      "text": "No one was ever *prosecuted.* The case was never tested in court.",
+      "suche": [
+        "gavel",
+        "empty courtroom"
+      ]
+    },
+    {
+      "text": "Real plot or exaggeration? Follow, and tell me *what you think.*",
+      "suche": [
+        "old documents",
+        "dark corridor"
+      ]
+    }
+  ],
+  "caption": "A general swore a plot against FDR existed. A congressional committee listened. Nobody was ever charged. Real plot or exaggeration? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#conspiracy",
+    "#history",
+    "#businessplot",
+    "#declassified",
+    "#coldcase",
+    "#usahistory",
+    "#secrets",
+    "#truth"
+  ],
+  "quellen": [
+    "House Special Committee on Un-American Activities (McCormack-Dickstein Committee) report, Feb 1935",
+    "Smedley Butler testimony, Nov 1934",
+    "Saturday Evening Post, 'The 1933 Business Plot', 2023"
+  ],
+  "story_frage": "A retired general testified about a plot to overthrow FDR."
+}

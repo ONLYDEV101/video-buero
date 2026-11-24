@@ -1,0 +1,88 @@
+{
+  "id": "20261124-06_sea_spray",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "The Navy Sprayed a City",
+  "szenen": [
+    {
+      "text": "In 1950, the U.S. Navy sprayed bacteria over *San Francisco.*",
+      "suche": [
+        "san francisco bay",
+        "navy ship"
+      ]
+    },
+    {
+      "text": "Nobody was told. Residents were *test subjects.*",
+      "suche": [
+        "city street",
+        "people walking"
+      ]
+    },
+    {
+      "text": "The microbe was *Serratia marcescens.* Officials thought it was harmless.",
+      "suche": [
+        "microscope",
+        "laboratory"
+      ]
+    },
+    {
+      "text": "It was called *Operation Sea-Spray.*",
+      "suche": [
+        "ship at sea",
+        "fog over bay"
+      ]
+    },
+    {
+      "text": "Days later, patients at a Stanford hospital got *sick.*",
+      "suche": [
+        "hospital corridor",
+        "hospital bed"
+      ]
+    },
+    {
+      "text": "Eleven were infected. One patient, Edward Nevin, *died.*",
+      "suche": [
+        "hospital room",
+        "medical chart"
+      ]
+    },
+    {
+      "text": "The tests became public in the *1970s.*",
+      "suche": [
+        "senate hearing",
+        "old newspaper"
+      ]
+    },
+    {
+      "text": "The Nevin family sued in 1981. The case was *dismissed.*",
+      "suche": [
+        "courtroom",
+        "gavel"
+      ]
+    },
+    {
+      "text": "Should citizens be told *first?* Follow for more.",
+      "suche": [
+        "city skyline fog",
+        "old documents"
+      ]
+    }
+  ],
+  "caption": "In 1950, the U.S. Navy secretly sprayed bacteria over San Francisco. It surfaced decades later. Should citizens always be told first? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#conspiracy",
+    "#declassified",
+    "#history",
+    "#sanfrancisco",
+    "#truth",
+    "#secrets",
+    "#usnavy",
+    "#coldwar"
+  ],
+  "quellen": [
+    "U.S. Senate Subcommittee on Health and Scientific Research hearing, 1977",
+    "Smithsonian Magazine, 'When the U.S. Army Secretly Tested Biological Weapons in San Francisco'",
+    "Discover Magazine, 'Blood and Fog'"
+  ],
+  "story_frage": "The Navy secretly sprayed bacteria over San Francisco."
+}
