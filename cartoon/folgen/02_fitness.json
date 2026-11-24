@@ -1,0 +1,18 @@
+{
+  "id": "02_fitness",
+  "titel": "Fitnessstudio",
+  "ort": "wohnzimmer",
+  "figuren": ["ronny", "mandy"],
+  "zeilen": [
+    { "wer": "mandy", "text": "Ronny, ab heute gehen wir ins Fitnessstudio.", "aktion": "zeigt" },
+    { "wer": "ronny", "text": "Ich trainier doch schon. Guck.", "aktion": "trinkt" },
+    { "wer": "mandy", "text": "Das ist eine Bierdose." },
+    { "wer": "ronny", "text": "Halber Liter. Zwanzig Wiederholungen am Tag. Beide Arme.", "aktion": "trinkt" },
+    { "wer": "mandy", "text": "Du hast einen Bauch wie ein Kühlschrank!", "aktion": "schreit" },
+    { "wer": "ronny", "text": "Genau. Und was ist im Kühlschrank? Kraftstoff.", "aktion": "zeigt" },
+    { "wer": "mandy", "text": "Ich hab uns schon angemeldet. Vierzig Euro im Monat." },
+    { "wer": "ronny", "text": "Vierzig Euro?! Das sind hundertsechzig Pfandflaschen!", "aktion": "schreit", "stimmung": "angry" }
+  ],
+  "caption": "Training ist Training 💪🍺 Markiere deinen Gym-Partner 😂",
+  "hashtags": ["#cartoon", "#comedy", "#gym", "#fitness", "#lustig", "#ronnyundmandy"]
+}

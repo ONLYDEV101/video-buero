@@ -1,0 +1,18 @@
+{
+  "id": "03_zeugnis",
+  "titel": "Kevins Zeugnis",
+  "ort": "kueche",
+  "figuren": ["ronny", "kevin"],
+  "zeilen": [
+    { "wer": "kevin", "text": "Papa, ich hab mein Zeugnis.", "aktion": "zeigt" },
+    { "wer": "ronny", "text": "Zeig her, Champion.", "aktion": "trinkt" },
+    { "wer": "kevin", "text": "Mathe: sechs." },
+    { "wer": "ronny", "text": "Sechs! Die höchste Zahl! Das hat dein Vater nie geschafft!", "aktion": "schreit", "stimmung": "amused" },
+    { "wer": "kevin", "text": "Papa ... eins ist die beste Note.", "aktion": "schock" },
+    { "wer": "ronny", "text": "Eins? Eins ist gar nix. Eins ist wie ein Bier. Bringt nix.", "aktion": "trinkt" },
+    { "wer": "kevin", "text": "Deutsch hab ich auch ne sechs." },
+    { "wer": "ronny", "text": "Mandy! Hol den Sekt raus! Wir haben ein Genie!", "aktion": "schreit", "stimmung": "amused" }
+  ],
+  "caption": "Ronny ist stolz auf Kevin 🎓 Welche Note hattet ihr in Mathe? 😂",
+  "hashtags": ["#cartoon", "#comedy", "#schule", "#zeugnis", "#lustig", "#ronnyundmandy"]
+}

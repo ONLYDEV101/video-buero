@@ -1,4 +1,6 @@
+*.wav
+__pycache__/
+build/
+cartoon/node_modules/
 out/
 voices/
-__pycache__/
-*.wav

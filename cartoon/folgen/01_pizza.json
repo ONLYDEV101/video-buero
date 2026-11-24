@@ -1,0 +1,20 @@
+{
+  "id": "01_pizza",
+  "titel": "Pizza mit Pfand",
+  "ort": "wohnzimmer",
+  "figuren": ["ronny", "mandy"],
+  "zeilen": [
+    { "wer": "ronny", "text": "Mandy! Ich hab Pizza bestellt. Familiengröße.", "aktion": "trinkt" },
+    { "wer": "mandy", "text": "Ronny, wir haben noch nicht mal Geld für Klopapier!", "aktion": "schreit" },
+    { "wer": "ronny", "text": "Brauchen wir auch nicht. Ich zahl mit Pfand." },
+    { "wer": "mandy", "text": "Mit Pfand?!", "aktion": "schock" },
+    { "wer": "ronny", "text": "Zweihundert Flaschen. Alle selbst geleert. Das nennt man Investment.", "aktion": "zeigt" },
+    { "wer": "mandy", "text": "Und wie kriegst du die zum Lieferdienst?" },
+    { "wer": "ronny", "text": "Gar nicht. Der Pizzamann zählt die selber im Keller.", "aktion": "trinkt" },
+    { "wer": "geraeusch", "text": "*DING DONG*" },
+    { "wer": "mandy", "text": "Ronny ... das ist der Vermieter.", "aktion": "schock" },
+    { "wer": "ronny", "text": "Alter! Versteck die Flaschen!", "aktion": "schreit", "stimmung": "angry" }
+  ],
+  "caption": "Ronny hat wieder einen Plan 🍕 Wer kennt so einen Ronny? 😂",
+  "hashtags": ["#cartoon", "#comedy", "#lustig", "#animation", "#memes", "#ronnyundmandy"]
+}
