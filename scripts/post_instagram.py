@@ -55,7 +55,19 @@ def konto_finden(token):
     raise RuntimeError("Kein Instagram-Konto zum Token gefunden – Secret IG_USER_ID setzen")
 
 
-def hochladen(token, nutzer, video, felder):
+def hochladen(token, nutzer, video, felder, versuche=3):
+    """Mit Wiederholung: Meta meldet gelegentlich ProcessingFailedError beim Upload."""
+    for i in range(versuche):
+        try:
+            return _hochladen(token, nutzer, video, felder)
+        except RuntimeError as e:
+            if i == versuche - 1:
+                raise
+            print(f"Upload-Versuch {i+1} fehlgeschlagen ({str(e)[:160]}), neuer Versuch in 60 s")
+            time.sleep(60)
+
+
+def _hochladen(token, nutzer, video, felder):
     """Video als Container hochladen (resumable), warten, veröffentlichen. Gibt Medien-ID zurück."""
     c = anfrage(f"{GRAPH}/{nutzer}/media", urllib.parse.urlencode({**felder, "upload_type": "resumable",
                 "access_token": token}).encode())
