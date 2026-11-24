@@ -17,8 +17,9 @@ SCHNITT = 1.9            # max. Sekunden pro Einstellung
 PAUSE = 0.22             # Pause nach jeder Szene
 STIMMEN = {"de": "voices/de.onnx", "en": "voices/en.onnx"}
 GELB = "&H0000E6FF&"     # ASS-Farbe (BGR)
-LOOK = ("eq=contrast=1.15:saturation=0.70:brightness=-0.06,colorbalance=rs=-0.04:bs=0.07:bm=0.03,"
-        "vignette=PI/4.2,noise=alls=4:allf=t")
+LOOK = ("eq=contrast=1.18:saturation=0.80:brightness=-0.05,colorbalance=rs=-0.05:bs=0.08:bm=0.03:rh=0.05:bh=-0.04,"
+        "unsharp=5:5:0.5,vignette=PI/4.5,noise=alls=3:allf=t")
+UEBER = 0.25             # Überblendung zwischen Einstellungen (Sekunden)
 
 
 def run(cmd, **kw):
@@ -171,8 +172,6 @@ def einstellung(nr, sek, anfragen, px, tmp, zufall, blitz=False):
     ruck = "+if(lt(t,0.3),22*sin(t*95)*(0.3-t)/0.3,0)" if blitz else ""
     bewegung = (f"scale={int(W*1.15)}:{int(H*1.15)}:force_original_aspect_ratio=increase,crop={int(W*1.15)}:{int(H*1.15)},"
                 f"crop={W}:{H}:x='{richtung}{ruck}':y='(ih-oh)/2{ruck}'")
-    if blitz:
-        bewegung += ",fade=t=in:st=0:d=0.14:color=white"
     if lang:
         start = zufall.uniform(0, max(0.0, lang - sek - 0.5))
         quelle = ["-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", roh]
@@ -305,11 +304,20 @@ def episode(pfad):
             n = max(1, math.ceil(laenge / SCHNITT))
             for j in range(n):
                 folge = anfragen[j % len(anfragen):] + anfragen[:j % len(anfragen)]
-                datei, echt = einstellung(nr, laenge / n, folge, px, tmp, zufall, blitz=(j == 0 and i > 0))
-                teile.append(datei); nr += 1; pex += echt
-        liste = os.path.join(tmp, "liste.txt")
-        open(liste, "w", encoding="utf-8").write("".join(f"file '{os.path.basename(x)}'\n" for x in teile))
-        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", "liste.txt", "-c", "copy", "bild.mp4"], cwd=tmp)
+                datei, echt = einstellung(nr, laenge / n + UEBER, folge, px, tmp, zufall, blitz=(j == 0 and i > 0))
+                teile.append((datei, laenge / n, j == 0 and i > 0)); nr += 1; pex += echt
+        # weiche Übergänge: Überblenden innerhalb einer Szene, Weißblitz beim Szenenwechsel
+        ein = sum([["-i", os.path.basename(d)] for d, _, _ in teile], [])
+        f, vorher, offset = "", "[0:v]", 0.0
+        for k in range(1, len(teile)):
+            offset += teile[k - 1][1]
+            art = "fadewhite" if teile[k][2] else ("fade" if k % 3 else "smoothleft")
+            f += f"{vorher}[{k}:v]xfade=transition={art}:duration={UEBER}:offset={offset:.3f}[x{k}];"
+            vorher = f"[x{k}]"
+        if len(teile) == 1:
+            f, vorher = "[0:v]null[x0]", "[x0]"
+        run(["ffmpeg", "-y", *ein, "-filter_complex", f.rstrip(";"), "-map", vorher, "-an", "-c:v", "libx264", "-preset", "veryfast",
+             "-crf", "19", "-pix_fmt", "yuv420p", "-r", str(FPS), "bild.mp4"], cwd=tmp)
         print(f"  {nr} Einstellungen, davon {pex} echte Clips (Pexels/Pixabay)")
         # 4) Untertitel + Klang
         untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"))
