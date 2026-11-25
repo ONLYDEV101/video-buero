@@ -1,0 +1,114 @@
+{
+  "id": "TEST_film_a119",
+  "sprache": "en",
+  "label": "Cold War Files",
+  "titel": "The Plan to Nuke the Moon",
+  "szenen": [
+    {
+      "text": "In 1958, the U.S. studied *nuking the Moon.*",
+      "suche": [
+        "full moon",
+        "nuclear explosion"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Full moon.jpeg",
+          "hinweis": "Real photo: NASA"
+        },
+        {
+          "film": "archiv/redwing_boom.mp4",
+          "hinweis": "Real nuclear test, 1956"
+        }
+      ],
+      "nur_archiv": true
+    },
+    {
+      "text": "It was called *Project A119.*",
+      "suche": [
+        "old documents",
+        "classified folder"
+      ]
+    },
+    {
+      "text": "Sputnik had shocked America. Washington wanted to *show strength.*",
+      "suche": [
+        "satellite orbit",
+        "rocket launch"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Sputnik 191378-full.jpg",
+          "hinweis": "NASA: Sputnik"
+        }
+      ],
+      "nur_archiv": true
+    },
+    {
+      "text": "The cover title was 'A Study of *Lunar Research Flights.*'",
+      "suche": [
+        "typewriter",
+        "old report"
+      ]
+    },
+    {
+      "text": "A scientist named Leonard Reiffel led the study.",
+      "suche": [
+        "scientist laboratory",
+        "chalkboard equations"
+      ]
+    },
+    {
+      "text": "The idea: a flash on the Moon, *visible from Earth.*",
+      "suche": [
+        "moon surface",
+        "night sky"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Operation Hardtack I, NNSA-NSO-1076.jpg",
+          "hinweis": "Archive: nuclear test"
+        }
+      ],
+      "nur_archiv": true
+    },
+    {
+      "text": "The project was *never carried out.*",
+      "suche": [
+        "rocket launch",
+        "moon craters"
+      ]
+    },
+    {
+      "text": "Reiffel revealed it in *2000.* He said he was horrified.",
+      "suche": [
+        "old documents",
+        "press conference"
+      ]
+    },
+    {
+      "text": "Genius or madness? *Follow* for the next Cold War file.",
+      "suche": [
+        "full moon",
+        "radar screen"
+      ]
+    }
+  ],
+  "caption": "The U.S. once studied detonating a nuclear bomb on the Moon to impress the world. It never happened. Was it genius or madness? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons & Archive.org (public domain/CC0).",
+  "hashtags": [
+    "#coldwar",
+    "#projecta119",
+    "#moon",
+    "#declassified",
+    "#nuclear",
+    "#space",
+    "#history",
+    "#secrets"
+  ],
+  "quellen": [
+    "USAF-funded Armour Research Foundation report 'A Study of Lunar Research Flights', 1959 (declassified)",
+    "CNN / Task & Purpose reporting on Project A119",
+    "Leonard Reiffel interview, 2000"
+  ],
+  "story_frage": "The U.S. planned to nuke the Moon in 1958.",
+  "klang": "voll"
+}

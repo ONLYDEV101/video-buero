@@ -23,7 +23,14 @@
       "suche": [
         "tunnel construction",
         "dark tunnel"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/berlin_map.mp4",
+          "hinweis": "Archive film: Berlin"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It tapped Soviet and East German *phone lines.*",
@@ -68,7 +75,7 @@
       ]
     }
   ],
-  "caption": "The CIA tapped Soviet phones through a tunnel under Berlin, while a double agent secretly told Moscow. Was the intel worth it? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "The CIA tapped Soviet phones through a tunnel under Berlin, while a double agent secretly told Moscow. Was the intel worth it? AI voice & edit. Footage: Pixabay/Pexels. Archive film: Archive.org (public domain).",
   "hashtags": [
     "#coldwar",
     "#spy",
