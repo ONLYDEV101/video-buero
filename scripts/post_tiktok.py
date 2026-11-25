@@ -32,6 +32,7 @@ def posten(video):
              "content_preview_confirmed": True, "express_consent_given": True}
     if os.environ.get("TIKTOK_MODUS", "entwurf") == "oeffentlich":
         einst["privacy_level"] = "PUBLIC_TO_EVERYONE"
+        einst["video_made_with_ai"] = True  # KI-Label (Stimme ist KI)
     else:
         einst["draft"] = True
     r = anfrage("/posts", {"content": caption[:2200], "mediaItems": [{"type": "video", "url": p["publicUrl"]}],

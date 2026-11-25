@@ -1,11 +1,16 @@
 name: TikTok-Entwurf
-# Nur von Hand: schickt das Video eines früheren Laufs als ENTWURF in den TikTok-Posteingang (nie öffentlich).
+# Nur von Hand: schickt das Video eines früheren Laufs zu TikTok (Standard: Entwurf, öffentlich nur bei modus=oeffentlich).
 on:
   workflow_dispatch:
     inputs:
       lauf:
         description: "Run-ID des Laufs, dessen Video genommen wird"
         required: true
+      modus:
+        description: "entwurf oder oeffentlich"
+        type: choice
+        options: [entwurf, oeffentlich]
+        default: entwurf
 permissions:
   contents: read
   actions: read
@@ -16,7 +21,7 @@ jobs:
     env:
       ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
       TIKTOK_ACCOUNT_ID: 6b064d9ed64beccc742452ae
-      TIKTOK_MODUS: entwurf
+      TIKTOK_MODUS: ${{ inputs.modus }}
       TIKTOK_ZUSTIMMUNG: "ja"   # gilt für den von Hand gestarteten Entwurf
     steps:
       - uses: actions/checkout@v4
