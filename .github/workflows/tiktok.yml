@@ -1,0 +1,29 @@
+name: TikTok-Entwurf
+# Nur von Hand: schickt das Video eines früheren Laufs als ENTWURF in den TikTok-Posteingang (nie öffentlich).
+on:
+  workflow_dispatch:
+    inputs:
+      lauf:
+        description: "Run-ID des Laufs, dessen Video genommen wird"
+        required: true
+permissions:
+  contents: read
+  actions: read
+jobs:
+  entwurf:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+      TIKTOK_ACCOUNT_ID: 6b064d9ed64beccc742452ae
+      TIKTOK_MODUS: entwurf
+      TIKTOK_ZUSTIMMUNG: "ja"   # gilt für den von Hand gestarteten Entwurf
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: videos
+          path: out
+          run-id: ${{ inputs.lauf }}
+          github-token: ${{ github.token }}
+      - run: ls -la out && python3 scripts/post_tiktok.py out/*.mp4
