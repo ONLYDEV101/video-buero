@@ -120,6 +120,20 @@ jobs:
         continue-on-error: true
         run: python scripts/post_youtube.py out/*.mp4
 
+      - name: TikTok-Entwurf (höchstens 4 am Tag, nie öffentlich)
+        if: steps.post.outcome == 'success' && github.event_name == 'schedule' && steps.ep.outputs.modus == 'warteschlange'
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          TIKTOK_ACCOUNT_ID: 6b064d9ed64beccc742452ae
+          TIKTOK_MODUS: entwurf
+          TIKTOK_ZUSTIMMUNG: "ja"   # Nutzer hat automatische Entwürfe freigegeben (25.11.2026); veröffentlicht wird nur von Hand in der App
+        run: |
+          # TikTok/Zernio: max. 5 offene Entwürfe in 24 h -> nur die 4 Läufe ab 08 Uhr UTC (nachts nicht)
+          if [ "$(date -u +%-H)" -lt 8 ]; then echo "Nachtlauf – kein TikTok-Entwurf."; exit 0; fi
+          python scripts/post_tiktok.py out/*.mp4
+
       - name: Folge als gepostet ablegen
         if: steps.post.outcome == 'success' && steps.ep.outputs.modus == 'warteschlange'
         run: |
