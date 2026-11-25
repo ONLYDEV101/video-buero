@@ -212,7 +212,7 @@ def ass_text(woerter):
     return " ".join(aus)
 
 
-def untertitel(szenen, gesamt, label, ziel):
+def untertitel(szenen, gesamt, label, ziel, titel=""):
     zeilen = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0",
               "ScaledBorderAndShadow: yes", "", "[V4+ Styles]",
               "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, "
@@ -220,10 +220,14 @@ def untertitel(szenen, gesamt, label, ziel):
               "Style: Cap,Anton,140,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,1,0,1,8,5,5,70,70,0,1",
               "Style: Label,Anton,62,&H00FFFFFF,&H00FFFFFF,&H001A1AD8,&H00000000,0,0,0,0,100,100,3,0,3,16,0,8,40,40,0,1",
               "Style: Stamp,Anton,150,&H002020E0,&H00FFFFFF,&H002020E0,&H00000000,0,0,0,0,100,100,6,0,1,9,0,5,40,40,0,1",
+              "Style: Hook,Anton,104,&H0000E5FF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,9,4,8,60,60,0,1",
               "Style: CTA,Anton,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,5,3,5,40,40,0,1",
               "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     if label:
         zeilen.append(f"Dialogue: 1,{zeit(0)},{zeit(gesamt)},Label,,0,0,0,,{{\\an8\\pos(540,120)}}{label.upper()}")
+    if titel and len(szenen) > 1:   # Hook-Titel gross in den ersten Sekunden (Stopp-Moment beim Scrollen)
+        ende = min(szenen[1][0], 3.0)
+        zeilen.append(f"Dialogue: 3,{zeit(0)},{zeit(ende)},Hook,,0,0,0,,{{\\an8\\pos(540,250)\\fscx130\\fscy130\\t(0,160,\\fscx100\\fscy100)\\fad(0,200)}}{sauber(titel).upper()}")
     stempel = False
     for nr, (start, sprech, text) in enumerate(szenen):
         roh = sauber(text).lower()
@@ -320,7 +324,7 @@ def episode(pfad):
              "-crf", "19", "-pix_fmt", "yuv420p", "-r", str(FPS), "bild.mp4"], cwd=tmp)
         print(f"  {nr} Einstellungen, davon {pex} echte Clips (Pexels/Pixabay)")
         # 4) Untertitel + Klang
-        untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"))
+        untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"), ep.get("titel", ""))
         klangteppich(gesamt, [z[0] for z in zeitplan], os.path.join(tmp, "musik.wav"))
         # 5) Alles zusammen
         ziel = os.path.join(OUT, f"{eid}.mp4")

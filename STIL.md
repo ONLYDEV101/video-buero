@@ -16,11 +16,14 @@ Von jeder Kategorie mindestens 1 Folge pro Tag (8 Folgen = Mix).
 - **Tabu:** Gesundheits-/Impf-Falschinfos, Wahlbetrugs-Behauptungen, Hetze gegen Gruppen (Religion, Herkunft …), Anschuldigungen gegen lebende Privatpersonen, aktuelle Tragödien/Anschläge, Flat Earth/Fake-Wissenschaft.
 - Keine Wiederholung: vorher `episoden/gepostet/` und `episoden/warteschlange/` prüfen. Ein Thema nur in Ausnahmefällen erneut – dann mit klar neuem Blickwinkel ("Part 2") und frühestens nach 30 Tagen.
 
-## Aufbau einer Folge (25–40 Sekunden, 7–10 Szenen)
-1. **Hook in Szene 1** (max. ~10 Wörter): Neugier + Fallhöhe. Muster: „This sounds like a conspiracy theory. But it's *100% real.*“, „The U.S. government once planned to …“, „Nobody can explain what happened on …“
-2. Szenen 2–7: Fakten in kurzen Sätzen (max. ~14 Wörter pro Szene), jede Szene bringt etwas Neues. Zahlen und Jahreszahlen machen es glaubwürdig.
-3. Wendepunkt/Beweis: „In 1997, the documents were *declassified.*“
-4. Schluss: Frage oder Cliffhanger + Follow-Aufruf („Follow for part two.“ / „Which one should I cover next?“)
+## Aufbau einer Folge (25–32 Sekunden, 7–9 Szenen) – Ziel: Zuschauer bis zum Ende halten
+Messwerte (24.11.): Reels werden im Schnitt nur 10–14 s von 35 s geschaut, Likes/Shares fast 0. Deshalb:
+1. **Hook in Szene 1** (max. 8 Wörter): Sofort die **konkreteste, schockierendste Tatsache** – keine Floskel wie „This sounds like fiction“. Gut: „The CIA secretly owned the world's top *encryption* company.“, „A U.S. bomber dropped *two nukes* on North Carolina.“ Schlecht: „This sounds like a conspiracy theory.“
+2. **`titel` = Hook-Titel auf dem Bildschirm** (erscheint gross in den ersten 2–3 s): max. 6 Wörter, Neugier-Lücke, verrät nicht alles. Z. B. „They Hid It Under A Hotel“, „The Ship That Wasn't A Ship“.
+3. Szenen 2–6: Fakten in kurzen Sätzen (max. ~12 Wörter pro Szene), jede Szene bringt etwas Neues. Zahlen und Jahreszahlen machen es glaubwürdig. Ab Szene 3 eine **offene Schleife**: „But the strangest part came later.“
+4. Wendepunkt/Beweis: „In 1997, the documents were *declassified.*“
+5. Schluss: **eine Frage, auf die man kommentieren will** (Meinung, kein Ja/Nein-Wissen): „Would you have believed it in 1975?“, „What do you think they're hiding today?“ – dann „Follow for more files.“
+- **caption**: 1. Zeile = neuer Mini-Hook (nicht der Videotext). Danach 1–2 Sätze, dann dieselbe Kommentar-Frage. Bei 2–3 Folgen pro Tag zusätzlich: „Send this to someone who doesn't believe it.“ (Shares sind das stärkste Signal.) Max. 5 passende Hashtags.
 - Wichtige Wörter mit `*Sternchen*` markieren (werden gelb). Pro Szene höchstens 1–2 Markierungen.
 - `suche`: 2–3 kurze, **konkrete, sichtbare** englische Stock-Footage-Begriffe je Szene (Dinge, die man filmen kann: „submarine underwater“, „cia headquarters“, „old typewriter“, „radar screen“ – keine abstrakten Wörter wie „secret“, „mystery“, „truth“) (z. B. „old documents“, „dark corridor“, „military jet“). Keine Personennamen (Stockvideos zeigen keine echten Personen).
 
