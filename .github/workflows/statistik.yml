@@ -1,0 +1,13 @@
+name: Statistik
+on: workflow_dispatch
+jobs:
+  statistik:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_BUSINESS_ID: "1910359486633208"
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/statistik.py
