@@ -34,6 +34,7 @@ Messwerte (24.11.): Reels werden im Schnitt nur 10–14 s von 35 s geschaut, Lik
 - Je Szene 1–2 Fotos: `"archiv": [{"datei": "File:Soviet b-59 submarine.jpg", "hinweis": "The real B-59"}], "nur_archiv": true`
 - `hinweis` (max. 26 Zeichen) muss stimmen: „Real photo, 1962“ nur beim echten Ereignis, sonst „Archive: …“, „Replica“, „Painting, 1861“.
 - Auf Folgenebene `"klang": "voll"` setzen. Mit Archivfotos endet die caption auf: `AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).`
+- Echte Filmclips: vorhandene Dateien aus `archiv/` nutzen mit `{"film": "archiv/redwing_boom.mp4", "hinweis": "Nuclear test film, 1956"}` (redwing_* = US-Atomtest 1956, ice_* = Camp Century, cuba_* = Wochenschau Okt. 1962, berlin_map = geteiltes Berlin). Nur wenn es inhaltlich passt; keine neuen Filme hochladen.
 - `suche` bleibt in jeder Szene Pflicht (Ersatz, falls ein Foto nicht lädt).
 
 ## Dateiformat

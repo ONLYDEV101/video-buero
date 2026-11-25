@@ -12,8 +12,8 @@
       ],
       "archiv": [
         {
-          "datei": "File:Camp Century trench construction.png",
-          "hinweis": "Camp Century, 1960"
+          "film": "archiv/ice_trench.mp4",
+          "hinweis": "Real Army film"
         }
       ],
       "nur_archiv": true
@@ -23,7 +23,14 @@
       "suche": [
         "ice tunnel",
         "snow storm"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/ice_map.mp4",
+          "hinweis": "Real Army film"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The cover story: a *science base* called Camp Century.",
@@ -58,14 +65,28 @@
       "suche": [
         "underground tunnel",
         "missile silo"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/ice_arch.mp4",
+          "hinweis": "Real Army film"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Danish officials were *not told* about the missile plan.",
       "suche": [
         "government building",
         "closed door"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/ice_crawler.mp4",
+          "hinweis": "Real Army film"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The ice sheet kept *moving,* and the tunnels didn't hold.",
@@ -96,7 +117,7 @@
       ]
     }
   ],
-  "caption": "The U.S. hid a nuclear missile plan under a 'science base' in Greenland. Would you have trusted your ally with this? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
+  "caption": "The U.S. hid a nuclear missile plan under a 'science base' in Greenland. Would you have trusted your ally with this? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons & Archive.org (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#greenland",

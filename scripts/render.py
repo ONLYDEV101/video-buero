@@ -209,16 +209,16 @@ def archivfoto(titel, ziel):
         return False
 
 
-def foto_einstellung(nr, sek, foto, tmp):
+def foto_einstellung(nr, sek, foto, tmp, film=False):
     """Foto als Abzug mit hellem Rand und langsamer Fahrt, dahinter unscharf dasselbe Bild."""
     ziel = os.path.join(tmp, f"e{nr}.mp4")
     zoom = f"(1+0.09*t/{sek:.3f})" if nr % 2 else f"(1.09-0.09*t/{sek:.3f})"
-    filt = (f"[0:v]format=yuv420p,split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=28:2,"
+    filt = (f"[0:v]fps={FPS}{',tpad=stop_mode=clone:stop_duration=10' if film else ''},format=yuv420p,split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=28:2,"
             f"eq=brightness=-0.22:saturation=0.45:contrast=1.1,setsar=1[h];"
             f"[b]scale=900:700:force_original_aspect_ratio=decrease,eq=contrast=1.1,pad=iw+28:ih+28:14:14:0xE9E4D6,"
             f"scale=w='trunc(iw*{zoom}/2)*2':h='trunc(ih*{zoom}/2)*2':eval=frame:flags=bicubic[f];"
             f"[h][f]overlay=x='(W-w)/2':y='730-h/2',vignette=PI/5,noise=alls=5:allf=t,fps={FPS},format=yuv420p[v]")
-    run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-i", foto, "-filter_complex", filt, "-map", "[v]", "-t", f"{sek:.3f}",
+    run(["ffmpeg", "-y"] + ([] if film else ["-loop", "1", "-framerate", str(FPS)]) + ["-i", foto, "-filter_complex", filt, "-map", "[v]", "-t", f"{sek:.3f}",
          "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-r", str(FPS), ziel])
     return ziel
 
@@ -368,8 +368,9 @@ def episode(pfad):
                 folge = anfragen[j % len(anfragen):] + anfragen[:j % len(anfragen)]
                 archiv = sz.get("archiv") or []
                 foto = os.path.join(tmp, f"foto{nr}.img")
-                if j < len(archiv) and archivfoto(archiv[j]["datei"], foto):
-                    datei, echt = foto_einstellung(nr, laenge / n + UEBER, foto, tmp), False
+                film = bool(j < len(archiv) and archiv[j].get("film") and os.path.exists(archiv[j]["film"]))
+                if film or (j < len(archiv) and archiv[j].get("datei") and archivfoto(archiv[j]["datei"], foto)):
+                    datei, echt = foto_einstellung(nr, laenge / n + UEBER, archiv[j]["film"] if film else foto, tmp, film), False
                     beginn = sum(x[1] for x in teile)
                     fotos.append((beginn, beginn + laenge / n, archiv[j].get("hinweis", "Archive photo")))
                 else:

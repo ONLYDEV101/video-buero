@@ -26,6 +26,10 @@
       ],
       "archiv": [
         {
+          "film": "archiv/cuba_fleet.mp4",
+          "hinweis": "Real newsreel, Oct 1962"
+        },
+        {
           "datei": "File:USS Charles P. Cecil (DDR-835) underway c1962.jpg",
           "hinweis": "Archive, c. 1962"
         }
@@ -51,7 +55,14 @@
       "suche": [
         "military officers",
         "control panel"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/cuba_ships.mp4",
+          "hinweis": "Real newsreel, Oct 1962"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Two reportedly *leaned toward* firing.",
@@ -96,7 +107,7 @@
       "nur_archiv": true
     }
   ],
-  "caption": "In 1962 one Soviet officer refused to fire a nuclear torpedo. Would you have had the nerve to say no? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
+  "caption": "In 1962 one Soviet officer refused to fire a nuclear torpedo. Would you have had the nerve to say no? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons & Archive.org (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#cubanmissilecrisis",

@@ -16,8 +16,8 @@
           "hinweis": "Real photo: NASA"
         },
         {
-          "datei": "File:HardtackOak.JPG",
-          "hinweis": "Real test, 1958"
+          "film": "archiv/redwing_boom.mp4",
+          "hinweis": "Nuclear test film, 1956"
         }
       ],
       "nur_archiv": true
@@ -27,7 +27,14 @@
       "suche": [
         "old documents",
         "classified folder"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/redwing_device.mp4",
+          "hinweis": "Nuclear test film, 1956"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Sputnik had shocked America. Washington wanted to *show strength.*",
@@ -48,13 +55,20 @@
       "suche": [
         "typewriter",
         "old report"
-      ]
+      ],
+      "archiv": [
+        {
+          "film": "archiv/redwing_big.mp4",
+          "hinweis": "Nuclear test film, 1956"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "A scientist named Leonard Reiffel led the study.",
       "suche": [
-        "scientist laboratory",
-        "chalkboard equations"
+        "laboratory vintage",
+        "telescope observatory"
       ]
     },
     {
@@ -64,6 +78,10 @@
         "night sky"
       ],
       "archiv": [
+        {
+          "film": "archiv/redwing_rocket.mp4",
+          "hinweis": "Nuclear test film, 1956"
+        },
         {
           "datei": "File:Operation Hardtack I, NNSA-NSO-1076.jpg",
           "hinweis": "Archive: nuclear test"
@@ -76,24 +94,38 @@
       "suche": [
         "rocket launch",
         "moon craters"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Full moon.jpeg",
+          "hinweis": "Real photo: NASA"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Reiffel revealed it in *2000.* He said he was horrified.",
       "suche": [
         "old documents",
         "press conference"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:HardtackOak.JPG",
+          "hinweis": "Real test, 1958"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Genius or madness? *Follow* for the next Cold War file.",
       "suche": [
-        "full moon",
-        "radar screen"
+        "moon surface",
+        "full moon night"
       ]
     }
   ],
-  "caption": "The U.S. once studied detonating a nuclear bomb on the Moon to impress the world. It never happened. Was it genius or madness? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
+  "caption": "The U.S. once studied detonating a nuclear bomb on the Moon to impress the world. It never happened. Was it genius or madness? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons & Archive.org (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#projecta119",
