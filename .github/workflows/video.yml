@@ -14,6 +14,10 @@ on:
         description: "Auf Instagram posten?"
         type: boolean
         default: false
+      youtube:
+        description: "Nur auf YouTube hochladen (ohne Instagram)?"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -112,7 +116,7 @@ jobs:
         run: python scripts/post_instagram.py out/*.mp4
 
       - name: Auf YouTube (Shorts) posten
-        if: steps.post.outcome == 'success' && env.YT_REFRESH_TOKEN != ''
+        if: (steps.post.outcome == 'success' || github.event.inputs.youtube == 'true') && env.YT_REFRESH_TOKEN != ''
         continue-on-error: true
         run: python scripts/post_youtube.py out/*.mp4
 
