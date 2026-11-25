@@ -11,6 +11,9 @@ on:
         type: choice
         options: [entwurf, oeffentlich]
         default: entwurf
+      zeit:
+        description: "UTC-Zeitpunkt, z. B. 2026-11-25T12:00:00Z (leer = sofort)"
+        required: false
 permissions:
   contents: read
   actions: read
@@ -22,6 +25,7 @@ jobs:
       ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
       TIKTOK_ACCOUNT_ID: 6b064d9ed64beccc742452ae
       TIKTOK_MODUS: ${{ inputs.modus }}
+      TIKTOK_ZEIT: ${{ inputs.zeit }}
       TIKTOK_ZUSTIMMUNG: "ja"   # gilt für den von Hand gestarteten Entwurf
     steps:
       - uses: actions/checkout@v4

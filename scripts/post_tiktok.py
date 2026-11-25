@@ -8,7 +8,7 @@ TIKTOK_ACCOUNT_ID  Zernio-Konto-ID
 TIKTOK_MODUS       entwurf (Standard: landet im TikTok-Posteingang, Veröffentlichen per Hand in der App) | oeffentlich
 TIKTOK_ZUSTIMMUNG  "ja" nur, wenn der Kontoinhaber dem Posten zugestimmt hat (TikTok verlangt Vorschau + Zustimmung).
 """
-import json, os, sys, urllib.error, urllib.request
+import json, os, re, sys, urllib.error, urllib.request
 
 API = "https://zernio.com/api/v1"
 
@@ -35,11 +35,14 @@ def posten(video):
         einst["video_made_with_ai"] = True  # KI-Label (Stimme ist KI)
     else:
         einst["draft"] = True
+    zeit = os.environ.get("TIKTOK_ZEIT", "").strip()      # z. B. 2026-11-25T12:00:00Z (leer = sofort)
+    wann = {"scheduledFor": zeit, "timezone": "UTC"} if zeit else {"publishNow": True}
+    caption = re.sub(r"\s*#reels", "", caption)
     r = anfrage("/posts", {"content": caption[:2200], "mediaItems": [{"type": "video", "url": p["publicUrl"]}],
                            "platforms": [{"platform": "tiktok", "accountId": os.environ["TIKTOK_ACCOUNT_ID"]}],
-                           "tiktokSettings": einst, "publishNow": True})
+                           "tiktokSettings": einst, **wann})
     post = r.get("post", r)
-    print("TikTok:", post.get("_id"), post.get("status"), [x.get("status") for x in post.get("platforms", [])])
+    print("TikTok:", post.get("_id"), post.get("status"), post.get("scheduledFor"), [x.get("status") for x in post.get("platforms", [])])
 
 
 if __name__ == "__main__":
