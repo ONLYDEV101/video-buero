@@ -27,7 +27,34 @@ def run(cmd, **kw):
     return r
 
 
+# Edge-Neuralstimmen (STIMMEN_ENGINE=edge). Fällt bei Fehlern automatisch auf Piper zurück.
+EDGE = {
+    "ronny": {"stimme": "de-DE-ChristophNeural", "rate": "-6%", "pitch": "-14Hz", "filter": "lowpass=f=6500,acompressor=threshold=-20dB:ratio=3"},
+    "mandy": {"stimme": "de-DE-TanjaNeural", "rate": "+10%", "pitch": "+22Hz", "filter": ""},
+    "kevin": {"stimme": "de-DE-ChristophNeural", "rate": "+8%", "pitch": "+60Hz", "filter": ""},
+    "erzaehler": {"stimme": "de-DE-ChristophNeural", "rate": "+0%", "pitch": "+0Hz", "filter": ""},
+}
+ENGINE = os.environ.get("STIMMEN_ENGINE", "piper")
+
+
+def sprich_edge(text, fig, stimmung, ziel):
+    e = EDGE[fig]
+    rate = e["rate"]
+    if stimmung == "angry": rate = f"{int(rate.rstrip('%')) + 8:+d}%"
+    if stimmung == "drunk": rate = f"{int(rate.rstrip('%')) - 10:+d}%"
+    mp3 = ziel + ".mp3"
+    run([sys.executable, "-m", "edge_tts", "--voice", e["stimme"], f"--rate={rate}", f"--pitch={e['pitch']}", "--text", text, "--write-media", mp3], timeout=120)
+    filt = ",".join(x for x in [e["filter"], "highpass=f=70", "loudnorm=I=-16:TP=-1.5"] if x)
+    run(["ffmpeg", "-y", "-loglevel", "error", "-i", mp3, "-af", filt, "-ac", "1", "-ar", str(RATE), ziel])
+    os.remove(mp3)
+
+
 def sprich(text, fig, stimmung, ziel):
+    if ENGINE == "edge":
+        try:
+            return sprich_edge(text, fig, stimmung, ziel)
+        except Exception as ex:
+            print("Edge-TTS fehlgeschlagen, nehme Piper:", str(ex)[:200])
     cfg = FIGUREN[fig]
     modell = os.path.join(STIMMEN, cfg["modell"] + ".onnx")
     roh = ziel + ".roh.wav"
