@@ -32,6 +32,9 @@ jobs:
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       IG_BUSINESS_ID: "1910359486633208"
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
       STORIES: auto                      # Storys nur zu jedem zweiten Reel
     steps:
       - uses: actions/checkout@v4
@@ -107,6 +110,11 @@ jobs:
         id: post
         if: steps.ep.outputs.liste != '' && env.IG_TOKEN != '' && (steps.ep.outputs.modus == 'warteschlange' || vars.AUTO_POST == 'true' || github.event.inputs.posten == 'true')
         run: python scripts/post_instagram.py out/*.mp4
+
+      - name: Auf YouTube (Shorts) posten
+        if: steps.post.outcome == 'success' && env.YT_REFRESH_TOKEN != ''
+        continue-on-error: true
+        run: python scripts/post_youtube.py out/*.mp4
 
       - name: Folge als gepostet ablegen
         if: steps.post.outcome == 'success' && steps.ep.outputs.modus == 'warteschlange'
