@@ -23,7 +23,18 @@
       "suche": [
         "jungle aerial",
         "airplane clouds"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:HoCMT.png",
+          "hinweis": "The trail"
+        },
+        {
+          "datei": "File:The Ho Chi Minh Trail.jpg",
+          "hinweis": "Real photo: the trail"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The goal: *longer monsoon* and muddy, blocked roads.",
@@ -58,7 +69,14 @@
       "suche": [
         "old letter",
         "government office"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Secretary of Defense Melvin Laird in 1970.jpg",
+          "hinweis": "Laird, Senate, 1970"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Did it work? Scientists *still argue.* Should weather ever be a weapon?",
@@ -68,7 +86,7 @@
       ]
     }
   ],
-  "caption": "The U.S. secretly ran a weather-modification war program, then denied it. Should weather ever be a weapon? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "The U.S. secretly ran a weather-modification war program, then denied it. Should weather ever be a weapon? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#declassified",
     "#vietnamwar",
@@ -81,5 +99,6 @@
     "Nature, 249, 402 (1974), report on the hearings",
     "Pentagon Papers (1971), mention of weather modification"
   ],
-  "story_frage": "The U.S. once seeded clouds over Vietnam to extend the monsoon."
+  "story_frage": "The U.S. once seeded clouds over Vietnam to extend the monsoon.",
+  "klang": "voll"
 }

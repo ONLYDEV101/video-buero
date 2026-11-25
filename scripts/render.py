@@ -183,6 +183,46 @@ def einstellung(nr, sek, anfragen, px, tmp, zufall, blitz=False):
     return ziel, bool(lang)
 
 
+# ------------------------------------------------------------------ Archivfotos (Wikimedia Commons)
+def archivfoto(titel, ziel):
+    """Lädt ein von Hand ausgesuchtes Commons-Foto. Nur gemeinfrei/CC0, sonst False."""
+    try:
+        kopf = {"User-Agent": "video-buero/2 (automated video tool)"}
+        def abfrage(breite):
+            url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({
+                "action": "query", "format": "json", "titles": titel, "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": breite})
+            seiten = json.load(urllib.request.urlopen(urllib.request.Request(url, headers=kopf), timeout=30))["query"]["pages"]
+            return next(iter(seiten.values()))["imageinfo"][0]
+        info = abfrage(1920)
+        if info["width"] <= 1920:      # Wikimedia möchte Vorschaubilder in Standardgrößen statt Originale
+            info = abfrage(max([b for b in (500, 960, 1280) if b < info["width"]] or [330]))
+        lizenz = info["extmetadata"].get("LicenseShortName", {}).get("value", "")
+        if not re.match(r"(public domain|cc0|pd\b)", lizenz.strip().lower()):
+            print(f"  Archivfoto abgelehnt ({lizenz}): {titel}")
+            return False
+        with urllib.request.urlopen(urllib.request.Request(info.get("thumburl") or info["url"], headers=kopf), timeout=60) as r, open(ziel, "wb") as f:
+            shutil.copyfileobj(r, f)
+        print(f"  Archivfoto: {titel} ({lizenz})")
+        return True
+    except Exception as e:
+        print(f"  Archivfoto ging nicht: {titel}: {str(e)[:200]}")
+        return False
+
+
+def foto_einstellung(nr, sek, foto, tmp):
+    """Foto als Abzug mit hellem Rand und langsamer Fahrt, dahinter unscharf dasselbe Bild."""
+    ziel = os.path.join(tmp, f"e{nr}.mp4")
+    zoom = f"(1+0.09*t/{sek:.3f})" if nr % 2 else f"(1.09-0.09*t/{sek:.3f})"
+    filt = (f"[0:v]format=yuv420p,split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=28:2,"
+            f"eq=brightness=-0.22:saturation=0.45:contrast=1.1,setsar=1[h];"
+            f"[b]scale=900:700:force_original_aspect_ratio=decrease,eq=contrast=1.1,pad=iw+28:ih+28:14:14:0xE9E4D6,"
+            f"scale=w='trunc(iw*{zoom}/2)*2':h='trunc(ih*{zoom}/2)*2':eval=frame:flags=bicubic[f];"
+            f"[h][f]overlay=x='(W-w)/2':y='730-h/2',vignette=PI/5,noise=alls=5:allf=t,fps={FPS},format=yuv420p[v]")
+    run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-i", foto, "-filter_complex", filt, "-map", "[v]", "-t", f"{sek:.3f}",
+         "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-r", str(FPS), ziel])
+    return ziel
+
+
 # ------------------------------------------------------------------ Untertitel
 def zeit(s):
     return f"{int(s // 3600)}:{int(s % 3600 // 60):02d}:{s % 60:05.2f}"
@@ -212,7 +252,7 @@ def ass_text(woerter):
     return " ".join(aus)
 
 
-def untertitel(szenen, gesamt, label, ziel, titel=""):
+def untertitel(szenen, gesamt, label, ziel, titel="", fotos=()):
     zeilen = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0",
               "ScaledBorderAndShadow: yes", "", "[V4+ Styles]",
               "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, "
@@ -221,6 +261,7 @@ def untertitel(szenen, gesamt, label, ziel, titel=""):
               "Style: Label,Anton,62,&H00FFFFFF,&H00FFFFFF,&H001A1AD8,&H00000000,0,0,0,0,100,100,3,0,3,16,0,8,40,40,0,1",
               "Style: Stamp,Anton,150,&H002020E0,&H00FFFFFF,&H002020E0,&H00000000,0,0,0,0,100,100,6,0,1,9,0,5,40,40,0,1",
               "Style: Hook,Anton,104,&H0000E5FF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,9,4,8,60,60,0,1",
+              "Style: Foto,Anton,50,&H00000000,&H00FFFFFF,&H0000E5FF,&H00000000,0,0,0,0,100,100,3,0,3,12,0,5,40,40,0,1",
               "Style: CTA,Anton,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,5,3,5,40,40,0,1",
               "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     if label:
@@ -228,6 +269,9 @@ def untertitel(szenen, gesamt, label, ziel, titel=""):
     if titel and len(szenen) > 1:   # Hook-Titel gross in den ersten Sekunden (Stopp-Moment beim Scrollen)
         ende = min(szenen[1][0], 3.0)
         zeilen.append(f"Dialogue: 3,{zeit(0)},{zeit(ende)},Hook,,0,0,0,,{{\\an8\\pos(540,250)\\fscx130\\fscy130\\t(0,160,\\fscx100\\fscy100)\\fad(0,200)}}{sauber(titel).upper()}")
+    for a, e, hinweis in fotos:
+        if hinweis:
+            zeilen.append(f"Dialogue: 2,{zeit(a + 0.2)},{zeit(e)},Foto,,0,0,0,,{{\\an5\\pos(540,1035)\\fad(120,80)}}{hinweis.upper()}")
     stempel = False
     for nr, (start, sprech, text) in enumerate(szenen):
         roh = sauber(text).lower()
@@ -254,7 +298,7 @@ def untertitel(szenen, gesamt, label, ziel, titel=""):
 
 
 # ------------------------------------------------------------------ Ton
-def klangteppich(gesamt, schlaege, ziel):
+def klangteppich(gesamt, schlaege, ziel, klicks=(), wischer=()):
     d = f"{gesamt:.3f}"
     eingaenge = ["-f", "lavfi", "-i", f"anoisesrc=c=brown:a=0.6:d={d}:r=44100",
                  "-f", "lavfi", "-i", f"sine=f=55:d={d}:r=44100",
@@ -267,6 +311,18 @@ def klangteppich(gesamt, schlaege, ziel):
         ms = int(s * 1000)
         filt.append(f"[{4 + i}]afade=t=out:st=0.02:d=1.35,volume=1.6,adelay={ms}|{ms}[h{i}]")
         mix.append(f"[h{i}]")
+    for art, zeiten in (("klick", klicks), ("wisch", wischer)):
+        for s in zeiten:
+            k = len(eingaenge) // 4
+            ms = max(0, int((s - (0.18 if art == "wisch" else 0)) * 1000))
+            if art == "klick":      # Kamera-Auslöser: zwei kurze Knackser
+                eingaenge += ["-f", "lavfi", "-i", "anoisesrc=c=white:a=0.9:d=0.16:r=44100"]
+                form = "asetnsamples=128,highpass=f=1800,volume='if(lt(t,0.018),1,if(between(t,0.085,0.11),0.8,0))':eval=frame,volume=2.2"
+            else:                   # Wischer beim Szenenwechsel
+                eingaenge += ["-f", "lavfi", "-i", "anoisesrc=c=pink:a=0.9:d=0.45:r=44100"]
+                form = "bandpass=f=1400:width_type=h:w=1800,afade=t=in:d=0.2,afade=t=out:st=0.2:d=0.25,volume=1.1"
+            filt.append(f"[{k}]{form},adelay={ms}|{ms}[k{k}]")
+            mix.append(f"[k{k}]")
     filt.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0,afade=t=in:d=0.4,afade=t=out:st={max(0, gesamt - 0.8):.2f}:d=0.8,volume=0.5[m]")
     run(["ffmpeg", "-y", *eingaenge, "-filter_complex", ";".join(filt), "-map", "[m]", "-ac", "2", "-t", d, ziel])
 
@@ -300,15 +356,24 @@ def episode(pfad):
         f += "".join(f"[a{i}]" for i in range(len(wavs))) + f"concat=n={len(wavs)}:v=0:a=1,apad=whole_dur={gesamt:.3f}[s]"
         run(["ffmpeg", "-y", *ein, "-filter_complex", f, "-map", "[s]", "-ac", "2", stimme_wav])
         # 3) Bilder: mehrere Einstellungen je Szene
-        teile, nr, pex = [], 0, 0
+        teile, nr, pex, fotos = [], 0, 0, []
         for i, sz in enumerate(ep["szenen"]):
             anfragen = sz.get("suche") or ep.get("suche_standard") or ["dark night"]
             anfragen = [anfragen] if isinstance(anfragen, str) else list(anfragen)
             laenge = laengen[i] + (0.4 if i == len(ep["szenen"]) - 1 else 0)
             n = max(1, math.ceil(laenge / SCHNITT))
+            if sz.get("nur_archiv") and sz.get("archiv"):   # Szene nur mit Archivfotos, keine Stockclips
+                n = len(sz["archiv"])
             for j in range(n):
                 folge = anfragen[j % len(anfragen):] + anfragen[:j % len(anfragen)]
-                datei, echt = einstellung(nr, laenge / n + UEBER, folge, px, tmp, zufall, blitz=(j == 0 and i > 0))
+                archiv = sz.get("archiv") or []
+                foto = os.path.join(tmp, f"foto{nr}.img")
+                if j < len(archiv) and archivfoto(archiv[j]["datei"], foto):
+                    datei, echt = foto_einstellung(nr, laenge / n + UEBER, foto, tmp), False
+                    beginn = sum(x[1] for x in teile)
+                    fotos.append((beginn, beginn + laenge / n, archiv[j].get("hinweis", "Archive photo")))
+                else:
+                    datei, echt = einstellung(nr, laenge / n + UEBER, folge, px, tmp, zufall, blitz=(j == 0 and i > 0))
                 teile.append((datei, laenge / n, j == 0 and i > 0)); nr += 1; pex += echt
         # weiche Übergänge: Überblenden innerhalb einer Szene, Weißblitz beim Szenenwechsel
         ein = sum([["-i", os.path.basename(d)] for d, _, _ in teile], [])
@@ -322,10 +387,12 @@ def episode(pfad):
             f, vorher = "[0:v]null[x0]", "[x0]"
         run(["ffmpeg", "-y", *ein, "-filter_complex", f.rstrip(";"), "-map", vorher, "-an", "-c:v", "libx264", "-preset", "veryfast",
              "-crf", "19", "-pix_fmt", "yuv420p", "-r", str(FPS), "bild.mp4"], cwd=tmp)
-        print(f"  {nr} Einstellungen, davon {pex} echte Clips (Pexels/Pixabay)")
+        print(f"  {nr} Einstellungen, davon {pex} Stockclips und {len(fotos)} Archivfotos")
         # 4) Untertitel + Klang
-        untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"), ep.get("titel", ""))
-        klangteppich(gesamt, [z[0] for z in zeitplan], os.path.join(tmp, "musik.wav"))
+        untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"), ep.get("titel", ""), fotos)
+        wechsel = [z[0] for z in zeitplan]
+        klangteppich(gesamt, wechsel, os.path.join(tmp, "musik.wav"), [x[0] for x in fotos],
+                     wechsel[1:] if ep.get("klang") == "voll" else [])
         # 5) Alles zusammen
         ziel = os.path.join(OUT, f"{eid}.mp4")
         filt = (f"[0:v][3:v]overlay=x='-W+W*t/{gesamt:.3f}':y=0,subtitles=caps.ass:fontsdir=fonts[v];"

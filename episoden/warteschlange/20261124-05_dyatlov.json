@@ -23,7 +23,14 @@
       "suche": [
         "torn tent",
         "snow campsite"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Dyatlov Pass incident 02.jpg",
+          "hinweis": "The real tent, 1959"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "They fled into freezing cold, many *barely dressed.*",
@@ -37,14 +44,28 @@
       "suche": [
         "frozen forest",
         "dark night snow"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Dyatlov.Volume 1.Page 301.jpg",
+          "hinweis": "Real case file"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Theories ranged from secret tests to *aliens.* None proven.",
       "suche": [
         "night sky",
         "old documents"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Dyatlov.Volume 1.Page 1.jpg",
+          "hinweis": "Real case file"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "In 2021, scientists modeled a rare *slab avalanche.*",
@@ -68,7 +89,7 @@
       ]
     }
   ],
-  "caption": "Nine experienced hikers died in 1959 after fleeing their tent. A 2021 study says an avalanche is plausible, but no one survived to tell. What's your theory? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "Nine experienced hikers died in 1959 after fleeing their tent. A 2021 study says an avalanche is plausible, but no one survived to tell. What's your theory? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#unsolvedmystery",
     "#dyatlovpass",
@@ -84,5 +105,6 @@
     "Follow-up paper, Communications Earth & Environment, 2022",
     "Live Science coverage of the 2021 study"
   ],
-  "story_frage": "Nine hikers died in 1959 and the case is still debated."
+  "story_frage": "Nine hikers died in 1959 and the case is still debated.",
+  "klang": "voll"
 }

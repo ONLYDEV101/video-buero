@@ -9,7 +9,14 @@
       "suche": [
         "san francisco bay",
         "navy ship"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Lockheed P2V-4 Neptune in flight 1950.JPG",
+          "hinweis": "San Francisco, 1950"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Nobody was told. Residents were *test subjects.*",
@@ -23,14 +30,28 @@
       "suche": [
         "microscope",
         "laboratory"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Serratia marcescens 01.jpg",
+          "hinweis": "Serratia marcescens"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It was called *Operation Sea-Spray.*",
       "suche": [
         "ship at sea",
         "fog over bay"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:USS Fitch (DMS-25) underway c1950s.jpg",
+          "hinweis": "Archive: Navy ship, 1950s"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Days later, patients at a Stanford hospital got *sick.*",
@@ -68,7 +89,7 @@
       ]
     }
   ],
-  "caption": "In 1950, the U.S. Navy secretly sprayed bacteria over San Francisco. It surfaced decades later. Should citizens always be told first? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "In 1950, the U.S. Navy secretly sprayed bacteria over San Francisco. It surfaced decades later. Should citizens always be told first? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#conspiracy",
     "#declassified",
@@ -84,5 +105,6 @@
     "Smithsonian Magazine, 'When the U.S. Army Secretly Tested Biological Weapons in San Francisco'",
     "Discover Magazine, 'Blood and Fog'"
   ],
-  "story_frage": "The Navy secretly sprayed bacteria over San Francisco."
+  "story_frage": "The Navy secretly sprayed bacteria over San Francisco.",
+  "klang": "voll"
 }

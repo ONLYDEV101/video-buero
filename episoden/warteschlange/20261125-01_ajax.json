@@ -9,7 +9,14 @@
       "suche": [
         "old documents",
         "tehran city"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Mossadegh-truman.jpg",
+          "hinweis": "Real photo, 1951"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The plan had a code name: *Operation TPAJAX.*",
@@ -30,14 +37,32 @@
       "suche": [
         "government building",
         "crowd street"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Prime Minister Mohammad Mossadegh of Iran addressing the United Nations Security Council.jpg",
+          "hinweis": "Mossadegh, 1951"
+        },
+        {
+          "datei": "File:Photograph of President Truman and the Shah of Iran in the Oval Office. - NARA - 200149.jpg",
+          "hinweis": "The Shah, 1949"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "For decades, the U.S. role stayed *officially secret.*",
       "suche": [
         "file cabinet",
         "dark corridor"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Photograph of President Truman, the Shah of Iran, Secretary of State Dean Acheson, and other dignitaries standing at... - NARA - 200144.jpg",
+          "hinweis": "The Shah, 1949"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Early document releases had CIA parts *blacked out.*",
@@ -51,7 +76,14 @@
       "suche": [
         "library archive",
         "computer screen"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Aerial view of CIA headquarters, Langley, Virginia 14271v.jpg",
+          "hinweis": "CIA headquarters"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The CIA now calls the coup *undemocratic.*",
@@ -68,7 +100,7 @@
       ]
     }
   ],
-  "caption": "A government hid its role in a coup for 60 years. Then the files came out. What other secrets do you think are still sealed? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "A government hid its role in a coup for 60 years. Then the files came out. What other secrets do you think are still sealed? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#declassified",
     "#cia",
@@ -81,5 +113,6 @@
     "NPR, 'CIA's Acknowledgment Of Iran Coup Role' (2013)",
     "NBC News, CIA acknowledges 1953 coup was undemocratic (2023)"
   ],
-  "story_frage": "The CIA once admitted it helped overthrow Iran's leader in 1953."
+  "story_frage": "The CIA once admitted it helped overthrow Iran's leader in 1953.",
+  "klang": "voll"
 }

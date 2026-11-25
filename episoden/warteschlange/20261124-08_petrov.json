@@ -23,7 +23,18 @@
       "suche": [
         "missile launch",
         "computer screen"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Minuteman II.jpg",
+          "hinweis": "Archive: U.S. missile"
+        },
+        {
+          "datei": "File:Minuteman II in silo 1980.jpg",
+          "hinweis": "Archive: U.S. silo, 1980"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Tensions were *sky-high.* Protocol meant reporting it upward.",
@@ -68,7 +79,7 @@
       ]
     }
   ],
-  "caption": "In 1983 a Soviet officer doubted a missile alert and called it a false alarm. It really was. Would you have trusted your gut? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "In 1983 a Soviet officer doubted a missile alert and called it a false alarm. It really was. Would you have trusted your gut? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#stanislavpetrov",
@@ -84,5 +95,6 @@
     "Britannica, 'Stanislav Petrov'",
     "Radio Free Europe/Radio Liberty, Soviet colonel averted nuclear war"
   ],
-  "story_frage": "A Soviet officer once ignored a nuclear alarm in 1983."
+  "story_frage": "A Soviet officer once ignored a nuclear alarm in 1983.",
+  "klang": "voll"
 }

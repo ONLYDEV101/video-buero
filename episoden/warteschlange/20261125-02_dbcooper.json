@@ -16,7 +16,14 @@
       "suche": [
         "airport terminal",
         "airplane ticket"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:July 2016 D.B. Cooper Plane Ticket (28379315406).jpg",
+          "hinweis": "The real ticket"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "He demanded *four parachutes* and cash in $20 bills.",
@@ -51,7 +58,14 @@
       "suche": [
         "river bank",
         "old money"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Money stolen by D. B. Cooper.jpg",
+          "hinweis": "The real money"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "In 2016, the FBI *ended* its active investigation.",
@@ -68,7 +82,7 @@
       ]
     }
   ],
-  "caption": "The only unsolved skyjacking in U.S. history. No name, no body, no proof. Did he survive that jump? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "The only unsolved skyjacking in U.S. history. No name, no body, no proof. Did he survive that jump? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#dbcooper",
     "#unsolved",
@@ -80,5 +94,6 @@
     "FBI, 'Update on Investigation of 1971 Hijacking by D.B. Cooper' (2016)",
     "NPR, 'FBI Is Giving Up On Solving The Mystery Of D.B. Cooper' (2016)"
   ],
-  "story_frage": "A hijacker jumped from a plane in 1971 and was never identified."
+  "story_frage": "A hijacker jumped from a plane in 1971 and was never identified.",
+  "klang": "voll"
 }

@@ -9,7 +9,14 @@
       "suche": [
         "greenland glacier",
         "arctic snow"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Camp Century trench construction.png",
+          "hinweis": "Camp Century, 1960"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It was called *Project Iceworm.*",
@@ -23,14 +30,28 @@
       "suche": [
         "arctic research station",
         "snowy landscape"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Camp Century layout plan.png",
+          "hinweis": "Camp Century plan"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Denmark was told it was for testing *construction* in the cold.",
       "suche": [
         "construction site snow",
         "meeting room"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:PM2Anuclearpowerplant.jpg",
+          "hinweis": "Archive: reactor site"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The plan: about *60 launch centers* and miles of tunnels.",
@@ -51,7 +72,14 @@
       "suche": [
         "glacier ice",
         "ice crack"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Camp Century trench deformation.png",
+          "hinweis": "Army tunnel measurements"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The project was dropped in the *1960s.* Danish documents revealed it in 1997.",
@@ -68,7 +96,7 @@
       ]
     }
   ],
-  "caption": "The U.S. hid a nuclear missile plan under a 'science base' in Greenland. Would you have trusted your ally with this? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "The U.S. hid a nuclear missile plan under a 'science base' in Greenland. Would you have trusted your ally with this? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#greenland",
@@ -81,5 +109,6 @@
     "HISTORY.com, 'Project Iceworm'",
     "Atomic Heritage Foundation, 'Camp Century'"
   ],
-  "story_frage": "The U.S. once planned nuclear missiles under Greenland's ice."
+  "story_frage": "The U.S. once planned nuclear missiles under Greenland's ice.",
+  "klang": "voll"
 }

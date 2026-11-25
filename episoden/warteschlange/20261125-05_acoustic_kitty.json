@@ -16,7 +16,14 @@
       "suche": [
         "old documents",
         "vintage laboratory"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Aerial view of CIA headquarters, Langley, Virginia 14760v.jpg",
+          "hinweis": "CIA headquarters"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Surgeons put a *microphone* in the cat's ear.",
@@ -68,7 +75,7 @@
       ]
     }
   ],
-  "caption": "The CIA really tried to build a spy cat. The files are public. What's the weirdest spy idea you can imagine? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "The CIA really tried to build a spy cat. The files are public. What's the weirdest spy idea you can imagine? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#cia",
     "#declassified",
@@ -81,5 +88,6 @@
     "HISTORY.com, 'The CIA's Spy Cat Espionage Fail'",
     "Time, 'That Time the CIA Tried to Train Cats to Be Spies'"
   ],
-  "story_frage": "The CIA once implanted a microphone in a cat to spy on the Soviets."
+  "story_frage": "The CIA once implanted a microphone in a cat to spy on the Soviets.",
+  "klang": "voll"
 }

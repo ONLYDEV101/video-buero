@@ -9,28 +9,56 @@
       "suche": [
         "wooden carving",
         "embassy office"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:NSA Great Seal bug.jpg",
+          "hinweis": "NSA archive photo"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "In 1945, Soviet schoolchildren gave it to ambassador Averell Harriman.",
       "suche": [
         "children school",
         "wooden plaque"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:116 Averell Harriman greets Soviet officer - USACE-p15141coll5-9476.jpeg",
+          "hinweis": "Archive: Harriman"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It was a carved wooden *Great Seal* of the United States.",
       "suche": [
         "eagle sculpture",
         "wood carving"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Great Seal bug - National Cryptologic Museum - DSC08048.JPG",
+          "hinweis": "Replica, NSA museum"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Inside was a tiny device with *no battery.*",
       "suche": [
         "microphone",
         "electronic circuit"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Great Seal bug - National Cryptologic Museum - DSC08049.JPG",
+          "hinweis": "Replica, NSA museum"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It only worked when Soviet radio beams *hit it.*",
@@ -44,7 +72,14 @@
       "suche": [
         "calendar pages",
         "old office"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Spaso House Exterior.JPG",
+          "hinweis": "Ambassador's residence today"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "In 1952, U.S. technicians finally *discovered* it.",
@@ -68,7 +103,7 @@
       ]
     }
   ],
-  "caption": "A wooden seal gifted by Soviet children bugged a U.S. ambassador's office for years, with no battery at all. Would you have spotted it? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "A wooden seal gifted by Soviet children bugged a U.S. ambassador's office for years, with no battery at all. Would you have spotted it? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#spy",
@@ -84,5 +119,6 @@
     "CIA, 'Compromise of the Great Seal'",
     "Crypto Museum, 'The Thing'"
   ],
-  "story_frage": "A Soviet gift bugged a U.S. embassy for seven years."
+  "story_frage": "A Soviet gift bugged a U.S. embassy for seven years.",
+  "klang": "voll"
 }
