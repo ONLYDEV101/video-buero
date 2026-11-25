@@ -358,6 +358,8 @@ def episode(pfad):
             anfragen = [anfragen] if isinstance(anfragen, str) else list(anfragen)
             laenge = laengen[i] + (0.4 if i == len(ep["szenen"]) - 1 else 0)
             n = max(1, math.ceil(laenge / SCHNITT))
+            if sz.get("nur_archiv") and sz.get("archiv"):   # Szene nur mit Archivfotos, keine Stockclips
+                n = len(sz["archiv"])
             for j in range(n):
                 folge = anfragen[j % len(anfragen):] + anfragen[:j % len(anfragen)]
                 archiv = sz.get("archiv") or []
