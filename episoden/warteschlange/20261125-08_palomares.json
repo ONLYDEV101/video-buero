@@ -1,0 +1,85 @@
+{
+  "id": "20261125-08_palomares",
+  "sprache": "en",
+  "label": "Cold War Files",
+  "titel": "They Lost A Hydrogen Bomb",
+  "szenen": [
+    {
+      "text": "In 1966, the U.S. *lost a hydrogen bomb* off Spain.",
+      "suche": [
+        "ocean surface",
+        "spain coast"
+      ]
+    },
+    {
+      "text": "January 17: a B-52 *collided* with a refueling tanker.",
+      "suche": [
+        "bomber airplane",
+        "airplane refueling"
+      ]
+    },
+    {
+      "text": "Both aircraft were *destroyed.* Seven airmen died.",
+      "suche": [
+        "burning wreckage",
+        "smoke sky"
+      ]
+    },
+    {
+      "text": "The bomber carried *four hydrogen bombs.*",
+      "suche": [
+        "military hangar",
+        "aircraft cargo"
+      ]
+    },
+    {
+      "text": "Three fell on land near *Palomares.* Two scattered plutonium.",
+      "suche": [
+        "farm field",
+        "hazmat suit"
+      ]
+    },
+    {
+      "text": "The fourth *vanished* into the Mediterranean.",
+      "suche": [
+        "sea waves",
+        "dark water"
+      ]
+    },
+    {
+      "text": "The Navy searched for *80 days.*",
+      "suche": [
+        "navy ship",
+        "sonar screen"
+      ]
+    },
+    {
+      "text": "The submersible *Alvin* found it nearly 3,000 feet down.",
+      "suche": [
+        "deep sea submersible",
+        "underwater"
+      ]
+    },
+    {
+      "text": "It was raised on *April 7.* How close was that to disaster? Follow for more.",
+      "suche": [
+        "navy ship crane",
+        "ocean sunrise"
+      ]
+    }
+  ],
+  "caption": "The U.S. lost four hydrogen bombs over Spain in 1966. Did we get lucky? What do you think? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#coldwar",
+    "#nuclear",
+    "#declassified",
+    "#history",
+    "#brokenarrow"
+  ],
+  "quellen": [
+    "Woods Hole Oceanographic Institution, 'The story of Little Alvin and the lost H-bomb'",
+    "Physics Today, 'Alvin finds lost hydrogen bomb'",
+    "Time, 'How the U.S. Lost—and Found—a Thermonuclear Weapon'"
+  ],
+  "story_frage": "The U.S. once lost a hydrogen bomb in the sea off Spain."
+}

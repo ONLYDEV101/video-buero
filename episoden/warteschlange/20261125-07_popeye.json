@@ -1,0 +1,85 @@
+{
+  "id": "20261125-07_popeye",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "They Weaponized The Rain",
+  "szenen": [
+    {
+      "text": "The U.S. military once tried to *make it rain* on its enemy.",
+      "suche": [
+        "rain clouds",
+        "monsoon rain"
+      ]
+    },
+    {
+      "text": "It was called *Operation Popeye,* from 1967 to 1972.",
+      "suche": [
+        "military aircraft",
+        "old documents"
+      ]
+    },
+    {
+      "text": "Aircraft seeded clouds over the *Ho Chi Minh Trail.*",
+      "suche": [
+        "jungle aerial",
+        "airplane clouds"
+      ]
+    },
+    {
+      "text": "The goal: *longer monsoon* and muddy, blocked roads.",
+      "suche": [
+        "muddy road",
+        "heavy rain"
+      ]
+    },
+    {
+      "text": "Officials publicly *denied* weather warfare.",
+      "suche": [
+        "press conference",
+        "microphones"
+      ]
+    },
+    {
+      "text": "Then it leaked. In 1974, a Senate hearing *exposed it.*",
+      "suche": [
+        "senate building",
+        "hearing room"
+      ]
+    },
+    {
+      "text": "Testimony: over *2,600 missions* were flown.",
+      "suche": [
+        "pilot cockpit",
+        "map table"
+      ]
+    },
+    {
+      "text": "A defense secretary's earlier statement was *later admitted false.*",
+      "suche": [
+        "old letter",
+        "government office"
+      ]
+    },
+    {
+      "text": "Did it work? Scientists *still argue.* Should weather ever be a weapon?",
+      "suche": [
+        "storm clouds",
+        "lightning"
+      ]
+    }
+  ],
+  "caption": "The U.S. secretly ran a weather-modification war program, then denied it. Should weather ever be a weapon? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#declassified",
+    "#vietnamwar",
+    "#history",
+    "#truestory",
+    "#conspiracy"
+  ],
+  "quellen": [
+    "U.S. Senate Subcommittee on Oceans and International Environment, hearing on weather modification (1974)",
+    "Nature, 249, 402 (1974), report on the hearings",
+    "Pentagon Papers (1971), mention of weather modification"
+  ],
+  "story_frage": "The U.S. once seeded clouds over Vietnam to extend the monsoon."
+}

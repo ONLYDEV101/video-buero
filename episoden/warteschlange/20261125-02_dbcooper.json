@@ -1,0 +1,84 @@
+{
+  "id": "20261125-02_dbcooper",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "He Jumped With $200,000",
+  "szenen": [
+    {
+      "text": "A hijacker *jumped* from a Boeing 727 with $200,000.",
+      "suche": [
+        "airplane in flight",
+        "night sky clouds"
+      ]
+    },
+    {
+      "text": "November 24, 1971. He gave the name *Dan Cooper.*",
+      "suche": [
+        "airport terminal",
+        "airplane ticket"
+      ]
+    },
+    {
+      "text": "He demanded *four parachutes* and cash in $20 bills.",
+      "suche": [
+        "parachute",
+        "cash money"
+      ]
+    },
+    {
+      "text": "In Seattle, he released *36 passengers.*",
+      "suche": [
+        "airport runway",
+        "airplane door"
+      ]
+    },
+    {
+      "text": "Then he took off again and *vanished* into the night.",
+      "suche": [
+        "airplane night",
+        "dark forest"
+      ]
+    },
+    {
+      "text": "The FBI never proved *who he was.*",
+      "suche": [
+        "fbi badge",
+        "detective board"
+      ]
+    },
+    {
+      "text": "In 1980, a few thousand dollars of the cash *turned up* by a river.",
+      "suche": [
+        "river bank",
+        "old money"
+      ]
+    },
+    {
+      "text": "In 2016, the FBI *ended* its active investigation.",
+      "suche": [
+        "old documents",
+        "office desk"
+      ]
+    },
+    {
+      "text": "Did he survive the jump? *Nobody knows.* What's your theory?",
+      "suche": [
+        "dark forest",
+        "parachute sky"
+      ]
+    }
+  ],
+  "caption": "The only unsolved skyjacking in U.S. history. No name, no body, no proof. Did he survive that jump? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#dbcooper",
+    "#unsolved",
+    "#mystery",
+    "#fbi",
+    "#truecrime"
+  ],
+  "quellen": [
+    "FBI, 'Update on Investigation of 1971 Hijacking by D.B. Cooper' (2016)",
+    "NPR, 'FBI Is Giving Up On Solving The Mystery Of D.B. Cooper' (2016)"
+  ],
+  "story_frage": "A hijacker jumped from a plane in 1971 and was never identified."
+}

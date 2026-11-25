@@ -1,0 +1,85 @@
+{
+  "id": "20261125-06_mary_celeste",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "The Ship With No One Aboard",
+  "szenen": [
+    {
+      "text": "In 1872, a ship was found *drifting* with nobody on board.",
+      "suche": [
+        "sailing ship ocean",
+        "foggy sea"
+      ]
+    },
+    {
+      "text": "It was the *Mary Celeste,* near the Azores.",
+      "suche": [
+        "old ship",
+        "atlantic ocean"
+      ]
+    },
+    {
+      "text": "Her cargo was *untouched.* Six months of food and water remained.",
+      "suche": [
+        "ship cargo",
+        "wooden barrels"
+      ]
+    },
+    {
+      "text": "But one *lifeboat* was missing.",
+      "suche": [
+        "lifeboat",
+        "rope knot"
+      ]
+    },
+    {
+      "text": "Ten people had sailed: the captain, his wife, *their daughter,* seven crew.",
+      "suche": [
+        "old photograph",
+        "ship deck"
+      ]
+    },
+    {
+      "text": "The ship was towed to *Gibraltar.* Inspectors found no proof of foul play.",
+      "suche": [
+        "harbor",
+        "old court room"
+      ]
+    },
+    {
+      "text": "Theories: *mutiny,* storms, panic. None proven.",
+      "suche": [
+        "stormy sea",
+        "dark clouds"
+      ]
+    },
+    {
+      "text": "Most likely, they left in the lifeboat and *were lost.*",
+      "suche": [
+        "small boat waves",
+        "open ocean"
+      ]
+    },
+    {
+      "text": "What really made them *abandon* a seaworthy ship? Your theory?",
+      "suche": [
+        "empty ship deck",
+        "sunset ocean"
+      ]
+    }
+  ],
+  "caption": "A seaworthy ship, a full cargo, and nobody aboard. 150 years later, no one knows why. What's your theory? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#maryceleste",
+    "#unsolved",
+    "#mystery",
+    "#history",
+    "#ocean"
+  ],
+  "quellen": [
+    "Britannica, 'Mary Celeste'",
+    "Smithsonian Magazine, Mary Celeste coverage",
+    "Royal Museums Greenwich, 'The mystery of the Mary Celeste'"
+  ],
+  "story_frage": "The Mary Celeste was found abandoned in 1872 with its cargo intact."
+}
