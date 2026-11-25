@@ -121,7 +121,7 @@ jobs:
         run: python scripts/post_youtube.py out/*.mp4
 
       - name: TikTok-Entwurf (höchstens 4 am Tag, nie öffentlich)
-        if: steps.post.outcome == 'success' && github.event_name == 'schedule' && steps.ep.outputs.modus == 'warteschlange'
+        if: vars.TIKTOK_AUTO == 'entwurf' && steps.post.outcome == 'success' && github.event_name == 'schedule' && steps.ep.outputs.modus == 'warteschlange'
         continue-on-error: true
         timeout-minutes: 10
         env:
