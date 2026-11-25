@@ -1,0 +1,120 @@
+{
+  "id": "TEST_palomares_archiv",
+  "sprache": "en",
+  "label": "Cold War Files",
+  "titel": "They Lost A Hydrogen Bomb",
+  "szenen": [
+    {
+      "text": "In 1966, the U.S. *lost a hydrogen bomb* off Spain.",
+      "suche": [
+        "ocean surface",
+        "spain coast"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Recovered Mk 28RI bomb.JPG",
+          "hinweis": "Real photo, 1966"
+        }
+      ]
+    },
+    {
+      "text": "January 17: a B-52 *collided* with a refueling tanker.",
+      "suche": [
+        "bomber airplane",
+        "airplane refueling"
+      ]
+    },
+    {
+      "text": "Both aircraft were *destroyed.* Seven airmen died.",
+      "suche": [
+        "burning wreckage",
+        "smoke sky"
+      ]
+    },
+    {
+      "text": "The bomber carried *four hydrogen bombs.*",
+      "suche": [
+        "military hangar",
+        "aircraft cargo"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Mark 28 Thermonuclear Bomb.jpg",
+          "hinweis": "Archive: Mk 28 bombs"
+        }
+      ]
+    },
+    {
+      "text": "Three fell on land near *Palomares.* Two scattered plutonium.",
+      "suche": [
+        "farm field",
+        "hazmat suit"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Palomares Bomb Casings.jpg",
+          "hinweis": "The real bomb casings"
+        }
+      ]
+    },
+    {
+      "text": "The fourth *vanished* into the Mediterranean.",
+      "suche": [
+        "sea waves",
+        "dark water"
+      ]
+    },
+    {
+      "text": "The Navy searched for *80 days.*",
+      "suche": [
+        "navy ship",
+        "sonar screen"
+      ]
+    },
+    {
+      "text": "The submersible *Alvin* found it nearly 3,000 feet down.",
+      "suche": [
+        "deep sea submersible",
+        "underwater"
+      ],
+      "archiv": [
+        {
+          "datei": "File:Alvin (DSV-2) aboard support ship Lulu 1966.jpg",
+          "hinweis": "Alvin, 1966"
+        }
+      ]
+    },
+    {
+      "text": "It was raised on *April 7.* How close was that to disaster? Follow for more.",
+      "suche": [
+        "navy ship crane",
+        "ocean sunrise"
+      ],
+      "archiv": [
+        {
+          "datei": "File:1966 Palomares B-52 crash - recovered H-bomb.jpg",
+          "hinweis": "Real photo, 1966"
+        },
+        {
+          "datei": "File:Recovered Mk 28RI bomb.JPG",
+          "hinweis": "Real photo, 1966"
+        }
+      ]
+    }
+  ],
+  "caption": "The U.S. lost four hydrogen bombs over Spain in 1966. Did we get lucky? What do you think? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive photos: U.S. government, public domain.",
+  "hashtags": [
+    "#coldwar",
+    "#nuclear",
+    "#declassified",
+    "#history",
+    "#brokenarrow"
+  ],
+  "quellen": [
+    "Woods Hole Oceanographic Institution, 'The story of Little Alvin and the lost H-bomb'",
+    "Physics Today, 'Alvin finds lost hydrogen bomb'",
+    "Time, 'How the U.S. Lost—and Found—a Thermonuclear Weapon'"
+  ],
+  "story_frage": "The U.S. once lost a hydrogen bomb in the sea off Spain.",
+  "klang": "voll"
+}
