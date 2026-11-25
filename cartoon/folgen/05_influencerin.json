@@ -1,0 +1,71 @@
+{
+  "id": "05_influencerin",
+  "titel": "Mandy wird Influencerin",
+  "ort": "balkon",
+  "figuren": [
+    "ronny",
+    "mandy",
+    "kevin"
+  ],
+  "zeilen": [
+    {
+      "wer": "mandy",
+      "text": "Ab heute bin ich Influencerin. Kevin, film mich!",
+      "aktion": "zeigt"
+    },
+    {
+      "wer": "kevin",
+      "text": "Mama, du hast elf Follower. Und acht davon sind Papa."
+    },
+    {
+      "wer": "ronny",
+      "text": "Ich hab mir Zweitaccounts gemacht. Für die Reichweite.",
+      "aktion": "trinkt"
+    },
+    {
+      "wer": "mandy",
+      "text": "Okay Leute, heute zeig ich euch meine Morgenroutine.",
+      "stimmung": "amused"
+    },
+    {
+      "wer": "kevin",
+      "text": "Es ist vier Uhr nachmittags."
+    },
+    {
+      "wer": "mandy",
+      "text": "Für eine Queen ist das Morgen!",
+      "aktion": "schreit"
+    },
+    {
+      "wer": "ronny",
+      "text": "Mandy, mach doch Werbung für Pfandflaschen. Da kenn ich mich aus.",
+      "aktion": "zeigt"
+    },
+    {
+      "wer": "geraeusch",
+      "text": "*PLING*"
+    },
+    {
+      "wer": "kevin",
+      "text": "Mama, du hast einen neuen Follower!"
+    },
+    {
+      "wer": "mandy",
+      "text": "Wer?!",
+      "aktion": "schock"
+    },
+    {
+      "wer": "kevin",
+      "text": "Der Vermieter."
+    }
+  ],
+  "caption": "Mandy startet durch 📱👑 Wie viele Follower würdet ihr ihr geben? 😂",
+  "hashtags": [
+    "#cartoon",
+    "#comedy",
+    "#lustig",
+    "#animation",
+    "#ronnyundmandy",
+    "#influencer"
+  ]
+}

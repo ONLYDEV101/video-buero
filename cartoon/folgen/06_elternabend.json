@@ -1,0 +1,66 @@
+{
+  "id": "06_elternabend",
+  "titel": "Elternabend",
+  "ort": "kueche",
+  "figuren": [
+    "ronny",
+    "kevin"
+  ],
+  "zeilen": [
+    {
+      "wer": "kevin",
+      "text": "Papa, morgen ist Elternabend. Die Lehrerin will dich sprechen."
+    },
+    {
+      "wer": "ronny",
+      "text": "Wegen den zwei Sechsen? Die will mir bestimmt gratulieren.",
+      "aktion": "trinkt"
+    },
+    {
+      "wer": "kevin",
+      "text": "Papa, ich glaube, das ist nicht gut."
+    },
+    {
+      "wer": "ronny",
+      "text": "Junge, ich zieh mein bestes Unterhemd an. Das ohne Flecken.",
+      "aktion": "zeigt"
+    },
+    {
+      "wer": "kevin",
+      "text": "Du hast keins ohne Flecken."
+    },
+    {
+      "wer": "ronny",
+      "text": "Dann das mit den wenigsten Flecken!",
+      "aktion": "schreit"
+    },
+    {
+      "wer": "kevin",
+      "text": "Und bitte bring keine Dosen mit."
+    },
+    {
+      "wer": "ronny",
+      "text": "Keine Dosen? Kevin. Was soll ich denn trinken? Wasser?!",
+      "aktion": "schock"
+    },
+    {
+      "wer": "kevin",
+      "text": "Die Lehrerin hat gesagt, du bist das Problem, nicht ich."
+    },
+    {
+      "wer": "ronny",
+      "text": "Hat sie gesagt, ich bin ein Problem? Oder DAS Problem? Das ist ein Unterschied!",
+      "aktion": "schreit",
+      "stimmung": "angry"
+    }
+  ],
+  "caption": "Ronny geht zum Elternabend 🏫🍺 Wer hatte auch so einen Papa? 😂",
+  "hashtags": [
+    "#cartoon",
+    "#comedy",
+    "#lustig",
+    "#animation",
+    "#ronnyundmandy",
+    "#elternabend"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "04_vermieter",
+  "titel": "Der Vermieter",
+  "ort": "wohnzimmer",
+  "figuren": [
+    "ronny",
+    "mandy"
+  ],
+  "zeilen": [
+    {
+      "wer": "mandy",
+      "text": "Ronny, der Vermieter steht immer noch vor der Tür.",
+      "aktion": "schock"
+    },
+    {
+      "wer": "ronny",
+      "text": "Psst. Wenn wir ganz leise sind, denkt der, wir sind im Urlaub."
+    },
+    {
+      "wer": "mandy",
+      "text": "Der Fernseher läuft auf voller Lautstärke!",
+      "aktion": "schreit"
+    },
+    {
+      "wer": "ronny",
+      "text": "Dann denkt der eben, der Fernseher ist zu Hause und wir nicht.",
+      "aktion": "zeigt"
+    },
+    {
+      "wer": "geraeusch",
+      "text": "*KLOPF KLOPF*"
+    },
+    {
+      "wer": "mandy",
+      "text": "Der will drei Monatsmieten, Ronny!"
+    },
+    {
+      "wer": "ronny",
+      "text": "Kein Problem. Ich biete ihm eine Beteiligung an meinem Investment an.",
+      "aktion": "trinkt"
+    },
+    {
+      "wer": "mandy",
+      "text": "Deine Pfandflaschen sind kein Investment!",
+      "aktion": "schreit"
+    },
+    {
+      "wer": "ronny",
+      "text": "Sag das nicht so laut. Die hören mit.",
+      "stimmung": "drunk"
+    }
+  ],
+  "caption": "Teil 2 von der Pizza-Geschichte 🍕🚪 Wie würdet ihr den Vermieter loswerden? 😂",
+  "hashtags": [
+    "#cartoon",
+    "#comedy",
+    "#lustig",
+    "#animation",
+    "#ronnyundmandy",
+    "#vermieter"
+  ]
+}
