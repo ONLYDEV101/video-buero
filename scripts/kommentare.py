@@ -77,6 +77,30 @@ def yt_holen():
     return offen
 
 
+def tt_senden(pfad, daten, methode="POST"):
+    import urllib.request
+    kopf = {"Authorization": "Bearer " + os.environ["ZERNIO_API_KEY"], "Content-Type": "application/json"}
+    req = urllib.request.Request("https://zernio.com/api/v1" + pfad, json.dumps(daten).encode(), kopf, method=methode)
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=60))
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Zernio {e.code} {pfad}: {e.read().decode(errors='replace')[:300]}")
+
+
+def tt_antworten(a):
+    """Antwort + Herz auf TikTok über Zernio. Fehlende Felder (post_id/account_id) kommen aus offen.json."""
+    k = {x["comment_id"]: x for x in lesen(os.path.join(ORDNER, "offen.json"), [])}.get(a["comment_id"], {})
+    post, konto, cid = a.get("post_id") or k.get("post_id"), a.get("account_id") or k.get("account_id"), a["comment_id"][3:]
+    r = tt_senden(f"/inbox/comments/{post}", {"accountId": konto, "message": a["text"][:150], "commentId": cid})
+    print("TikTok-Antwort:", json.dumps(r)[:200])
+    if a.get("herz", True):
+        for pfad in (f"/inbox/comments/{post}/{cid}/like", f"/inbox/comments/{post}/like"):
+            try:
+                print("TikTok-Herz:", json.dumps(tt_senden(pfad, {"accountId": konto, "commentId": cid}))[:200]); break
+            except RuntimeError as e:
+                print("Herz ging nicht:", str(e)[:200])
+
+
 def tt_holen():
     """TikTok über Zernio-Inbox: Posts mit Kommentaren, dann deren Kommentare."""
     import urllib.request
@@ -118,7 +142,9 @@ def antworten():
         if a.get("comment_id") in erledigt or not a.get("text"):
             continue
         try:
-            if str(a["comment_id"]).startswith("yt:"):
+            if str(a["comment_id"]).startswith("tt:"):
+                tt_antworten(a)
+            elif str(a["comment_id"]).startswith("yt:"):
                 yt_anfrage("comments", {"snippet": {"parentId": a["comment_id"][3:], "textOriginal": a["text"][:500]}}, part="snippet")
             else:
                 anfrage(f"{GRAPH}/{a['comment_id']}/replies",
