@@ -122,14 +122,14 @@ class Pexels:
         pix = os.environ.get("PIXABAY_API_KEY")
         if pix and len(treffer) < 4:
             try:
-                url = "https://pixabay.com/api/videos/?" + urllib.parse.urlencode({"key": pix, "q": q, "per_page": 15, "safesearch": "true"})
+                url = "https://pixabay.com/api/videos/?" + urllib.parse.urlencode({"key": pix, "q": q, "per_page": 20, "safesearch": "true", "video_type": "film"})
                 daten = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "video-buero/2"}), timeout=30))
                 extra, schwach = [], []
                 stich = {w for w in re.findall(r"[a-z]{4,}", q.lower())}
                 for v in daten.get("hits", []):
                     tags = v.get("tags", "").lower()
-                    tiere = r"\b(animal|squirrel|bird|flower|cat|dog)s?\b"
-                    if re.search(r"green ?screen|chroma|blue ?screen|\balpha\b|cartoon|animation|fantasy|monster|anime|demon|dragon|wizard", tags) or \
+                    tiere = r"\b(animal|squirrel|bird|flower|cat|dog|tree|baobab|forest|beach|sunset|landscape|waterfall|meadow|savanna)s?\b"
+                    if re.search(r"green ?screen|chroma|blue ?screen|\balpha\b|cartoon|animation|animated|illustration|infographic|motion graphic|chart|fantasy|monster|anime|demon|dragon|wizard", tags) or \
                             (re.search(tiere, tags) and not re.search(tiere, q.lower())):
                         continue
                     passend = any(w[:5] in tags for w in stich)
