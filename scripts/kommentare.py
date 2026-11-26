@@ -33,7 +33,10 @@ def holen(nutzer):
     ich = q(nutzer, fields="username").get("username", "")
     erledigt = set(lesen(ERLEDIGT, []))
     offen = []
-    for m in q(f"{nutzer}/media", fields="id,caption,timestamp", limit=15).get("data", []):
+    for m in q(f"{nutzer}/media", fields="id,caption,timestamp,comments_count", limit=60).get("data", []):
+        if not m.get("comments_count"):
+            continue
+        print(f"{m['comments_count']} Kommentar(e): {(m.get('caption') or '')[:60]!r}")
         for c in q(f"{m['id']}/comments", fields="id,text,username,timestamp,replies{username}", limit=50).get("data", []):
             antwortende = {r.get("username") for r in c.get("replies", {}).get("data", [])}
             if c["id"] in erledigt or c.get("username") == ich or ich in antwortende:
