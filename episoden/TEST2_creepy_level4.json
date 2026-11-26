@@ -1,5 +1,5 @@
 {
-  "id": "TEST_creepy_level4",
+  "id": "TEST2_creepy_level4",
   "sprache": "en",
   "label": "Night Shift Stories",
   "titel": "Never Go To Level 4",
@@ -14,8 +14,8 @@
     {
       "text": "I worked nights in a hospital parking garage. *Level 4* was always empty.",
       "suche": [
-        "parking garage night",
-        "empty parking lot"
+        "underground parking",
+        "parking garage"
       ]
     },
     {
@@ -28,50 +28,50 @@
     {
       "text": "The doors opened. *Nobody* got out.",
       "suche": [
-        "dark corridor",
-        "empty hallway night"
+        "corridor dark",
+        "empty hallway"
       ]
     },
     {
       "text": "My boss gave me one rule: *never* go to Level 4 after three.",
       "suche": [
-        "security guard",
-        "flashlight dark"
+        "hallway night",
+        "corridor"
       ]
     },
     {
       "text": "On my last shift, the elevator *called me* instead.",
       "suche": [
-        "elevator buttons",
+        "elevator",
         "flickering light"
       ]
     },
     {
       "text": "On the camera, I watched a man step out onto Level 4.",
       "suche": [
-        "security camera",
-        "cctv monitor"
+        "surveillance camera",
+        "security camera"
       ]
     },
     {
       "text": "He was wearing *my uniform.*",
       "suche": [
-        "shadow man",
-        "silhouette dark"
+        "corridor dark",
+        "parking garage"
       ]
     },
     {
       "text": "I was still sitting at my desk. *Wasn't I?*",
       "suche": [
-        "night office",
-        "dark room"
+        "office night",
+        "monitor screen"
       ]
     },
     {
       "text": "This story is fiction. Follow for the *next shift.*",
       "suche": [
-        "dark night",
-        "fog night"
+        "fog night",
+        "dark forest"
       ]
     }
   ],
@@ -82,5 +82,7 @@
     "#creepy",
     "#horrorstory",
     "#fiction"
-  ]
+  ],
+  "look": "cctv",
+  "kamera": "CAM 04  LEVEL 4"
 }

@@ -397,7 +397,15 @@ def episode(pfad):
                      wechsel[1:] if ep.get("klang") == "voll" else [])
         # 5) Alles zusammen
         ziel = os.path.join(OUT, f"{eid}.mp4")
-        filt = (f"[0:v][3:v]overlay=x='-W+W*t/{gesamt:.3f}':y=0,subtitles=caps.ass:fontsdir=fonts[v];"
+        kamera = ""
+        if ep.get("look") == "cctv":      # Überwachungskamera: grünlich-grau, Rauschen, Zeitstempel, REC
+            schrift = os.path.join("fonts", sorted(f for f in os.listdir(os.path.join(tmp, "fonts")) if f.lower().endswith(".ttf"))[0]).replace("\\", "/")
+            cam = ep.get("kamera", "CAM 04")
+            kamera = (f"hue=s=0.12,colorbalance=gm=0.05:bm=-0.03,eq=contrast=1.25:brightness=-0.04,noise=alls=22:allf=t,vignette=PI/4,"
+                      f"drawtext=fontfile={schrift}:text='{cam}':fontsize=46:fontcolor=white@0.85:x=60:y=230,"
+                      f"drawtext=fontfile={schrift}:text='REC':fontsize=46:fontcolor=0xFF2020:x=w-170:y=230:enable='lt(mod(t,1.2),0.7)',"
+                      f"drawtext=fontfile={schrift}:text='03\:12\:%{{eif\:mod(t+4,60)\:d\:2}} AM':fontsize=46:fontcolor=white@0.85:x=60:y=h-260,")
+        filt = (f"[0:v]{kamera}null[k];[k][3:v]overlay=x='-W+W*t/{gesamt:.3f}':y=0,subtitles=caps.ass:fontsdir=fonts[v];"
                 "[1:a]asplit=2[s1][s2];[2:a][s1]sidechaincompress=threshold=0.02:ratio=6:attack=15:release=350[m];"
                 "[s2][m]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
         run(["ffmpeg", "-y", "-i", "bild.mp4", "-i", "stimme.wav", "-i", "musik.wav",
