@@ -48,7 +48,7 @@ def hochladen(video):
         r = json.load(urllib.request.urlopen(req, timeout=600))
     except urllib.error.HTTPError as e:
         raise RuntimeError(f"YouTube-Fehler {e.code}: {e.read().decode(errors='replace')[:600]}")
-    print(f"YouTube: https://youtube.com/shorts/{r['id']} ({r['status']['privacyStatus']})")
+    print(f"YouTube: https://youtube.com/watch?v={r['id']} ({r['status']['privacyStatus']})")
     return r["id"]
 
 
