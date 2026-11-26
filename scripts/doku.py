@@ -74,6 +74,20 @@ class Stock:
     def __init__(self, zufall):
         self.zufall, self.benutzt, self.cache = zufall, set(), {}
 
+    ALLGEMEIN = {"night", "dark", "empty", "close", "view", "with", "from", "office", "city"}
+    NATUR = r"(mountain|forest|tree|lake|beach|flower|sunset|waterfall|animal|bird|snow|meadow|volcano|desert|river|jungle|savanna|fuji)s?"
+
+    def passt(self, q, beschreibung):
+        """Wie gut passt ein Clip zur Suche? Wörter aus Pexels-URL bzw. Pixabay-Tags vergleichen."""
+        b = beschreibung.lower().replace("-", " ")
+        if re.search(r"cartoon|animat|illustration|infographic|green ?screen|chroma|fantasy|anime", b):
+            return -1
+        if re.search(self.NATUR, b) and not re.search(self.NATUR, q.lower()):
+            return -1
+        woerter = [w for w in re.findall(r"[a-z]{3,}", q.lower())]
+        wichtig = [w for w in woerter if w not in self.ALLGEMEIN] or woerter
+        return sum(2 for w in wichtig if w[:5] in b) + sum(1 for w in woerter if w in self.ALLGEMEIN and w[:5] in b)
+
     def suche(self, q):
         if q in self.cache:
             return self.cache[q]
@@ -81,13 +95,14 @@ class Stock:
         key = os.environ.get("PEXELS_API_KEY")
         if key:
             try:
-                url = "https://api.pexels.com/videos/search?" + urllib.parse.urlencode({"query": q, "orientation": "landscape", "per_page": 15})
+                url = "https://api.pexels.com/videos/search?" + urllib.parse.urlencode({"query": q, "orientation": "landscape", "per_page": 20})
                 d = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"Authorization": key, "User-Agent": "video-buero/2"}), timeout=30))
                 for v in d.get("videos", []):
                     f = sorted([f for f in v.get("video_files", []) if f.get("width", 0) >= 1280 and f.get("height", 0) < f.get("width", 0)],
                                key=lambda f: abs(f["width"] - 1920))
-                    if f:
-                        treffer.append((v["id"], f[0]["link"]))
+                    wert = self.passt(q, v.get("url", ""))
+                    if f and wert >= 2:
+                        treffer.append((wert, v["id"], f[0]["link"]))
             except Exception as e:
                 print(f"  Pexels '{q}':", str(e)[:120])
         pix = os.environ.get("PIXABAY_API_KEY")
@@ -96,14 +111,16 @@ class Stock:
                 url = "https://pixabay.com/api/videos/?" + urllib.parse.urlencode({"key": pix, "q": q, "per_page": 20, "safesearch": "true", "video_type": "film"})
                 d = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "video-buero/2"}), timeout=30))
                 for v in d.get("hits", []):
-                    if re.search(r"cartoon|animat|illustration|infographic|green ?screen|chroma|fantasy|anime", v.get("tags", "").lower()):
-                        continue
                     g = sorted([f for f in v.get("videos", {}).values() if f.get("url") and f.get("width", 0) >= 1280], key=lambda f: abs(f["width"] - 1920))
-                    if g:
-                        treffer.append(("pb%s" % v["id"], g[0]["url"]))
+                    wert = self.passt(q, v.get("tags", ""))
+                    if g and wert >= 2:
+                        treffer.append((wert, "pb%s" % v["id"], g[0]["url"]))
             except Exception as e:
                 print(f"  Pixabay '{q}':", str(e)[:120])
         self.zufall.shuffle(treffer)
+        treffer.sort(key=lambda x: -x[0])
+        treffer = [(vid, link) for _, vid, link in treffer]
+        print(f"  Suche '{q}': {len(treffer)} passende Clips")
         self.cache[q] = treffer
         return treffer
 
@@ -238,7 +255,8 @@ def doku(pfad_json):
                     e_zitat(b["zitat"], b.get("quelle", ""), stueck, nr, tmp, ziel); ok = True
                 if not ok:
                     roh = os.path.join(tmp, f"r{nr}.mp4")
-                    if stock.clip(b.get("suche") or ab.get("suche") or ["dark office night", "city skyline night"], roh):
+                    reserve = d.get("suche_reserve", ["stock market screen", "money counting", "business documents desk", "financial district night"])
+                    if stock.clip((b.get("suche") or ab.get("suche") or []) + reserve, roh):
                         e_clip(roh, stueck, ziel)
                     else:
                         e_karte("", "", stueck, nr, tmp, ziel)
