@@ -43,8 +43,52 @@ def holen(nutzer):
                 continue
             offen.append({"comment_id": c["id"], "von": c.get("username"), "text": c.get("text", ""),
                           "reel": (m.get("caption") or "")[:120], "zeit": c.get("timestamp")})
-    schreiben(os.path.join(ORDNER, "offen.json"), offen)
-    print(f"{len(offen)} unbeantwortete Kommentare")
+    print(f"Instagram: {len(offen)} unbeantwortete Kommentare")
+    return offen
+
+
+def yt_anfrage(pfad, daten=None, **p):
+    import urllib.request
+    from post_youtube import token
+    if not hasattr(yt_anfrage, "at"):
+        yt_anfrage.at = token()
+    kopf = {"Authorization": "Bearer " + yt_anfrage.at, "Content-Type": "application/json"}
+    url = "https://www.googleapis.com/youtube/v3/" + pfad + "?" + urllib.parse.urlencode(p)
+    req = urllib.request.Request(url, json.dumps(daten).encode() if daten else None, kopf, method="POST" if daten else "GET")
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=60))
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"YouTube {e.code}: {e.read().decode(errors='replace')[:300]}")
+
+
+def yt_holen():
+    erledigt = set(lesen(ERLEDIGT, []))
+    kanal = yt_anfrage("channels", part="id", mine="true")["items"][0]["id"]
+    offen = []
+    d = yt_anfrage("commentThreads", part="snippet", allThreadsRelatedToChannelId=kanal, maxResults=100, order="time")
+    for th in d.get("items", []):
+        s = th["snippet"]["topLevelComment"]["snippet"]
+        cid = th["snippet"]["topLevelComment"]["id"]
+        if cid in erledigt or s.get("authorChannelId", {}).get("value") == kanal or th["snippet"].get("totalReplyCount"):
+            continue
+        offen.append({"plattform": "youtube", "comment_id": "yt:" + cid, "von": s.get("authorDisplayName"),
+                      "text": s.get("textOriginal", ""), "reel": s.get("videoId"), "zeit": s.get("publishedAt")})
+    print(f"YouTube: {len(offen)} unbeantwortete Kommentare")
+    return offen
+
+
+def tt_holen():
+    """TikTok über Zernio (Inbox). Wenn Zernio das nicht kann, nur Hinweis ausgeben."""
+    import urllib.request
+    kopf = {"Authorization": "Bearer " + os.environ["ZERNIO_API_KEY"]}
+    for pfad in ("/inbox/comments?platform=tiktok", "/comments?platform=tiktok", "/inbox?platform=tiktok"):
+        try:
+            d = json.load(urllib.request.urlopen(urllib.request.Request("https://zernio.com/api/v1" + pfad, headers=kopf), timeout=60))
+        except Exception as e:
+            print("TikTok", pfad, "ging nicht:", str(e)[:150]); continue
+        print("TikTok", pfad, "Antwort:", json.dumps(d, ensure_ascii=False)[:800])
+        return []
+    return []
 
 
 def antworten():
@@ -54,8 +98,11 @@ def antworten():
         if a.get("comment_id") in erledigt or not a.get("text"):
             continue
         try:
-            anfrage(f"{GRAPH}/{a['comment_id']}/replies",
-                    urllib.parse.urlencode({"message": a["text"][:300], "access_token": TOKEN}).encode())
+            if str(a["comment_id"]).startswith("yt:"):
+                yt_anfrage("comments", {"snippet": {"parentId": a["comment_id"][3:], "textOriginal": a["text"][:500]}}, part="snippet")
+            else:
+                anfrage(f"{GRAPH}/{a['comment_id']}/replies",
+                        urllib.parse.urlencode({"message": a["text"][:300], "access_token": TOKEN}).encode())
             print("Antwort gesendet:", a["comment_id"])
         except RuntimeError as e:
             print("Antwort fehlgeschlagen:", str(e)[:200])
@@ -65,9 +112,18 @@ def antworten():
 
 
 if __name__ == "__main__":
-    if not TOKEN:
-        sys.exit("Kein IG_TOKEN")
     if "antworten" in sys.argv:
         antworten()
     if "holen" in sys.argv:
-        holen(os.environ.get("IG_USER_ID") or konto_finden(TOKEN))
+        alle = []
+        teile = [("Instagram", lambda: holen(os.environ.get("IG_USER_ID") or konto_finden(TOKEN)) if TOKEN else []),
+                 ("YouTube", lambda: yt_holen() if os.environ.get("YT_REFRESH_TOKEN") else []),
+                 ("TikTok", lambda: tt_holen() if os.environ.get("ZERNIO_API_KEY") else [])]
+        for name, f in teile:
+            try:
+                alle += f()
+            except Exception as e:
+                print(name, "ging nicht:", str(e)[:300])
+        for k in alle:
+            print("  ", k.get("plattform", "instagram"), "|", k.get("von"), "|", (k.get("text") or "")[:120])
+        schreiben(os.path.join(ORDNER, "offen.json"), alle)
