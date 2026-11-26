@@ -27,8 +27,11 @@ Messwerte (24.11.): Reels werden im Schnitt nur 10–14 s von 35 s geschaut, Lik
 - Wichtige Wörter mit `*Sternchen*` markieren (werden gelb). Pro Szene höchstens 1–2 Markierungen.
 - `suche`: 2–3 kurze, **konkrete, sichtbare** englische Stock-Footage-Begriffe je Szene (Dinge, die man filmen kann: „submarine underwater“, „cia headquarters“, „old typewriter“, „radar screen“ – keine abstrakten Wörter wie „secret“, „mystery“, „truth“) (z. B. „old documents“, „dark corridor“, „military jet“). Keine Personennamen (Stockvideos zeigen keine echten Personen).
 
-## Echte Archivfotos (wichtig: wirkt deutlich stärker als Stockclips)
-- Je Folge 3–8 echte Fotos, vor allem in Szene 1 und beim Beweis. Themen mit guten Fotos bevorzugen (U.S.-Regierung, NARA, NASA, Militär).
+## Echte Archivfotos – PFLICHT (wirkt deutlich stärker als Stockclips)
+Messwerte (26.11.): A119 mit echtem Archivmaterial wird im Schnitt **85 s** geschaut, normale Stockclip-Folgen nur ~10 s. Spionage/geheime Orte im Kalten Krieg (Berlin-Tunnel 1.113 YouTube-Aufrufe, Bunker unterm Hotel 523 TikTok-Aufrufe) laufen am besten.
+- **Pflicht:** mindestens 4 Archivfotos je Folge, **Szene 1 möglichst mit echtem Foto** (Hook + Beweisbild in den ersten 2 Sekunden). Folgen ohne Archivfotos nur, wenn die Suche technisch scheitert – dann im Abschlussbericht melden.
+- Bei der Themenwahl Themen bevorzugen, zu denen es gute gemeinfreie Fotos gibt (U.S.-Regierung, NARA, NASA, Militär, alte Gemälde/Stiche bei historischen Mysterien).
+- Je Folge 4–8 echte Fotos, vor allem in Szene 1 und beim Beweis. Themen mit guten Fotos bevorzugen (U.S.-Regierung, NARA, NASA, Militär).
 - Suchen: `python3 scripts/archiv_suche.py bitmap "Soviet submarine B-59"` (macht absichtlich Pausen; bei Fehler 429 aufhören und später weitermachen). Klappt das Netz nicht, Folge ohne Archivfotos schreiben.
 - Nur **Public domain oder CC0**, nur wenn Beschreibung auf Commons eindeutig zum Satz passt. Bei Filmfiguren, unklarer Herkunft oder Zweifel an der Lizenz: weglassen. Keine Leichen/Verletzten, keine lebenden Privatpersonen.
 - Je Szene 1–2 Fotos: `"archiv": [{"datei": "File:Soviet b-59 submarine.jpg", "hinweis": "The real B-59"}], "nur_archiv": true`
@@ -45,8 +48,9 @@ Dateiname: `episoden/warteschlange/JJJJMMTT-NN_stichwort.json` (NN = 01..08, bes
   "sprache": "en",
   "label": "Conspiracy that was TRUE",
   "titel": "…",
-  "szenen": [ { "text": "…", "suche": ["…", "…"] } ],
-  "caption": "1–2 Sätze + Frage an die Zuschauer. Endet mit: AI voice & edit. Footage: Pixabay/Pexels.",
+  "klang": "voll",
+  "szenen": [ { "text": "…", "suche": ["…", "…"], "archiv": [{"datei": "File:….jpg", "hinweis": "Real photo, 1962"}], "nur_archiv": true } ],
+  "caption": "1–2 Sätze + Frage an die Zuschauer. Endet mit: AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": ["#conspiracy", "#declassified", "…max 10"],
   "quellen": ["…"],
   "story_frage": "Kurze TRUE-or-FAKE-Behauptung für die Story, max. 12 Wörter, z. B. \"The CIA once tried to bug a cat.\""
