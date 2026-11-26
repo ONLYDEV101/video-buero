@@ -78,17 +78,37 @@ def yt_holen():
 
 
 def tt_holen():
-    """TikTok über Zernio (Inbox). Wenn Zernio das nicht kann, nur Hinweis ausgeben."""
+    """TikTok über Zernio-Inbox: Posts mit Kommentaren, dann deren Kommentare."""
     import urllib.request
     kopf = {"Authorization": "Bearer " + os.environ["ZERNIO_API_KEY"]}
-    for pfad in ("/inbox/comments?platform=tiktok", "/comments?platform=tiktok", "/inbox?platform=tiktok"):
+    z = lambda pfad: json.load(urllib.request.urlopen(urllib.request.Request("https://zernio.com/api/v1" + pfad, headers=kopf), timeout=60))
+    erledigt = set(lesen(ERLEDIGT, []))
+    posts = z("/inbox/comments?platform=tiktok").get("data", [])
+    if posts:
+        print("TikTok Felder:", sorted(posts[0].keys()))
+    offen = []
+    for p in posts:
+        n = p.get("commentCount") or p.get("commentsCount") or p.get("comments") or 0
+        if not n:
+            continue
+        print(f"TikTok {n} Kommentar(e): {(p.get('content') or '')[:60]!r}")
         try:
-            d = json.load(urllib.request.urlopen(urllib.request.Request("https://zernio.com/api/v1" + pfad, headers=kopf), timeout=60))
+            d = z(f"/inbox/comments/{p['id']}?accountId={p['accountId']}")
         except Exception as e:
-            print("TikTok", pfad, "ging nicht:", str(e)[:150]); continue
-        print("TikTok", pfad, "Antwort:", json.dumps(d, ensure_ascii=False)[:800])
-        return []
-    return []
+            print("  Kommentare laden ging nicht:", str(e)[:200]); continue
+        liste = d.get("data") or d.get("comments") or []
+        if liste:
+            print("  Felder:", sorted(liste[0].keys()))
+        for c in liste:
+            cid = "tt:" + str(c.get("id"))
+            if cid in erledigt or c.get("isOwner") or c.get("fromMe"):
+                continue
+            offen.append({"plattform": "tiktok", "comment_id": cid, "post_id": p["id"], "account_id": p["accountId"],
+                          "von": (c.get("from") or {}).get("username") if isinstance(c.get("from"), dict) else c.get("username"),
+                          "text": c.get("text") or c.get("message") or c.get("content", ""),
+                          "reel": (p.get("content") or "")[:120], "zeit": c.get("createdTime")})
+    print(f"TikTok: {len(offen)} Kommentare")
+    return offen
 
 
 def antworten():
