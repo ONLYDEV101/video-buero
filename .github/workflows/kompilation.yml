@@ -1,0 +1,82 @@
+name: Sonntags-Kompilation
+on:
+  schedule:
+    - cron: "0 16 * * 0"            # Sonntag 17:00 (Winter) / 18:00 (Sommer) deutsche Zeit
+  workflow_dispatch:
+    inputs:
+      posten:
+        description: "Posten (Instagram-Reel + YouTube)?"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: video
+  cancel-in-progress: false
+jobs:
+  kompilation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_BUSINESS_ID: "1910359486633208"
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      STORIES: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          curl -sfL https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz | tar xJ -C /tmp
+          echo "/tmp/ffmpeg-master-latest-linux64-gpl/bin" >> "$GITHUB_PATH"
+      - name: Die letzten 6 geposteten Videos holen
+        run: |
+          mkdir -p teile out
+          for id in $(gh run list -R "$GITHUB_REPOSITORY" --workflow video.yml --event schedule --status success -L 12 --json databaseId -q '.[].databaseId'); do
+            [ "$(ls teile/*.mp4 2>/dev/null | wc -l)" -ge 6 ] && break
+            gh run download "$id" -R "$GITHUB_REPOSITORY" -n videos -D "tmp_$id" 2>/dev/null || continue
+            for f in tmp_$id/*.mp4; do case "$f" in *_story.mp4) ;; *) cp "$f" teile/ ;; esac; done
+          done
+          ls teile
+      - name: Bauen
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, subprocess
+          teile = sorted(glob.glob("teile/*.mp4"))[-6:]
+          titel = []
+          for t in teile:
+              eid = os.path.basename(t)[:-4]
+              for o in ("episoden/gepostet", "episoden/warteschlange"):
+                  p = f"{o}/{eid}.json"
+                  if os.path.exists(p):
+                      titel.append(json.load(open(p, encoding="utf-8")).get("titel", eid)); break
+              else:
+                  titel.append(eid.split("_", 1)[-1].replace("_", " ").title())
+          n = len(teile)
+          subprocess.run(["python3", "scripts/kompilation.py", f"{n} SECRET FILES", "THAT WERE TRUE", *teile, "-o", "out/kompilation.mp4"], check=True)
+          liste = "\n".join(f"{i+1}. {t}" for i, t in enumerate(titel))
+          cap = (f"{n} Secrets They Hid From You | This Week's Declassified Files\n\n"
+                 f"This week's files in one video:\n{liste}\n\nWhich one shocked you most? Comment the number.\n\n"
+                 "AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).\n"
+                 "#declassified #coldwar #history #conspiracy #documentary")
+          open("out/kompilation.txt", "w", encoding="utf-8").write(cap)
+          print(cap)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kompilation
+          path: out/
+          retention-days: 14
+      - name: Instagram-Reel
+        id: ig
+        if: github.event_name == 'schedule' || github.event.inputs.posten == 'true'
+        continue-on-error: true
+        run: python3 scripts/post_instagram.py out/kompilation.mp4
+      - name: YouTube (langes Video)
+        if: github.event_name == 'schedule' || github.event.inputs.posten == 'true'
+        continue-on-error: true
+        run: python3 scripts/post_youtube.py out/kompilation.mp4
