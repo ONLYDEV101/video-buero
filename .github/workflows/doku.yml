@@ -1,18 +1,20 @@
 name: Doku bauen
 on:
+  schedule:
+    - cron: "0 14 */2 * *"   # jeden 2. Tag 14:00 UTC (US-Morgen): nächste Doku aus der Warteschlange
   workflow_dispatch:
     inputs:
       datei:
         description: "Doku-JSON (z. B. dokus/warteschlange/doku_wirecard_en.json)"
-        required: true
+        required: false
       posten:
         description: "Auf YouTube hochladen?"
         type: boolean
         default: false
 permissions:
-  contents: read
+  contents: write
 concurrency:
-  group: doku-${{ github.event.inputs.datei }}
+  group: doku
   cancel-in-progress: false
 jobs:
   doku:
@@ -35,13 +37,32 @@ jobs:
           echo "/tmp/ffmpeg-master-latest-linux64-gpl/bin" >> "$GITHUB_PATH"
           (timeout 90 sudo apt-get install -y -qq fonts-dejavu-core || true)
           pip install -q edge-tts==7.3.1
+      - name: Auswahl
+        id: wahl
+        run: |
+          D="${{ github.event.inputs.datei }}"
+          [ -z "$D" ] && D=$(ls dokus/warteschlange/*.json 2>/dev/null | sort | head -1)
+          if [ -z "$D" ]; then echo "Warteschlange leer – nichts zu tun."; echo "datei=" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "Doku: $D"; echo "datei=$D" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.posten }}" = "true" ]; then echo "posten=true" >> "$GITHUB_OUTPUT"; fi
       - name: Doku bauen
-        run: python scripts/doku.py "${{ github.event.inputs.datei }}"
+        if: steps.wahl.outputs.datei != ''
+        run: python scripts/doku.py "${{ steps.wahl.outputs.datei }}"
       - uses: actions/upload-artifact@v4
+        if: steps.wahl.outputs.datei != ''
         with:
           name: doku
           path: out/
           retention-days: 14
       - name: YouTube
-        if: github.event.inputs.posten == 'true' && env.YT_REFRESH_TOKEN != ''
+        id: yt
+        if: steps.wahl.outputs.posten == 'true' && env.YT_REFRESH_TOKEN != ''
         run: python scripts/post_youtube.py out/*.mp4
+      - name: Als gepostet markieren
+        if: steps.yt.outcome == 'success'
+        run: |
+          git config user.name "video-buero-bot"; git config user.email "actions@users.noreply.github.com"
+          mkdir -p dokus/gepostet
+          git mv "${{ steps.wahl.outputs.datei }}" dokus/gepostet/
+          git commit -m "Doku gepostet: ${{ steps.wahl.outputs.datei }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

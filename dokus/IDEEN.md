@@ -7,7 +7,12 @@ Regeln für jede Doku:
 - Lebende Personen: nur das, was gerichtlich oder offiziell belegt ist.
 - Aufbau: Hook (0–30 s), Aufstieg, Warnzeichen, Absturz, Wer ist schuld, Was heißt das für dich, Frage an die Zuschauer.
 
-Markierung: ★ = Top-Kandidat für die ersten 10 · [DE] = vor allem für deutsches Publikum · [EN] = international
+Markierung: ★ = Top-Kandidat für die ersten 10 · [DE] = deutsches Thema · [EN] = international
+
+SPRACHE (Entscheidung 26.11.2026): ALLE Dokus nur auf ENGLISCH für den bestehenden Kanal.
+[DE]-Themen werden für ein internationales Publikum erzählt: "Germany's ..."-Winkel, deutsche Begriffe kurz erklären
+(z. B. "Schufa, Germany's private credit score agency"), Euro-Beträge zusätzlich grob in Dollar.
+Bereits gemacht: siehe Ordner dokus/gepostet (und dokus/warteschlange = gebaut wird demnächst).
 
 ## A. Finanzskandale & Betrug (Rise & Fall)
 1. ★ Wirecard: 1,9 Milliarden, die nie existierten [DE/EN]
