@@ -75,7 +75,7 @@ class Stock:
         self.zufall, self.benutzt, self.cache = zufall, set(), {}
 
     ALLGEMEIN = {"night", "dark", "empty", "close", "view", "with", "from", "office", "city"}
-    NATUR = r"(mountain|forest|tree|lake|beach|flower|sunset|waterfall|animal|bird|snow|meadow|volcano|desert|river|jungle|savanna|fuji)s?"
+    NATUR = r"(mountain|forest|tree|lake|beach|flower|sunset|waterfall|animal|bird|snow|meadow|volcano|desert|river|jungle|savanna|fuji|alps|alpine|valley|hill|countryside|landscape|neon sign|cartoon)s?"
 
     def passt(self, q, beschreibung):
         """Wie gut passt ein Clip zur Suche? Wörter aus Pexels-URL bzw. Pixabay-Tags vergleichen."""
