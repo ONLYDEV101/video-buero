@@ -9,21 +9,42 @@
       "suche": [
         "old radio equipment",
         "code breaking"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Meredith Gardner, at far left, working with cryptanalysts.jpg",
+          "hinweis": "Venona codebreakers"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The project was called *Venona.*",
       "suche": [
         "old documents",
         "classified folder"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Decryption of Soviet Diplomatic Telegram Relating to the Code Name \"Enormous\" and Photography of Material - NARA - 595374 (page 1).jpg",
+          "hinweis": "Real Venona decrypt"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It began in *1943* and ran until 1980.",
       "suche": [
         "vintage calendar",
         "typewriter keys"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Arlington Hall 1943.jpg",
+          "hinweis": "Arlington Hall, 1943"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Soviet cables were meant to be *unbreakable.*",
@@ -44,14 +65,28 @@
       "suche": [
         "nuclear facility",
         "laboratory"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Decision to maintain contact with Theodore Hall 1944.gif",
+          "hinweis": "Venona file, 1944"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The public learned of it only in *1995.*",
       "suche": [
         "archive shelves",
         "library documents"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Decryption of Soviet Diplomatic Telegram Relating to the Code Name \"Enormous\" and Photography of Material - NARA - 595374 (page 3).jpg",
+          "hinweis": "Real Venona decrypt"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "A secret kept for *50 years.* Who is reading your messages today?",
@@ -61,7 +96,7 @@
       ]
     }
   ],
-  "caption": "Venona ran from 1943 to 1980 and stayed secret until 1995. Who do you think is listening today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "Venona ran from 1943 to 1980 and stayed secret until 1995. Who do you think is listening today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#venona",
     "#spies",
@@ -74,5 +109,6 @@
     "U.S. Department of Energy (OSTI), Manhattan Project History: Venona",
     "Haynes & Klehr, 'Venona: Decoding Soviet Espionage in America'"
   ],
-  "story_frage": "U.S. codebreakers secretly read Soviet spy cables for decades."
+  "story_frage": "U.S. codebreakers secretly read Soviet spy cables for decades.",
+  "klang": "voll"
 }

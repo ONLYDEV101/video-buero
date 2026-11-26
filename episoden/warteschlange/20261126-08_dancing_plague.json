@@ -9,14 +9,28 @@
       "suche": [
         "old european street",
         "cobblestone"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Danse Saint-Guy 1518 Charles Spindler détail.jpg",
+          "hinweis": "Later illustration"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It happened in *Strasbourg*, now France.",
       "suche": [
         "medieval town",
         "old cathedral"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Braun et Hogenberg Argentoratum 77.998.0.4239 mb.jpg",
+          "hinweis": "Strasbourg, c. 1572"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "She danced for *days.* She didn't stop.",
@@ -30,7 +44,14 @@
       "suche": [
         "crowd of people",
         "medieval market"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Die Wallfahrt der Fallsuechtigen nach Meulebeeck.jpg",
+          "hinweis": "Engraving after Bruegel"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Records say some *died* from exhaustion.",
@@ -44,7 +65,18 @@
       "suche": [
         "old chapel",
         "wooden wagon"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Interdiction danse Strasbourg Sebastien Brant 1518.jpg",
+          "hinweis": "Real city decree, 1518"
+        },
+        {
+          "datei": "File:Saint John’s Dancers in Molenbeeck’ (1592) by Pieter Brueghel II.jpg",
+          "hinweis": "Painting, 1592"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The cause is *still debated.* Mass hysteria is the top theory.",
@@ -61,7 +93,7 @@
       ]
     }
   ],
-  "caption": "In 1518 a street in Strasbourg couldn't stop dancing. Nobody knows exactly why. What's your guess? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "In 1518 a street in Strasbourg couldn't stop dancing. Nobody knows exactly why. What's your guess? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#mystery",
     "#unsolved",
@@ -74,5 +106,6 @@
     "Public Domain Review, 'The Dancing Plague of 1518'",
     "John Waller, 'A Time to Dance, a Time to Die' (2008)"
   ],
-  "story_frage": "A whole city danced uncontrollably in 1518."
+  "story_frage": "A whole city danced uncontrollably in 1518.",
+  "klang": "voll"
 }

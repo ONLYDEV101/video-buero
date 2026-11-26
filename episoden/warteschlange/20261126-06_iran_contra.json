@@ -44,7 +44,18 @@
       "suche": [
         "white house",
         "courtroom"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Photograph of President Reagan receiving the Tower Commission Report in the Cabinet Room - NARA - 198581.jpg",
+          "hinweis": "Real photo, 1987"
+        },
+        {
+          "datei": "File:President Ronald Reagan Receives The Tower Commission Report in The Cabinet Room with John Tower and Edmund Muskie - DPLA - 626fd7fb1f0270f016bf4298893ee4dd.jpg",
+          "hinweis": "Real photo, 1987"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The special prosecutor *charged 14 people.*",
@@ -61,7 +72,7 @@
       ]
     }
   ],
-  "caption": "Secret arms sales and hidden funds shook Washington in 1986. Was justice served? What do you think? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "Secret arms sales and hidden funds shook Washington in 1986. Was justice served? What do you think? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#irancontra",
     "#conspiracy",
@@ -73,5 +84,6 @@
     "Tower Commission Report (Feb 1987)",
     "Final Report of the Independent Counsel for Iran/Contra Matters (Walsh), 1993"
   ],
-  "story_frage": "U.S. officials secretly sold arms to Iran and funded the Contras."
+  "story_frage": "U.S. officials secretly sold arms to Iran and funded the Contras.",
+  "klang": "voll"
 }

@@ -9,7 +9,14 @@
       "suche": [
         "desert airbase",
         "nevada desert"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Area51 Aerial photograph.jpg",
+          "hinweis": "NASA satellite image"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "That was in *2013*, by releasing a document.",
@@ -23,21 +30,42 @@
       "suche": [
         "spy plane in flight",
         "jet at high altitude"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Lockheed U-2 landing on USS America (CVA-66) 1969.jpg",
+          "hinweis": "Archive: U-2, 1969"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The base was chosen for *secret* test flights.",
       "suche": [
         "desert runway",
         "hangar"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Wfm area 51 landsat geocover 2000.jpg",
+          "hinweis": "Satellite: Groom Lake"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The first U-2 test flight there was *August 4, 1955.*",
       "suche": [
         "vintage airplane takeoff",
         "airfield sunrise"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:A U-2 Dragon Lady flies over the Golden Gate Bridge near San Francisco, California, Mar. 23, 2016. The U-2 is capable of flying at altitudes exceeding 70,000 ft.jpg",
+          "hinweis": "A U-2 in flight, 2016"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The document names Area 51 *again and again.*",
@@ -61,7 +89,7 @@
       ]
     }
   ],
-  "caption": "Area 51 was officially confirmed in 2013, and it was about spy planes. What do you think still hides there? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "Area 51 was officially confirmed in 2013, and it was about spy planes. What do you think still hides there? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#area51",
     "#declassified",
@@ -73,5 +101,6 @@
     "CIA internal history 'The Central Intelligence Agency and Overhead Reconnaissance: The U-2 and Oxcart Programs' (1992), released 2013",
     "National Security Archive, George Washington University, 2013 briefing"
   ],
-  "story_frage": "The CIA officially acknowledged Area 51 in 2013."
+  "story_frage": "The CIA officially acknowledged Area 51 in 2013.",
+  "klang": "voll"
 }

@@ -9,7 +9,14 @@
       "suche": [
         "military command center",
         "radar screen"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Ships of the NATO Standing Naval Force Atlantic underway, in 1983.jpg",
+          "hinweis": "NATO ships, 1983"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It was called *Able Archer 83.*",
@@ -23,21 +30,42 @@
       "suche": [
         "missile silo",
         "control panel"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Pershing 1 launch (Feb 16, 1966).png",
+          "hinweis": "Archive: Pershing launch"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Soviet leaders feared it was cover for a *real attack.*",
       "suche": [
         "kremlin",
         "snow moscow"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:1984 CIA-Memo on US Soviet Tension.jpg",
+          "hinweis": "Real CIA memo, 1984"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Soviet air units were *placed on alert.*",
       "suche": [
         "fighter jets airfield",
         "military airplane runway"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Missile, Surface-to-Surface, SS-20 \"Pioneer\" - DPLA - 4b6ed34c2fa543358d174f3c5897fe9e (page 1).jpg",
+          "hinweis": "Archive: Soviet SS-20"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "A 1990 U.S. report said we *may* have been on a *hair trigger.*",
@@ -61,7 +89,7 @@
       ]
     }
   ],
-  "caption": "A NATO drill in 1983 alarmed Moscow. Historians argue about how close it came. What do you think? AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "A NATO drill in 1983 alarmed Moscow. Historians argue about how close it came. What do you think? AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#coldwar",
     "#ablearcher",
@@ -74,5 +102,6 @@
     "National Security Archive, 'The Able Archer War Scare Declassified'",
     "U.S. State Department, FRUS 1981-88 Vol. IV"
   ],
-  "story_frage": "A 1983 NATO war game made Moscow fear a real attack."
+  "story_frage": "A 1983 NATO war game made Moscow fear a real attack.",
+  "klang": "voll"
 }

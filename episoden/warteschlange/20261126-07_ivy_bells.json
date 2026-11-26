@@ -9,14 +9,28 @@
       "suche": [
         "submarine underwater",
         "deep ocean"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:USS Halibut SSGN-587.jpg",
+          "hinweis": "Archive: USS Halibut"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It lay in the *Sea of Okhotsk.*",
       "suche": [
         "arctic sea",
         "cold ocean waves"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:Sea-of-Okhotsk-Full-Map-Hokkaido-Kuril-Kamchatka-Sakhalin.png",
+          "hinweis": "Map: Sea of Okhotsk"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "The cable linked a Soviet naval base to *headquarters.*",
@@ -30,14 +44,28 @@
       "suche": [
         "scuba diver",
         "underwater cable"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:USS Halibut with diver lockout.jpg",
+          "hinweis": "USS Halibut, 1970s"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "Tapes were *collected* and replaced in secret.",
       "suche": [
         "reel to reel tape",
         "headphones"
-      ]
+      ],
+      "archiv": [
+        {
+          "datei": "File:USS Halibut with bow thruster.jpg",
+          "hinweis": "USS Halibut, 1965"
+        }
+      ],
+      "nur_archiv": true
     },
     {
       "text": "It was code-named *Ivy Bells.*",
@@ -61,7 +89,7 @@
       ]
     }
   ],
-  "caption": "The U.S. wiretapped a Soviet cable on the seafloor until a spy gave it away. Could it happen today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "caption": "The U.S. wiretapped a Soviet cable on the seafloor until a spy gave it away. Could it happen today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels. Archive images: Wikimedia Commons (public domain/CC0).",
   "hashtags": [
     "#spies",
     "#coldwar",
@@ -74,5 +102,6 @@
     "CIA Reading Room documents on Ivy Bells",
     "National Interest / Military.com historical summaries on Operation Ivy Bells"
   ],
-  "story_frage": "The U.S. once tapped a Soviet cable on the ocean floor."
+  "story_frage": "The U.S. once tapped a Soviet cable on the ocean floor.",
+  "klang": "voll"
 }
