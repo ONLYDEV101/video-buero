@@ -15,7 +15,7 @@ redirect = f"http://127.0.0.1:{PORT}"
 state = secrets.token_urlsafe(16)
 url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
     "client_id": cfg["client_id"], "redirect_uri": redirect, "response_type": "code", "state": state,
-    "scope": "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly",
+    "scope": "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.force-ssl",
     "access_type": "offline", "prompt": "consent"})
 code = {}
 
