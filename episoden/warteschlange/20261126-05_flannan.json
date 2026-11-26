@@ -1,0 +1,77 @@
+{
+  "id": "20261126-05_flannan",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "Three Men Vanished From A Lighthouse",
+  "szenen": [
+    {
+      "text": "In 1900, *three lighthouse keepers* vanished.",
+      "suche": [
+        "lighthouse storm",
+        "rocky island"
+      ]
+    },
+    {
+      "text": "The Flannan Isles lie off *Scotland's* coast.",
+      "suche": [
+        "scottish coast",
+        "ocean waves"
+      ]
+    },
+    {
+      "text": "The keepers were Ducat, Marshall and *McArthur.*",
+      "suche": [
+        "old photograph frame",
+        "lantern"
+      ]
+    },
+    {
+      "text": "On December 15, a passing ship saw the *light was out.*",
+      "suche": [
+        "steamship at night",
+        "dark sea"
+      ]
+    },
+    {
+      "text": "The relief keeper went ashore and found it *deserted.*",
+      "suche": [
+        "empty room",
+        "wooden door"
+      ]
+    },
+    {
+      "text": "Reports said the *clocks had stopped.*",
+      "suche": [
+        "old clock",
+        "wall clock"
+      ]
+    },
+    {
+      "text": "No bodies were *ever found.*",
+      "suche": [
+        "stormy ocean",
+        "cliff edge"
+      ]
+    },
+    {
+      "text": "Storm? Wave? Accident? *Nobody knows.* What's your theory?",
+      "suche": [
+        "lighthouse beam night",
+        "sea fog"
+      ]
+    }
+  ],
+  "caption": "Three keepers vanished in 1900 and were never found. Storm or something else? What's your theory? Send this to someone who loves a mystery. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#mystery",
+    "#unsolved",
+    "#lighthouse",
+    "#history",
+    "#flannanisles"
+  ],
+  "quellen": [
+    "National Records of Scotland, 'The mystery of the Flannan Islands lighthouse'",
+    "Northern Lighthouse Board inquiry reports, 1900"
+  ],
+  "story_frage": "Three lighthouse keepers vanished in 1900 and were never found."
+}

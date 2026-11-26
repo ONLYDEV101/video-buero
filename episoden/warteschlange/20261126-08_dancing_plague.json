@@ -1,0 +1,78 @@
+{
+  "id": "20261126-08_dancing_plague",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "They Danced Until They Dropped",
+  "szenen": [
+    {
+      "text": "In 1518, a woman began *dancing* in a street.",
+      "suche": [
+        "old european street",
+        "cobblestone"
+      ]
+    },
+    {
+      "text": "It happened in *Strasbourg*, now France.",
+      "suche": [
+        "medieval town",
+        "old cathedral"
+      ]
+    },
+    {
+      "text": "She danced for *days.* She didn't stop.",
+      "suche": [
+        "dancing feet",
+        "crowd street"
+      ]
+    },
+    {
+      "text": "Within weeks, dozens *joined her.* Some estimates say 400.",
+      "suche": [
+        "crowd of people",
+        "medieval market"
+      ]
+    },
+    {
+      "text": "Records say some *died* from exhaustion.",
+      "suche": [
+        "empty street",
+        "candle"
+      ]
+    },
+    {
+      "text": "City leaders sent the dancers to a *shrine.*",
+      "suche": [
+        "old chapel",
+        "wooden wagon"
+      ]
+    },
+    {
+      "text": "The cause is *still debated.* Mass hysteria is the top theory.",
+      "suche": [
+        "old manuscript",
+        "quill pen"
+      ]
+    },
+    {
+      "text": "Why would *hundreds* dance? What's your guess?",
+      "suche": [
+        "spinning dancer",
+        "candle flame"
+      ]
+    }
+  ],
+  "caption": "In 1518 a street in Strasbourg couldn't stop dancing. Nobody knows exactly why. What's your guess? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#mystery",
+    "#unsolved",
+    "#history",
+    "#1518",
+    "#strange"
+  ],
+  "quellen": [
+    "Britannica, 'Dancing plague of 1518'",
+    "Public Domain Review, 'The Dancing Plague of 1518'",
+    "John Waller, 'A Time to Dance, a Time to Die' (2008)"
+  ],
+  "story_frage": "A whole city danced uncontrollably in 1518."
+}

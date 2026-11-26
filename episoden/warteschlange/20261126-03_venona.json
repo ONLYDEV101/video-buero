@@ -1,0 +1,78 @@
+{
+  "id": "20261126-03_venona",
+  "sprache": "en",
+  "label": "Declassified",
+  "titel": "The Cables Nobody Could Read",
+  "szenen": [
+    {
+      "text": "The U.S. *secretly* read Soviet spy messages for decades.",
+      "suche": [
+        "old radio equipment",
+        "code breaking"
+      ]
+    },
+    {
+      "text": "The project was called *Venona.*",
+      "suche": [
+        "old documents",
+        "classified folder"
+      ]
+    },
+    {
+      "text": "It began in *1943* and ran until 1980.",
+      "suche": [
+        "vintage calendar",
+        "typewriter keys"
+      ]
+    },
+    {
+      "text": "Soviet cables were meant to be *unbreakable.*",
+      "suche": [
+        "encrypted code",
+        "dark computer screen"
+      ]
+    },
+    {
+      "text": "But code clerks *reused* keys. That was the crack.",
+      "suche": [
+        "paper strips numbers",
+        "hands typing"
+      ]
+    },
+    {
+      "text": "Decrypts helped *expose* spies inside the atomic program.",
+      "suche": [
+        "nuclear facility",
+        "laboratory"
+      ]
+    },
+    {
+      "text": "The public learned of it only in *1995.*",
+      "suche": [
+        "archive shelves",
+        "library documents"
+      ]
+    },
+    {
+      "text": "A secret kept for *50 years.* Who is reading your messages today?",
+      "suche": [
+        "surveillance camera",
+        "night city"
+      ]
+    }
+  ],
+  "caption": "Venona ran from 1943 to 1980 and stayed secret until 1995. Who do you think is listening today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#venona",
+    "#spies",
+    "#declassified",
+    "#coldwar",
+    "#history"
+  ],
+  "quellen": [
+    "NSA, 'VENONA: An Overview' / 'The Venona Story'",
+    "U.S. Department of Energy (OSTI), Manhattan Project History: Venona",
+    "Haynes & Klehr, 'Venona: Decoding Soviet Espionage in America'"
+  ],
+  "story_frage": "U.S. codebreakers secretly read Soviet spy cables for decades."
+}

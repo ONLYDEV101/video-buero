@@ -1,0 +1,77 @@
+{
+  "id": "20261126-06_iran_contra",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "Money Went Where Congress Said No",
+  "szenen": [
+    {
+      "text": "U.S. officials *secretly* sold weapons to Iran.",
+      "suche": [
+        "cargo crates",
+        "airplane cargo"
+      ]
+    },
+    {
+      "text": "Congress had *banned* aid to the Nicaraguan Contras.",
+      "suche": [
+        "capitol building",
+        "senate chamber"
+      ]
+    },
+    {
+      "text": "The *Boland Amendment* was passed in 1982, then tightened in 1984.",
+      "suche": [
+        "legal documents",
+        "gavel"
+      ]
+    },
+    {
+      "text": "Some Iran profits were *diverted* to the Contras.",
+      "suche": [
+        "cash bundles",
+        "bank vault"
+      ]
+    },
+    {
+      "text": "It was exposed in *late 1986.*",
+      "suche": [
+        "newspaper headline",
+        "old television"
+      ]
+    },
+    {
+      "text": "The Tower Commission *investigated* in 1987.",
+      "suche": [
+        "white house",
+        "courtroom"
+      ]
+    },
+    {
+      "text": "The special prosecutor *charged 14 people.*",
+      "suche": [
+        "court building",
+        "judge desk"
+      ]
+    },
+    {
+      "text": "Later, a president *pardoned* six. Was justice served?",
+      "suche": [
+        "pen signing paper",
+        "government building"
+      ]
+    }
+  ],
+  "caption": "Secret arms sales and hidden funds shook Washington in 1986. Was justice served? What do you think? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#irancontra",
+    "#conspiracy",
+    "#declassified",
+    "#politics",
+    "#history"
+  ],
+  "quellen": [
+    "Tower Commission Report (Feb 1987)",
+    "Final Report of the Independent Counsel for Iran/Contra Matters (Walsh), 1993"
+  ],
+  "story_frage": "U.S. officials secretly sold arms to Iran and funded the Contras."
+}

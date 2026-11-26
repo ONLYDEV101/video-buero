@@ -1,0 +1,77 @@
+{
+  "id": "20261126-01_shad",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "They Tested It On Sailors",
+  "szenen": [
+    {
+      "text": "The Pentagon ran *secret* chemical and biological tests at sea.",
+      "suche": [
+        "navy ship at sea",
+        "warship deck"
+      ]
+    },
+    {
+      "text": "It was part of Project *112*, launched in the 1960s.",
+      "suche": [
+        "old documents",
+        "military base"
+      ]
+    },
+    {
+      "text": "A unit called the *Deseret Test Center* ran it from Utah.",
+      "suche": [
+        "utah desert",
+        "army base"
+      ]
+    },
+    {
+      "text": "It planned *134 tests* between 1962 and 1973.",
+      "suche": [
+        "calendar pages",
+        "paperwork stack"
+      ]
+    },
+    {
+      "text": "Fifty were *actually conducted.* The rest were cancelled.",
+      "suche": [
+        "laboratory",
+        "test tubes"
+      ]
+    },
+    {
+      "text": "For decades, the military *denied* it existed.",
+      "suche": [
+        "locked filing cabinet",
+        "dark corridor"
+      ]
+    },
+    {
+      "text": "In *2000*, a TV investigation broke the silence.",
+      "suche": [
+        "tv news broadcast",
+        "old television"
+      ]
+    },
+    {
+      "text": "In *2002*, the Pentagon released fact sheets. Would you have believed it?",
+      "suche": [
+        "open file folder",
+        "navy sailors"
+      ]
+    }
+  ],
+  "caption": "The Pentagon denied Project 112 for decades, until 2000. Would you have believed it before? What do you think? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#conspiracy",
+    "#declassified",
+    "#history",
+    "#military",
+    "#truestory"
+  ],
+  "quellen": [
+    "U.S. Department of Defense (health.mil), 'Project 112 / SHAD' fact sheets",
+    "National Academies, 'Assessing Health Outcomes Among Veterans of Project SHAD' (2016)"
+  ],
+  "story_frage": "The Pentagon secretly tested chemical agents on ships in the 1960s."
+}

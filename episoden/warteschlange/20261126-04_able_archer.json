@@ -1,0 +1,78 @@
+{
+  "id": "20261126-04_able_archer",
+  "sprache": "en",
+  "label": "Cold War Files",
+  "titel": "A War Game Almost Went Wrong",
+  "szenen": [
+    {
+      "text": "In 1983, a NATO *drill* scared Moscow.",
+      "suche": [
+        "military command center",
+        "radar screen"
+      ]
+    },
+    {
+      "text": "It was called *Able Archer 83.*",
+      "suche": [
+        "old computer terminal",
+        "military map"
+      ]
+    },
+    {
+      "text": "It simulated a *nuclear* release procedure.",
+      "suche": [
+        "missile silo",
+        "control panel"
+      ]
+    },
+    {
+      "text": "Soviet leaders feared it was cover for a *real attack.*",
+      "suche": [
+        "kremlin",
+        "snow moscow"
+      ]
+    },
+    {
+      "text": "Soviet air units were *placed on alert.*",
+      "suche": [
+        "fighter jets airfield",
+        "military airplane runway"
+      ]
+    },
+    {
+      "text": "A 1990 U.S. report said we *may* have been on a *hair trigger.*",
+      "suche": [
+        "old documents",
+        "redacted paper"
+      ]
+    },
+    {
+      "text": "That report stayed *secret* until 2015.",
+      "suche": [
+        "archive boxes",
+        "locked door"
+      ]
+    },
+    {
+      "text": "Historians still *debate* how close it came. What's your view?",
+      "suche": [
+        "globe spinning",
+        "dark sky"
+      ]
+    }
+  ],
+  "caption": "A NATO drill in 1983 alarmed Moscow. Historians argue about how close it came. What do you think? AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#coldwar",
+    "#ablearcher",
+    "#declassified",
+    "#nuclear",
+    "#history"
+  ],
+  "quellen": [
+    "PFIAB report 'The Soviet War Scare' (1990, declassified 2015)",
+    "National Security Archive, 'The Able Archer War Scare Declassified'",
+    "U.S. State Department, FRUS 1981-88 Vol. IV"
+  ],
+  "story_frage": "A 1983 NATO war game made Moscow fear a real attack."
+}
