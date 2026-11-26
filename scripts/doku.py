@@ -40,15 +40,32 @@ def textdatei(tmp, name, text):
 # ------------------------------------------------------------------ Stimme (Edge, wie Probe Nr. 6)
 def sprechen(text, stimme, rate, ziel):
     import edge_tts
+    import time
     mp3 = ziel[:-4] + ".mp3"
-    for versuch in range(4):
-        try:
-            asyncio.run(edge_tts.Communicate(text, stimme, rate=rate).save(mp3))
-            break
-        except Exception as e:
-            print("  Stimme Versuch", versuch + 1, "ging nicht:", str(e)[:150])
-            if versuch == 3:
-                raise
+
+    def versuche(txt, datei, anzahl):
+        for v in range(anzahl):
+            try:
+                asyncio.run(edge_tts.Communicate(txt, stimme, rate=rate).save(datei))
+                if os.path.getsize(datei) > 1000:
+                    return True
+            except Exception as e:
+                print("  Stimme Versuch", v + 1, "ging nicht:", str(e)[:100])
+            time.sleep(min(60, 4 * 2 ** v))
+        return False
+
+    if not versuche(text, mp3, 5):
+        # Notfall: Satz für Satz sprechen und zusammensetzen
+        saetze = [s for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+        teile = []
+        for n, s in enumerate(saetze):
+            d = f"{ziel[:-4]}_s{n}.mp3"
+            if not versuche(s, d, 8):
+                raise RuntimeError("Edge-Stimme nicht erreichbar")
+            teile.append(d)
+        liste = ziel[:-4] + "_s.txt"
+        open(liste, "w").write("".join(f"file '{p.replace(os.sep, '/')}'\n" for p in teile))
+        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", liste, "-c", "copy", mp3])
     run(["ffmpeg", "-y", "-i", mp3, "-ar", "44100", "-ac", "2", ziel])
 
 
