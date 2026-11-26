@@ -159,17 +159,17 @@ def e_foto(foto, sek, hinweis, nr, tmp, ziel):
             f"eq=brightness=-0.25:saturation=0.4[h];[b]scale=1400:860:force_original_aspect_ratio=decrease,pad=iw+28:ih+28:14:14:{PAPIER},"
             f"scale=w='trunc(iw*{z}/2)*2':h='trunc(ih*{z}/2)*2':eval=frame[f];[h][f]overlay=x='(W-w)/2':y='(H-h)/2-10',vignette=PI/5")
     if hinweis:
-        filt += (f",drawtext=fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'h{nr}.txt', hinweis.upper())}:fontsize=34:fontcolor=black:"
+        filt += (f",drawtext=expansion=none:fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'h{nr}.txt', hinweis.upper())}:fontsize=34:fontcolor=black:"
                  f"box=1:boxcolor={GELB}:boxborderw=12:x=80:y=h-110")
     filt += f",fps={FPS},fade=t=in:d=0.3[v]"
     run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-i", foto, "-filter_complex", filt, "-map", "[v]", "-t", f"{sek:.3f}", *ENC, ziel])
 
 
 def e_karte(gross, klein, sek, nr, tmp, ziel, farbe=GELB):
-    filt = (f"noise=alls=8:allf=t,vignette=PI/4,drawtext=fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'g{nr}.txt', gross.upper())}:"
+    filt = (f"noise=alls=8:allf=t,vignette=PI/4,drawtext=expansion=none:fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'g{nr}.txt', gross.upper())}:"
             f"fontsize=150:fontcolor={farbe}:x=(w-tw)/2:y=(h-th)/2-60:alpha='min(1,t/0.5)'")
     if klein:
-        filt += (f",drawtext=fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'k{nr}.txt', klein.upper())}:fontsize=54:fontcolor=white:"
+        filt += (f",drawtext=expansion=none:fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'k{nr}.txt', klein.upper())}:fontsize=54:fontcolor=white:"
                  f"x=(w-tw)/2:y=(h/2)+70:alpha='min(1,max(0,(t-0.5)/0.5))'")
     run(["ffmpeg", "-y", "-f", "lavfi", "-i", f"color=c=0x0c0c0c:s={W}x{H}:r={FPS}:d={sek:.3f}", "-vf", filt, *ENC, ziel])
 
@@ -177,10 +177,10 @@ def e_karte(gross, klein, sek, nr, tmp, ziel, farbe=GELB):
 def e_zitat(text, quelle, sek, nr, tmp, ziel):
     zeilen = "\n".join(textwrap.wrap(text, 44))
     filt = (f"drawbox=x=260:y=120:w=1400:h=840:color={PAPIER}:t=fill,noise=alls=6:allf=t,"
-            f"drawtext=fontfile={pfad(MONO)}:textfile={textdatei(tmp, f'z{nr}.txt', zeilen)}:fontsize=46:line_spacing=10:fontcolor=0x1a1a1a:"
+            f"drawtext=expansion=none:fontfile={pfad(MONO)}:textfile={textdatei(tmp, f'z{nr}.txt', zeilen)}:fontsize=46:line_spacing=10:fontcolor=0x1a1a1a:"
             f"x=340:y=220:alpha='min(1,t/0.6)'")
     if quelle:
-        filt += (f",drawtext=fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'q{nr}.txt', '— ' + quelle.upper())}:fontsize=40:fontcolor=0xB00000:"
+        filt += (f",drawtext=expansion=none:fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'q{nr}.txt', '— ' + quelle.upper())}:fontsize=40:fontcolor=0xB00000:"
                  f"x=340:y=860")
     filt += ",vignette=PI/5"
     run(["ffmpeg", "-y", "-f", "lavfi", "-i", f"color=c=0x151515:s={W}x{H}:r={FPS}:d={sek:.3f}", "-vf", filt, *ENC, ziel])
@@ -188,8 +188,8 @@ def e_zitat(text, quelle, sek, nr, tmp, ziel):
 
 def e_kapitel(titel, unter, sek, nr, tmp, ziel):
     filt = (f"drawbox=x=(iw-160)/2:y=430:w=160:h=8:color=0xD01010:t=fill,"
-            f"drawtext=fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'c{nr}.txt', titel.upper())}:fontsize=64:fontcolor=0xD01010:x=(w-tw)/2:y=330,"
-            f"drawtext=fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'u{nr}.txt', (unter or '').upper())}:fontsize=120:fontcolor=white:"
+            f"drawtext=expansion=none:fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'c{nr}.txt', titel.upper())}:fontsize=64:fontcolor=0xD01010:x=(w-tw)/2:y=330,"
+            f"drawtext=expansion=none:fontfile={pfad(ANTON)}:textfile={textdatei(tmp, f'u{nr}.txt', (unter or '').upper())}:fontsize=120:fontcolor=white:"
             f"x=(w-tw)/2:y=480:alpha='min(1,t/0.6)',fade=t=out:st={sek - 0.4:.2f}:d=0.4")
     run(["ffmpeg", "-y", "-f", "lavfi", "-i", f"color=c=black:s={W}x{H}:r={FPS}:d={sek:.3f}", "-vf", filt, *ENC, ziel])
 
