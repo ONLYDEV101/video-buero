@@ -1,0 +1,47 @@
+name: Doku bauen
+on:
+  workflow_dispatch:
+    inputs:
+      datei:
+        description: "Doku-JSON (z. B. dokus/warteschlange/doku_wirecard_en.json)"
+        required: true
+      posten:
+        description: "Auf YouTube hochladen?"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: doku-${{ github.event.inputs.datei }}
+  cancel-in-progress: false
+jobs:
+  doku:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Werkzeuge
+        run: |
+          curl -sfL https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz | tar xJ -C /tmp
+          echo "/tmp/ffmpeg-master-latest-linux64-gpl/bin" >> "$GITHUB_PATH"
+          (timeout 90 sudo apt-get install -y -qq fonts-dejavu-core || true)
+          pip install -q edge-tts==7.3.1
+      - name: Doku bauen
+        run: python scripts/doku.py "${{ github.event.inputs.datei }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: doku
+          path: out/
+          retention-days: 14
+      - name: YouTube
+        if: github.event.inputs.posten == 'true' && env.YT_REFRESH_TOKEN != ''
+        run: python scripts/post_youtube.py out/*.mp4

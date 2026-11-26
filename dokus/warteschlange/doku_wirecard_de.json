@@ -1,0 +1,657 @@
+{
+ "id": "doku_wirecard_de",
+ "sprache": "de",
+ "stimme": "en-US-AndrewMultilingualNeural",
+ "rate": "-4%",
+ "titel": "Wirecard: Die 1,9 Milliarden, die es nie gab | Doku",
+ "beschreibung": "Im Juni 2020 stellten Prüfer dem deutschen Tech-Champion eine einfache Frage: Wo ist das Geld? Die Antwort brachte einen DAX-Konzern zu Fall, der mehr wert war als die Deutsche Bank. Sie zeigte eine Finanzaufsicht, die gegen Journalisten vorging statt gegen Betrüger, und schickte einen Manager auf die Flucht nach Moskau.\n\nMarkus Braun bestreitet die Vorwürfe. Sein Strafprozess in München lief zum Zeitpunkt der Veröffentlichung noch; es gilt die Unschuldsvermutung.",
+ "hashtags": [
+  "#Wirecard",
+  "#Doku",
+  "#Finanzskandal",
+  "#BaFin",
+  "#Betrug"
+ ],
+ "quellen": [
+  "Wirecard AG press releases, 18, 22 and 25 June 2020",
+  "KPMG special audit report on Wirecard, 27 April 2020",
+  "Financial Times, 'House of Wirecard' (2015) and reporting by Dan McCrum, 2019",
+  "German Bundestag, 3rd Committee of Inquiry (Wirecard), final report 2021",
+  "BaFin short-selling ban, 18 February 2019",
+  "APAS sanctions against EY Germany, April 2023",
+  "Munich Regional Court I, criminal trial against Markus Braun et al. (since December 2022)",
+  "Der Spiegel / The Insider, investigation into Jan Marsalek in Moscow, September 2025",
+  "UK Crown Prosecution Service, Bulgarian spy ring case, 2025"
+ ],
+ "hinweis": "Sprecher: KI-Stimme. Videos: Pexels/Pixabay. Archivbilder: Wikimedia Commons.",
+ "abschnitte": [
+  {
+   "text": "Im Juni 2020 stellte ein Team von Wirtschaftsprüfern einem der gefeiertsten Unternehmen Deutschlands eine ganz einfache Frage. Wo ist das Geld? Nicht ein bisschen Geld. Eins Komma neun Milliarden Euro. Ein Viertel der gesamten Bilanz.",
+   "bilder": [
+    {
+     "suche": [
+      "auditor documents desk night",
+      "office papers"
+     ]
+    },
+    {
+     "karte": "1,9 MRD. €",
+     "unter": "ein Viertel der Bilanz"
+    }
+   ]
+  },
+  {
+   "text": "Das Geld sollte auf zwei Banken auf den Philippinen liegen. Die Banken sagten, sie hätten es nie gesehen. Innerhalb einer Woche war ein Konzern pleite, der einmal mehr wert war als die Deutsche Bank. Der Chef saß in Haft. Und der zweitmächtigste Manager war verschwunden.",
+   "bilder": [
+    {
+     "archiv": "File:Makati, Metro Manila skyline - Flickr.jpg",
+     "hinweis": "Manila, Philippines"
+    },
+    {
+     "suche": [
+      "stock market crash screen",
+      "red stock chart"
+     ]
+    },
+    {
+     "suche": [
+      "private jet night",
+      "airport runway night"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Das ist die Geschichte von Wirecard. Eine Geschichte über Gier, über eine Aufsicht, die die falsche Seite beschützt hat, und über einen Mann, der laut Ermittlern in Moskau gelandet ist. Und das Verrückteste? Die Warnungen gab es seit Jahren.",
+   "bilder": [
+    {
+     "archiv": "File:Wirecard-aschheim-2019.jpg",
+     "hinweis": "Wirecard-Zentrale, Aschheim, 2019"
+    },
+    {
+     "archiv": "File:Frankfurt, Bafin.JPG",
+     "hinweis": "BaFin, Frankfurt"
+    },
+    {
+     "suche": [
+      "moscow night",
+      "kremlin night"
+     ]
+    }
+   ]
+  },
+  {
+   "kapitel": "Kapitel 1",
+   "untertitel": "Der Aufstieg"
+  },
+  {
+   "text": "Wirecard wurde 1999 bei München gegründet, mitten im Dotcom-Boom. Das Geschäft klang langweilig: Kartenzahlungen für Onlineshops abwickeln. Doch in den ersten Jahren kamen einige der wichtigsten Kunden aus zwei Branchen, die Banken lieber nicht anfassten. Online-Glücksspiel und Erotik-Webseiten.",
+   "bilder": [
+    {
+     "suche": [
+      "credit card payment online",
+      "typing credit card laptop"
+     ]
+    },
+    {
+     "suche": [
+      "casino roulette",
+      "slot machine lights"
+     ]
+    },
+    {
+     "karte": "1999",
+     "unter": "gegründet bei München"
+    }
+   ]
+  },
+  {
+   "text": "2002 wurde ein österreichischer IT-Berater Vorstandschef: Markus Braun. Er trug gern schwarze Rollkragenpullover und sprach von großen Visionen. Von künstlicher Intelligenz, von der Zukunft des Geldes, von einer Welt ohne Bargeld. Die Anleger liebten es.",
+   "bilder": [
+    {
+     "suche": [
+      "businessman on stage presentation",
+      "conference speaker"
+     ]
+    },
+    {
+     "suche": [
+      "digital payment technology",
+      "smartphone payment"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Neben ihm stieg ein viel jüngerer Manager auf. Jan Marsalek, ebenfalls Österreicher, kam im Jahr 2000 ohne Studienabschluss zur Firma und wurde 2010 Vorstand für das operative Geschäft. Er war zuständig für das schnell wachsende Geschäft in Asien und im Nahen Osten. Er war ständig unterwegs. Und er sammelte Kontakte, nicht nur in der Wirtschaft.",
+   "bilder": [
+    {
+     "suche": [
+      "airport departure board",
+      "airplane window night"
+     ]
+    },
+    {
+     "suche": [
+      "singapore skyline night",
+      "dubai skyline night"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "2005 kam Wirecard durch die Hintertür an die Börse, über die Übernahme einer bereits gelisteten Firmenhülle. Ab da kannten die Zahlen nur eine Richtung. Nach oben. Umsatz, Gewinn, Übernahmen in Indien, in Singapur, in Indonesien.",
+   "bilder": [
+    {
+     "suche": [
+      "stock exchange trading floor",
+      "stock ticker screen"
+     ]
+    },
+    {
+     "karte": "NUR NACH OBEN",
+     "unter": "Umsatz, Gewinn, Übernahmen"
+    }
+   ]
+  },
+  {
+   "text": "Im September 2018 war Wirecard ganz oben angekommen. Der Konzern stieg in den DAX auf, den Index der dreißig größten börsennotierten Unternehmen Deutschlands. Er ersetzte die Commerzbank. Für einen Moment war der Zahlungsabwickler aus einem Münchner Vorort mehr wert als die Deutsche Bank. Rund vierundzwanzig Milliarden Euro.",
+   "bilder": [
+    {
+     "archiv": "File:Wirecard headquarters, Aschheim (49556187461).jpg",
+     "hinweis": "Wirecard-Zentrale, Aschheim"
+    },
+    {
+     "karte": "DAX",
+     "unter": "September 2018 · ersetzt die Commerzbank"
+    },
+    {
+     "karte": "≈ 24 MRD. €",
+     "unter": "mehr wert als die Deutsche Bank"
+    }
+   ]
+  },
+  {
+   "text": "Deutschland hatte endlich, was ihm jahrelang gefehlt hatte. Einen Tech-Champion. Ein Unternehmen, das neben den Riesen aus dem Silicon Valley bestehen konnte. Und weil alle wollten, dass diese Geschichte stimmt, wollten nur sehr wenige hören, dass sie vielleicht nicht stimmt.",
+   "bilder": [
+    {
+     "archiv": "File:SAM 2821 (43951825620).jpg",
+     "hinweis": "Wirecard auf dem Web Summit 2018"
+    },
+    {
+     "suche": [
+      "silicon valley office",
+      "tech campus"
+     ]
+    }
+   ]
+  },
+  {
+   "kapitel": "Kapitel 2",
+   "untertitel": "Die Warnungen"
+  },
+  {
+   "text": "Die ersten Zweifel kamen früh. Schon 2008 stellte eine deutsche Anlegervereinigung Fragen zur Bilanz von Wirecard. Das Unternehmen wehrte sich hart. Und angegriffen wurden die Kritiker, nicht das Unternehmen.",
+   "bilder": [
+    {
+     "suche": [
+      "old documents magnifying glass",
+      "accounting papers"
+     ]
+    },
+    {
+     "karte": "2008",
+     "unter": "erste Fragen zur Bilanz"
+    }
+   ]
+  },
+  {
+   "text": "2015 veröffentlichte die Financial Times eine Serie mit dem Titel House of Wirecard. Die Journalisten Dan McCrum und Paul Murphy stellten eine einfache Frage. Warum passten die Zahlen aus dem Asiengeschäft nicht zusammen? Auch Leerverkäufer, also Anleger, die auf fallende Kurse wetten, begannen zu graben.",
+   "bilder": [
+    {
+     "archiv": "File:Financial Times building One Southwark Bridge.jpg",
+     "hinweis": "Financial Times, London"
+    },
+    {
+     "karte": "2015",
+     "unter": "'House of Wirecard'"
+    },
+    {
+     "suche": [
+      "journalist typing laptop night",
+      "newspaper printing press"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Jedes Mal hatte Wirecard eine Antwort. Die Kritiker seien Spekulanten, hieß es. Sie wollten den Kurs drücken, um daran zu verdienen. Manche Anleger glaubten dem Unternehmen, andere den Journalisten. Der Kurs stieg weiter.",
+   "bilder": [
+    {
+     "suche": [
+      "stock chart rising green",
+      "trading screen"
+     ]
+    },
+    {
+     "suche": [
+      "businessman phone call office",
+      "boardroom meeting"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Im Januar 2019 berichtete die Financial Times dann etwas viel Konkreteres. Ein Hinweisgeber im Büro in Singapur hatte Alarm geschlagen. Interne Unterlagen deuteten auf mögliche Fälschungen und rückdatierte Verträge hin. Der Kurs brach ein.",
+   "bilder": [
+    {
+     "suche": [
+      "singapore marina bay night",
+      "singapore office tower"
+     ]
+    },
+    {
+     "zitat": "Verdacht auf Fälschung und Rückdatierung von Verträgen im Büro von Wirecard in Singapur.",
+     "quelle": "Financial Times, Januar 2019"
+    },
+    {
+     "suche": [
+      "red stock market crash",
+      "falling chart"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Das wäre der Moment gewesen, in dem alle genauer hinschauen. Stattdessen tat Deutschland etwas, das bis heute kaum zu glauben ist.",
+   "bilder": [
+    {
+     "karte": "UND DANN …",
+     "unter": "Deutschland trifft eine Entscheidung"
+    }
+   ]
+  },
+  {
+   "kapitel": "Kapitel 3",
+   "untertitel": "Deutschland schützt seinen Champion"
+  },
+  {
+   "text": "Am achtzehnten Februar 2019 verbot die deutsche Finanzaufsicht BaFin neue Wetten gegen die Wirecard-Aktie. Zwei Monate lang waren Leerverkäufe untersagt. Es war das erste Mal, dass die BaFin das für ein einzelnes Unternehmen tat.",
+   "bilder": [
+    {
+     "archiv": "File:Frankfurt, Bafin.JPG",
+     "hinweis": "BaFin, Frankfurt"
+    },
+    {
+     "karte": "LEERVERKÄUFE VERBOTEN",
+     "unter": "18. Februar 2019 · eine Premiere"
+    }
+   ]
+  },
+  {
+   "text": "Die Botschaft an den Markt war klar: Wirecard ist hier das Opfer. Und die Aufsicht ging noch weiter. Im April 2019 erstattete die BaFin Strafanzeige. Nicht gegen die Manager von Wirecard. Sondern gegen die Journalisten der Financial Times und gegen Leerverkäufer, wegen des Verdachts der Marktmanipulation.",
+   "bilder": [
+    {
+     "suche": [
+      "official documents stamp",
+      "legal papers desk"
+     ]
+    },
+    {
+     "karte": "DAS ZIEL?",
+     "unter": "die Journalisten"
+    },
+    {
+     "archiv": "File:Financial Times building.jpg",
+     "hinweis": "Financial Times building"
+    }
+   ]
+  },
+  {
+   "text": "Man muss sich das kurz vorstellen. Gegen die Journalisten, die fragten, wo das Geld ist, wurde ermittelt. Das Unternehmen, nach dem sie fragten, stieg in den wichtigsten Aktienindex des Landes auf.",
+   "bilder": [
+    {
+     "suche": [
+      "dark corridor office",
+      "empty office night"
+     ]
+    },
+    {
+     "suche": [
+      "frankfurt skyline night",
+      "bank towers night"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Das Verfahren gegen die Journalisten wurde später eingestellt. Aber das Signal war gesendet. In Deutschland war es riskant, Wirecard zu kritisieren. Und bei Wirecard wuchsen die Zahlen weiter.",
+   "bilder": [
+    {
+     "karte": "VERFAHREN EINGESTELLT",
+     "unter": "doch der Schaden war da"
+    },
+    {
+     "suche": [
+      "server room lights",
+      "data center"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Ende 2019 veröffentlichte die Financial Times interne Tabellen. Sie legten nahe, dass ein großer Teil der Gewinne von nur drei Partnerfirmen kam, in Dubai, Singapur und Manila. Unter Druck beauftragte Wirecard die Prüfungsgesellschaft KPMG mit einer Sonderprüfung. Sie sollte den Namen des Unternehmens ein für alle Mal reinwaschen.",
+   "bilder": [
+    {
+     "suche": [
+      "spreadsheet on screen",
+      "financial data screen"
+     ]
+    },
+    {
+     "karte": "3 PARTNER",
+     "unter": "Dubai · Singapur · Manila"
+    },
+    {
+     "suche": [
+      "auditors meeting",
+      "business documents table"
+     ]
+    }
+   ]
+  },
+  {
+   "kapitel": "Kapitel 4",
+   "untertitel": "1,9 Milliarden Euro"
+  },
+  {
+   "text": "Am achtundzwanzigsten April 2020 kam der KPMG-Bericht. Er wusch Wirecard nicht rein. KPMG schrieb, man könne nicht bestätigen, dass die Umsätze aus diesem Partnergeschäft zwischen 2016 und 2018 echt waren. Wirecard habe nötige Unterlagen nicht geliefert. Der Kurs fiel an einem Tag um ein Viertel.",
+   "bilder": [
+    {
+     "zitat": "KPMG konnte die Existenz der Umsätze aus dem Drittpartnergeschäft für 2016 bis 2018 nicht nachweisen.",
+     "quelle": "KPMG-Sonderprüfung, April 2020 (sinngemäß)"
+    },
+    {
+     "suche": [
+      "stock market crash red screen",
+      "falling numbers"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Dann kam der achtzehnte Juni 2020. Der langjährige Abschlussprüfer EY verweigerte die Unterschrift unter die Jahresbilanz. Der Grund: Eins Komma neun Milliarden Euro, die angeblich auf Treuhandkonten bei zwei Banken auf den Philippinen lagen, ließen sich nicht bestätigen. Die Bankbestätigungen, räumte Wirecard selbst ein, waren womöglich gefälscht.",
+   "bilder": [
+    {
+     "karte": "18. JUNI 2020",
+     "unter": "EY verweigert die Unterschrift"
+    },
+    {
+     "zitat": "Es gibt Hinweise, dass dem Abschlussprüfer gefälschte Saldenbestätigungen vorgelegt wurden, um ihn zu täuschen.",
+     "quelle": "Wirecard, 18. Juni 2020 (sinngemäß)"
+    },
+    {
+     "archiv": "File:Makati Skyline as of June 2015.jpg",
+     "hinweis": "Makati, Manila"
+    }
+   ]
+  },
+  {
+   "text": "Die Aktie stürzte an einem einzigen Tag um mehr als sechzig Prozent ab. Am nächsten Morgen trat Markus Braun zurück. Die beiden philippinischen Banken erklärten, die Dokumente stammten nicht von ihnen. Und der Chef der philippinischen Zentralbank sagte, das Geld sei nie in das Finanzsystem des Landes gelangt.",
+   "bilder": [
+    {
+     "karte": "-60%",
+     "unter": "an einem einzigen Tag"
+    },
+    {
+     "suche": [
+      "manila street night",
+      "manila city traffic night"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Am zweiundzwanzigsten Juni gab Wirecard auf. In einer kurzen Mitteilung sagte das Unternehmen, was wenige Wochen zuvor undenkbar gewesen war.",
+   "bilder": [
+    {
+     "zitat": "Es besteht eine überwiegende Wahrscheinlichkeit, dass die Bankguthaben auf Treuhandkonten in Höhe von 1,9 Mrd. EUR nicht bestehen.",
+     "quelle": "Wirecard-Mitteilung, 22. Juni 2020"
+    }
+   ]
+  },
+  {
+   "text": "Am selben Abend stellte sich Markus Braun der Staatsanwaltschaft in München. Er kam gegen Kaution frei und wurde einen Monat später erneut verhaftet. Am fünfundzwanzigsten Juni 2020 meldete Wirecard Insolvenz an. Es war das erste Unternehmen in der Geschichte des DAX, das pleiteging.",
+   "bilder": [
+    {
+     "archiv": "File:Justizpalast at dusk 2.JPG",
+     "hinweis": "München, Justizpalast"
+    },
+    {
+     "karte": "25. JUNI 2020",
+     "unter": "erste DAX-Pleite der Geschichte"
+    }
+   ]
+  },
+  {
+   "text": "Milliarden an Ersparnissen waren weg. Kleinanleger, die dem deutschen Tech-Champion vertraut hatten, verloren fast alles. Banken, die Wirecard Geld geliehen hatten, blieben auf riesigen Löchern sitzen. Und eine Frage wurde mit jeder Stunde dringender. Wo war Jan Marsalek?",
+   "bilder": [
+    {
+     "suche": [
+      "empty wallet",
+      "worried man looking at phone"
+     ]
+    },
+    {
+     "karte": "WO IST",
+     "unter": "Jan Marsalek?"
+    }
+   ]
+  },
+  {
+   "kapitel": "Kapitel 5",
+   "untertitel": "Der Mann, der verschwand"
+  },
+  {
+   "text": "Wirecard stellte Marsalek am achtzehnten Juni frei und entließ ihn wenige Tage später. Da war er schon weg. Nach Angaben von Ermittlern und mehreren Medienberichten stieg er am neunzehnten Juni auf einem kleinen Flugplatz in Österreich in ein Privatflugzeug. Ziel: Minsk, in Belarus.",
+   "bilder": [
+    {
+     "suche": [
+      "small private airplane takeoff",
+      "private jet runway"
+     ]
+    },
+    {
+     "karte": "19. JUNI 2020",
+     "unter": "Österreich → Minsk"
+    }
+   ]
+  },
+  {
+   "text": "Sein Name landete auf Europas Fahndungslisten. Doch die Spur verlor sich. In den folgenden Jahren setzten Journalisten ein Bild zusammen, das eher nach Spionageroman klang als nach Finanzskandal. Marsalek, so berichteten sie, hatte seit Langem Kontakte zu russischen Geheimdiensten.",
+   "bilder": [
+    {
+     "suche": [
+      "wanted poster",
+      "police investigation board"
+     ]
+    },
+    {
+     "suche": [
+      "moscow red square night",
+      "moscow city night"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "2025 verurteilte ein Gericht in London Mitglieder eines bulgarischen Spionagerings, der Journalisten und andere Menschen in ganz Europa ausspioniert hatte. Laut der britischen Anklage bekam die Gruppe ihre Befehle von Jan Marsalek.",
+   "bilder": [
+    {
+     "suche": [
+      "london old bailey",
+      "london court building"
+     ]
+    },
+    {
+     "karte": "LONDON 2025",
+     "unter": "Spionagering verurteilt · Befehle laut Anklage von Marsalek"
+    }
+   ]
+  },
+  {
+   "text": "Im September 2025 berichteten der Spiegel und weitere Medien, Marsalek lebe unter falscher Identität in Moskau und arbeite offenbar mit russischen Geheimdiensten zusammen. Russland äußert sich nicht zu seinem Aufenthaltsort. Deutsche Behörden suchen ihn weiter per Haftbefehl.",
+   "bilder": [
+    {
+     "suche": [
+      "moscow street winter",
+      "moscow apartment buildings"
+     ]
+    },
+    {
+     "karte": "WEITER GESUCHT",
+     "unter": "deutscher Haftbefehl"
+    }
+   ]
+  },
+  {
+   "text": "Man muss sich vorstellen, was das bedeutet. Jahrelang hatte womöglich einer der Top-Manager eines DAX-Konzerns Verbindungen zu einem fremden Geheimdienst. Und niemand, der zuständig war, hat es bemerkt.",
+   "bilder": [
+    {
+     "suche": [
+      "shadow man window",
+      "dark silhouette window"
+     ]
+    }
+   ]
+  },
+  {
+   "kapitel": "Kapitel 6",
+   "untertitel": "Wer hat versagt?"
+  },
+  {
+   "text": "Nach dem Zusammenbruch setzte der Bundestag einen Untersuchungsausschuss ein. Monatelang befragte er Aufseher, Prüfer, Minister und Manager. Unter den Zeugen war auch der damalige Finanzminister Olaf Scholz.",
+   "bilder": [
+    {
+     "archiv": "File:Im Stzungssaal vorm PUA.jpg",
+     "hinweis": "Bundestag, Ausschusssaal"
+    },
+    {
+     "suche": [
+      "german parliament bundestag",
+      "berlin reichstag"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Die Ergebnisse waren vernichtend. Die BaFin hatte Wirecard vor allem als Technologiefirma behandelt und nicht als Finanzkonzern. Sie hatte auf die Kritiker geschaut statt auf das Unternehmen. Der Präsident der BaFin musste im Januar 2021 gehen. Die Behörde wurde umgebaut.",
+   "bilder": [
+    {
+     "archiv": "File:Frankfurt, Bafin.JPG",
+     "hinweis": "BaFin"
+    },
+    {
+     "karte": "JANUAR 2021",
+     "unter": "BaFin-Präsident muss gehen"
+    }
+   ]
+  },
+  {
+   "text": "Und die Prüfer? EY hatte die Bilanzen von Wirecard jahrelang testiert. 2023 sanktionierte die deutsche Abschlussprüferaufsicht EY Deutschland, mit einer Geldbuße und einem zweijährigen Verbot, neue Prüfmandate von Unternehmen öffentlichen Interesses anzunehmen, etwa von börsennotierten Konzernen.",
+   "bilder": [
+    {
+     "suche": [
+      "accounting firm office",
+      "auditors documents"
+     ]
+    },
+    {
+     "karte": "EY SANKTIONIERT",
+     "unter": "2023 · zwei Jahre keine neuen Börsenmandate"
+    }
+   ]
+  },
+  {
+   "text": "Im Dezember 2022 begann in München der Strafprozess gegen Markus Braun und zwei weitere frühere Manager. Die Staatsanwaltschaft wirft ihm unter anderem Betrug, Untreue und Marktmanipulation vor. Braun bestreitet alles. Er sagt, er sei Opfer einer Bande um Marsalek geworden. Einer der Mitangeklagten, der frühere Chef des Dubai-Geschäfts, wurde zum Kronzeugen der Anklage.",
+   "bilder": [
+    {
+     "archiv": "File:Aerial image of the Augsburg-Gablingen prison (view from the southeast).jpg",
+     "hinweis": "JVA Augsburg-Gablingen"
+    },
+    {
+     "karte": "DER PROZESS",
+     "unter": "München · seit Dezember 2022"
+    },
+    {
+     "suche": [
+      "courtroom empty",
+      "judge gavel"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Der Prozess dauert seit Jahren. Braun sitzt seit mehr als sechs Jahren in Untersuchungshaft. In einem getrennten Zivilverfahren verurteilte ein Münchner Gericht ihn und zwei weitere frühere Vorstände zu hundertvierzig Millionen Euro Schadenersatz. Dieses Urteil war bei Veröffentlichung dieses Videos nicht rechtskräftig. Solange es kein Strafurteil gibt, gilt für Markus Braun die Unschuldsvermutung.",
+   "bilder": [
+    {
+     "archiv": "File:Landgericht München I.jpg",
+     "hinweis": "Landgericht München I"
+    },
+    {
+     "karte": "140 MIO. €",
+     "unter": "Schadenersatz · nicht rechtskräftig"
+    }
+   ]
+  },
+  {
+   "kapitel": "Epilog",
+   "untertitel": "Was bleibt"
+  },
+  {
+   "text": "Die frühere Wirecard-Zentrale in Aschheim ist heute wieder ein ganz normales Bürogebäude. Der Konzern wurde in Einzelteilen verkauft. Anleger verloren rund zwanzig Milliarden Euro an Börsenwert.",
+   "bilder": [
+    {
+     "archiv": "File:Aschheim-Dornach, Einsteinring 31 v N, 3, ret Wirecard.jpeg",
+     "hinweis": "Ehemaliges Wirecard-Gelände"
+    },
+    {
+     "karte": "≈ 20 MRD. €",
+     "unter": "Börsenwert vernichtet"
+    }
+   ]
+  },
+  {
+   "text": "Aber die unangenehmste Lehre betrifft nicht ein einzelnes Unternehmen. Sie betrifft ein System, das glauben wollte. Eine Aufsicht, die gegen Journalisten vorging. Prüfer, die jahrelang unterschrieben. Politiker, die stolz auf einen Champion waren, den sie nicht verstanden.",
+   "bilder": [
+    {
+     "suche": [
+      "frankfurt bank towers fog",
+      "city skyline fog"
+     ]
+    },
+    {
+     "suche": [
+      "journalist notebook",
+      "newspaper headlines"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Die Leute, die recht hatten, wurden wie Feinde behandelt. Deshalb die Frage an dich: Hättest du Wirecard 2018 vertraut? Und wer ist deiner Meinung nach das nächste Wirecard? Schreib es in die Kommentare. Und wenn du mehr solche Geschichten sehen willst, abonnier den Kanal.",
+   "bilder": [
+    {
+     "karte": "DAS NÄCHSTE WIRECARD?",
+     "unter": "schreib es in die Kommentare"
+    },
+    {
+     "suche": [
+      "city lights night aerial",
+      "night city timelapse"
+     ]
+    }
+   ]
+  }
+ ]
+}

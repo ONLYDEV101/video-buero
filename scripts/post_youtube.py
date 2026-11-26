@@ -26,7 +26,7 @@ def metadaten(video):
             ep = json.load(open(p, encoding="utf-8"))
             break
     titel = ep.get("titel") or caption.split("\n")[0]
-    lang = os.path.basename(basis).startswith("kompilation")   # langes Video: kein #shorts
+    lang = os.path.basename(basis).startswith(("kompilation", "doku"))   # langes Video: kein #shorts
     titel = re.sub(r"[<>]", "", titel)[:90] + ("" if lang else " #shorts")
     tags = [t.lstrip("#") for t in re.findall(r"#\w+", caption)][:10]
     beschreibung = re.sub(r"[<>]", "", caption)[:4800]
