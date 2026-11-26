@@ -1,0 +1,86 @@
+{
+  "id": "TEST_creepy_level4",
+  "sprache": "en",
+  "label": "Night Shift Stories",
+  "titel": "Never Go To Level 4",
+  "stimme": "am_onyx",
+  "tempo": 1.0,
+  "cta": "FOLLOW FOR THE NEXT SHIFT",
+  "stempel": false,
+  "suche_standard": [
+    "dark night"
+  ],
+  "szenen": [
+    {
+      "text": "I worked nights in a hospital parking garage. *Level 4* was always empty.",
+      "suche": [
+        "parking garage night",
+        "empty parking lot"
+      ]
+    },
+    {
+      "text": "Every night at *3:12,* the elevator stopped there anyway.",
+      "suche": [
+        "elevator",
+        "elevator doors"
+      ]
+    },
+    {
+      "text": "The doors opened. *Nobody* got out.",
+      "suche": [
+        "dark corridor",
+        "empty hallway night"
+      ]
+    },
+    {
+      "text": "My boss gave me one rule: *never* go to Level 4 after three.",
+      "suche": [
+        "security guard",
+        "flashlight dark"
+      ]
+    },
+    {
+      "text": "On my last shift, the elevator *called me* instead.",
+      "suche": [
+        "elevator buttons",
+        "flickering light"
+      ]
+    },
+    {
+      "text": "On the camera, I watched a man step out onto Level 4.",
+      "suche": [
+        "security camera",
+        "cctv monitor"
+      ]
+    },
+    {
+      "text": "He was wearing *my uniform.*",
+      "suche": [
+        "shadow man",
+        "silhouette dark"
+      ]
+    },
+    {
+      "text": "I was still sitting at my desk. *Wasn't I?*",
+      "suche": [
+        "night office",
+        "dark room"
+      ]
+    },
+    {
+      "text": "This story is fiction. Follow for the *next shift.*",
+      "suche": [
+        "dark night",
+        "fog night"
+      ]
+    }
+  ],
+  "caption": "An original horror short (fiction). Would you go to Level 4? 👁️\nFootage: Pixabay. Voice: AI.",
+  "hashtags": [
+    "#horror",
+    "#scarystories",
+    "#creepy",
+    "#horrorstory",
+    "#fiction"
+  ]
+}

@@ -252,7 +252,7 @@ def ass_text(woerter):
     return " ".join(aus)
 
 
-def untertitel(szenen, gesamt, label, ziel, titel="", fotos=()):
+def untertitel(szenen, gesamt, label, ziel, titel="", fotos=(), cta="FOLLOW FOR MORE FILES", stempel_an=True):
     zeilen = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0",
               "ScaledBorderAndShadow: yes", "", "[V4+ Styles]",
               "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, "
@@ -272,7 +272,7 @@ def untertitel(szenen, gesamt, label, ziel, titel="", fotos=()):
     for a, e, hinweis in fotos:
         if hinweis:
             zeilen.append(f"Dialogue: 2,{zeit(a + 0.2)},{zeit(e)},Foto,,0,0,0,,{{\\an5\\pos(540,1035)\\fad(120,80)}}{hinweis.upper()}")
-    stempel = False
+    stempel = not stempel_an
     for nr, (start, sprech, text) in enumerate(szenen):
         roh = sauber(text).lower()
         wort = next((w for k, w in [("declassif", "DECLASSIFIED"), ("confirm", "CONFIRMED"), ("admitted", "ADMITTED"),
@@ -284,7 +284,7 @@ def untertitel(szenen, gesamt, label, ziel, titel="", fotos=()):
             zeilen.append(f"Dialogue: 2,{zeit(e)},{zeit(e + 1.4)},Stamp,,0,0,0,,{{\\an5\\pos(540,720)\\frz12\\fscx260\\fscy260\\alpha&HFF&"
                           f"\\t(0,90,\\fscx100\\fscy100\\alpha&H00&)\\t(1150,1400,\\alpha&HFF&)}}{wort}")
         if nr == len(szenen) - 1:
-            zeilen.append(f"Dialogue: 1,{zeit(start)},{zeit(gesamt)},CTA,,0,0,0,,{{\\an5\\pos(540,1520)\\fad(300,0)}}FOLLOW FOR MORE FILES")
+            zeilen.append(f"Dialogue: 1,{zeit(start)},{zeit(gesamt)},CTA,,0,0,0,,{{\\an5\\pos(540,1520)\\fad(300,0)}}{cta}")
         text = re.sub(r"\*([^*]+)\*", lambda m: " ".join("*" + w + "*" for w in m.group(1).split()), text)
         teile = bloecke(text)
         gewicht = [len(sauber(" ".join(t))) + (5 if re.search(r"[.,!?:;…]", t[-1]) else 1) for t in teile]
@@ -390,7 +390,8 @@ def episode(pfad):
              "-crf", "19", "-pix_fmt", "yuv420p", "-r", str(FPS), "bild.mp4"], cwd=tmp)
         print(f"  {nr} Einstellungen, davon {pex} Stockclips und {len(fotos)} Archivfotos")
         # 4) Untertitel + Klang
-        untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"), ep.get("titel", ""), fotos)
+        untertitel(zeitplan, gesamt, ep.get("label", ""), os.path.join(tmp, "caps.ass"), ep.get("titel", ""), fotos,
+                   ep.get("cta", "FOLLOW FOR MORE FILES"), ep.get("stempel", True))
         wechsel = [z[0] for z in zeitplan]
         klangteppich(gesamt, wechsel, os.path.join(tmp, "musik.wav"), [x[0] for x in fotos],
                      wechsel[1:] if ep.get("klang") == "voll" else [])
