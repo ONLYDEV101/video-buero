@@ -1,0 +1,785 @@
+{
+ "id": "doku_schufa_en",
+ "sprache": "en",
+ "stimme": "en-US-AndrewMultilingualNeural",
+ "rate": "-4%",
+ "titel": "Schufa: The Secret Score That Rules Germany | Documentary",
+ "beschreibung": "A private company owned largely by banks holds data on around 68 million people in Germany, and for decades its score formula was a trade secret. Then Europe's highest court stepped in, and journalists reported a hidden archive of old data. Who checks the people who check you?\n\nChapters:\n0:00 The number behind the keys\n0:59 The machine that remembers\n2:57 The black box\n4:50 Who profits?\n6:28 Luxembourg steps in\n8:37 The transparency offensive\n10:29 The shadow database\n12:51 What it means for you\n14:37 Who watches the scorekeepers?\n\nThe disputes over Schufa's historical data are ongoing. Schufa says its storage and use of this data is lawful; no court had ruled on the matter at the time of publication. Several other cases mentioned in this video are also not final.",
+ "hashtags": [
+  "#Schufa",
+  "#documentary",
+  "#creditscore",
+  "#privacy",
+  "#Germany"
+ ],
+ "quellen": [
+  "Court of Justice of the European Union, judgments of 7 December 2023, C-634/21 (SCHUFA Holding, Scoring) and joined cases C-26/22 and C-64/22, press release No 186/23",
+  "Court of Justice of the European Union, judgment of 27 February 2025, C-203/22 (Dun & Bradstreet Austria), press release No 22/25",
+  "German Federal Court of Justice (BGH), VI ZR 156/13, 28 January 2014; I ZR 97/25, 18 December 2025; I ZR 227/25 to 230/25, 21 October 2026",
+  "Administrative Court of Wiesbaden, Schufa score transparency ruling, late 2025 (not final), reported by beck-aktuell",
+  "NDR / Süddeutsche Zeitung investigation into Schufa's historical data, July 2026, reported by tagesschau.de, netzpolitik.org and heise online",
+  "noyb: complaint against SCHUFA Holding AG, 16 February 2024; cease-and-desist letter, August 2026; reporting by dpa/Tagesspiegel, September 2026",
+  "Open Knowledge Foundation Germany / AlgorithmWatch, OpenSCHUFA; Der Spiegel and BR, 'Blackbox Schufa', November 2018",
+  "Bundeskartellamt, press release on the planned acquisition of SCHUFA, 7 February 2022",
+  "Verbraucherzentrale (German consumer advice centres) on the new Schufa score (March 2026) and on deletion of mobile contract data (19 October 2023)",
+  "Stadtlexikon Wiesbaden, entry 'SCHUFA Holding AG'; SCHUFA FAQ on data volume; Section 37a Federal Data Protection Act (BDSG), in force 20 November 2026"
+ ],
+ "hinweis": "Narration: AI voice. Footage: Pexels/Pixabay.",
+ "abschnitte": [
+  {
+   "text": "Imagine you have finally found the apartment. The rent is fair, the landlord likes you. Then he asks for one more piece of paper. A letter from a private company you never signed a contract with. And on that letter is a number that decides whether you get the keys.",
+   "bilder": [
+    {
+     "suche": [
+      "apartment keys handover",
+      "apartment viewing empty room"
+     ]
+    },
+    {
+     "suche": [
+      "landlord reading document",
+      "person holding letter"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "In Germany, that company is called Schufa. It holds data on around sixty eight million people, almost every adult in the country. Banks, phone companies, online shops and landlords rely on it. And for decades, the way it calculated its scores was treated as a trade secret.",
+   "bilder": [
+    {
+     "karte": "68 MILLION",
+     "unter": "people in Germany on file"
+    },
+    {
+     "suche": [
+      "server room lights",
+      "data center corridor"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then Europe's highest court stepped in. Then journalists reported a hidden archive of old data that, they say, should have been deleted long ago. And just one week ago, the rules changed again. So who really decides whether you can be trusted? And who checks the people who do the checking?",
+   "bilder": [
+    {
+     "suche": [
+      "european court building",
+      "courtroom empty"
+     ]
+    },
+    {
+     "karte": "WHO CHECKS",
+     "unter": "the people who check you?"
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 1",
+   "untertitel": "The Machine That Remembers"
+  },
+  {
+   "text": "To understand Schufa, we have to go back to Berlin in nineteen twenty seven. The city's electricity company, Bewag, was selling household appliances on instalment plans. Irons, stoves, vacuum cleaners. The idea was simple. People who paid their electricity bill on time could probably be trusted to pay off a new stove as well.",
+   "bilder": [
+    {
+     "suche": [
+      "vintage black and white city street 1920s",
+      "old electric appliances"
+     ]
+    },
+    {
+     "karte": "BERLIN, 1927",
+     "unter": "an idea from the power company"
+    }
+   ]
+  },
+  {
+   "text": "So a shared register was set up, recording who paid and who did not. Its name was a mouthful. Schutzgemeinschaft für allgemeine Kreditsicherung. Roughly, the protective association for general credit security. In short, Schufa. According to the city of Wiesbaden's official history, it had around one and a half million index cards just two years after it started.",
+   "bilder": [
+    {
+     "suche": [
+      "old index card file cabinet",
+      "vintage filing cabinet drawers"
+     ]
+    },
+    {
+     "karte": "1.5 MILLION",
+     "unter": "index cards after two years"
+    }
+   ]
+  },
+  {
+   "text": "After the Second World War, regional Schufa companies spread across West Germany. A national umbrella association was formed in nineteen fifty two and moved to Wiesbaden in nineteen fifty seven. In the year two thousand, the regional companies merged into Schufa Holding, which is still based in Wiesbaden today.",
+   "bilder": [
+    {
+     "suche": [
+      "office building germany",
+      "corporate headquarters exterior"
+     ]
+    },
+    {
+     "karte": "WIESBADEN",
+     "unter": "Schufa Holding AG since 2000"
+    }
+   ]
+  },
+  {
+   "text": "Think of Equifax or Experian. Schufa is not a government agency. It is a private company. And its owners are largely the very industry that uses its data. Savings banks, cooperative banks, private banks, and retailers.",
+   "bilder": [
+    {
+     "suche": [
+      "bank branch exterior",
+      "bank logo building facade"
+     ]
+    },
+    {
+     "karte": "PRIVATE",
+     "unter": "owned mostly by banks"
+    }
+   ]
+  },
+  {
+   "text": "Schufa says it holds around one billion data records on roughly sixty eight million people and six million companies. The information comes mainly from about ten thousand contract partners, plus public sources such as court registers of debtors and insolvency notices.",
+   "bilder": [
+    {
+     "karte": "≈ 1 BILLION",
+     "unter": "data records"
+    },
+    {
+     "suche": [
+      "digital data stream screen",
+      "database on computer screen"
+     ]
+    },
+    {
+     "karte": "10,000",
+     "unter": "contract partners"
+    }
+   ]
+  },
+  {
+   "text": "What is in there? Bank accounts, credit cards, loans, leasing contracts, and whether payments arrived on time. Schufa stresses that more than ninety percent of the people in its database have only positive entries. But positive entries are still data. Every account, every contract, every credit enquiry feeds the machine.",
+   "bilder": [
+    {
+     "suche": [
+      "credit card on table",
+      "signing contract pen"
+     ]
+    },
+    {
+     "karte": "90%+",
+     "unter": "only positive entries, says Schufa"
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 2",
+   "untertitel": "The Black Box"
+  },
+  {
+   "text": "For most of its history, the heart of Schufa was a single number. A score, shown as a percentage, that was meant to predict how likely you are to pay. How exactly was it calculated? That, Schufa said, was a trade secret.",
+   "bilder": [
+    {
+     "suche": [
+      "black box on table",
+      "locked safe door"
+     ]
+    },
+    {
+     "karte": "??%",
+     "unter": "a number nobody could explain"
+    }
+   ]
+  },
+  {
+   "text": "In January twenty fourteen, Germany's Federal Court of Justice agreed. A consumer from Hesse had sued to learn how their score was built. The court ruled that Schufa must tell people which of their data it stores and uses, but not the formula itself, and not how the criteria are weighted.",
+   "bilder": [
+    {
+     "suche": [
+      "court building columns",
+      "judge gavel"
+     ]
+    },
+    {
+     "karte": "2014",
+     "unter": "formula stays secret, says Germany's top court"
+    }
+   ]
+  },
+  {
+   "text": "In twenty eighteen, two civil society groups tried something unusual. The Open Knowledge Foundation Germany and AlgorithmWatch asked ordinary people to request their own Schufa data and donate it. The project was called OpenSchufa. Its crowdfunding raised around forty three thousand euros, roughly fifty thousand dollars.",
+   "bilder": [
+    {
+     "suche": [
+      "people using laptop at home",
+      "scanning document with phone"
+     ]
+    },
+    {
+     "karte": "OPENSCHUFA",
+     "unter": "2018 · citizens donate their data"
+    }
+   ]
+  },
+  {
+   "text": "In November twenty eighteen, the news magazine Der Spiegel and the Bavarian public broadcaster BR published their analysis of around two thousand donated reports. One finding stood out. Schufa was running several versions of its score at the same time. Depending on which version a company requested, the same person could look more or less risky.",
+   "bilder": [
+    {
+     "suche": [
+      "newsroom journalists computers",
+      "data analysis charts screen"
+     ]
+    },
+    {
+     "karte": "SAME PERSON",
+     "unter": "different scores"
+    }
+   ]
+  },
+  {
+   "text": "The journalists also concluded that the system could put some groups at a disadvantage. But they admitted the sample was voluntary and not representative, and would not stand up in court. Germany's justice minister at the time, Katarina Barley, demanded more transparency from credit agencies.",
+   "bilder": [
+    {
+     "suche": [
+      "german parliament building",
+      "politician press conference microphones"
+     ]
+    },
+    {
+     "suche": [
+      "magnifying glass documents",
+      "spreadsheet numbers"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "But the black box stayed closed. And people kept running into it in ordinary life. A rejected phone contract. A loan with a worse interest rate. An apartment that went to someone else.",
+   "bilder": [
+    {
+     "suche": [
+      "online shopping checkout laptop",
+      "phone shop counter"
+     ]
+    },
+    {
+     "suche": [
+      "disappointed person reading letter",
+      "rejected application paper"
+     ]
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 3",
+   "untertitel": "Who Profits?"
+  },
+  {
+   "text": "Here is something many people do not know. Under European data protection law, the GDPR, everyone has the right to a free copy of the data a company holds about them. Schufa also sells a paid credit report, the kind many landlords like to see.",
+   "bilder": [
+    {
+     "suche": [
+      "paper document mailbox",
+      "envelope letter opening"
+     ]
+    },
+    {
+     "karte": "FREE",
+     "unter": "your right under the GDPR"
+    }
+   ]
+  },
+  {
+   "text": "In February twenty twenty four, the privacy group noyb, founded by the Austrian activist Max Schrems, filed a complaint with the data protection authority in Hesse, the German state where Schufa is based. Its accusation was blunt. Schufa, it said, used manipulative design to hide the free option and push people towards the paid product.",
+   "bilder": [
+    {
+     "suche": [
+      "website on laptop screen",
+      "clicking button on website"
+     ]
+    },
+    {
+     "karte": "FEBRUARY 2024",
+     "unter": "noyb files a complaint"
+    }
+   ]
+  },
+  {
+   "text": "noyb's headline: German credit agency earns millions through unlawful customer manipulation. Schufa rejected this. It said its free data copy went further than the law requires. noyb's own case page lists Schufa's response and noyb's reply, but no decision by the authority.",
+   "bilder": [
+    {
+     "karte": "EARNS MILLIONS?",
+     "unter": "noyb's accusation · Schufa rejects it"
+    },
+    {
+     "suche": [
+      "office documents desk",
+      "legal papers"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The business is valuable enough that investors wanted in. In twenty twenty one and twenty twenty two, the Swedish private equity firm EQT tried to take control of Schufa. Germany's competition authority cleared the plans in February twenty twenty two.",
+   "bilder": [
+    {
+     "suche": [
+      "stockholm skyline",
+      "business meeting boardroom"
+     ]
+    },
+    {
+     "karte": "FOR SALE?",
+     "unter": "a private equity bid for Schufa"
+    }
+   ]
+  },
+  {
+   "text": "But the savings banks and cooperative banks pushed back. According to Handelsblatt and Reuters, EQT eventually broke off talks. Schufa stayed in the hands of the banking industry. Which raises a question worth asking. If the companies that judge you are owned by the companies that lend to you, whose interests does the score serve first?",
+   "bilder": [
+    {
+     "suche": [
+      "frankfurt bank towers",
+      "bank skyscrapers"
+     ]
+    },
+    {
+     "karte": "WHOSE SCORE?",
+     "unter": "judged by the lenders' own company"
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 4",
+   "untertitel": "Luxembourg Steps In"
+  },
+  {
+   "text": "The real blow came from Luxembourg, home of the Court of Justice of the European Union. A consumer in Germany had been refused a loan after a negative Schufa score. They asked Schufa for an explanation and got only general information. The data protection authority in Hesse declined to act.",
+   "bilder": [
+    {
+     "suche": [
+      "luxembourg city",
+      "european court building"
+     ]
+    },
+    {
+     "suche": [
+      "bank loan rejected letter",
+      "person at bank counter"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The consumer sued, and the Administrative Court of Wiesbaden sent the case to Luxembourg. On the seventh of December twenty twenty three, the judges ruled. Schufa had always argued that it only delivers a number, and the bank makes the decision.",
+   "bilder": [
+    {
+     "karte": "7 DEC 2023",
+     "unter": "Court of Justice of the EU"
+    },
+    {
+     "suche": [
+      "judges courtroom",
+      "court gavel close up"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "The court disagreed. If a lender relies heavily on the score when deciding whether to grant credit, then calculating that score is itself an automated decision about a human being. And under the GDPR, such decisions are prohibited in principle, with narrow exceptions.",
+   "bilder": [
+    {
+     "karte": "TO SCORE IS TO DECIDE",
+     "unter": "the core of the ruling"
+    },
+    {
+     "suche": [
+      "algorithm code on screen",
+      "computer processing data"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "On the same day, the court decided two more cases, about people who had gone through personal bankruptcy. In Germany, when remaining debts are finally written off, that fact appears in an official public register for six months. Schufa, following an industry code of conduct, kept it for three years.",
+   "bilder": [
+    {
+     "karte": "6 MONTHS",
+     "unter": "public register"
+    },
+    {
+     "karte": "3 YEARS",
+     "unter": "Schufa's practice"
+    }
+   ]
+  },
+  {
+   "text": "The court said that was not compatible with the GDPR. The whole point of a debt discharge is to let people return to economic life. Schufa shortened the period to six months.",
+   "bilder": [
+    {
+     "suche": [
+      "person walking out door sunlight",
+      "fresh start new beginning city"
+     ]
+    },
+    {
+     "karte": "A FRESH START",
+     "unter": "means a clean file"
+    }
+   ]
+  },
+  {
+   "text": "In February twenty twenty five, the same court went further in an Austrian case against the credit agency Dun and Bradstreet. People affected by an automated score have a right to a real explanation. Not simply the algorithm, but an understandable account of which of their data was used, and how.",
+   "bilder": [
+    {
+     "karte": "FEBRUARY 2025",
+     "unter": "a right to an explanation"
+    },
+    {
+     "suche": [
+      "vienna city street",
+      "mobile phone contract store"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Trade secrets are no automatic excuse. A court or regulator must weigh them. Back in Wiesbaden, the administrative court applied these rulings in late twenty twenty five. Schufa, it found, must give people precise and comprehensible information about how their individual score is calculated. That ruling was not final.",
+   "bilder": [
+    {
+     "suche": [
+      "sealed envelope confidential",
+      "documents handed over desk"
+     ]
+    },
+    {
+     "karte": "NOT FINAL",
+     "unter": "Wiesbaden, late 2025 · appeal allowed"
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 5",
+   "untertitel": "The Transparency Offensive"
+  },
+  {
+   "text": "Schufa was under pressure. In October twenty twenty three, after years of complaints from consumer advocates, it began deleting stored data about mobile phone contracts, so called positive data. According to reports, around twenty million customers were affected.",
+   "bilder": [
+    {
+     "suche": [
+      "smartphone contract signing",
+      "mobile phone store"
+     ]
+    },
+    {
+     "karte": "20 MILLION",
+     "unter": "phone contract records deleted"
+    }
+   ]
+  },
+  {
+   "text": "But the legal fight over that data continued. In October twenty twenty five, the Federal Court of Justice ruled that phone companies may in principle pass such contract data to Schufa to prevent fraud. What Schufa may do with it, including whether it can be used for credit scores, the court left open.",
+   "bilder": [
+    {
+     "suche": [
+      "court building germany",
+      "lawyer reading file"
+     ]
+    },
+    {
+     "karte": "FRAUD PREVENTION",
+     "unter": "allowed · scoring left open"
+    }
+   ]
+  },
+  {
+   "text": "In December twenty twenty five, the same court ruled that keeping settled payment problems for up to three years is not automatically unlawful. Each case has to be weighed individually. Since twenty twenty five, a single payment problem that is paid within one hundred days can, under conditions, disappear after eighteen months instead.",
+   "bilder": [
+    {
+     "karte": "18 MONTHS",
+     "unter": "instead of 36, under conditions"
+    },
+    {
+     "suche": [
+      "calendar pages",
+      "paying bill online"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Then, on the seventeenth of March twenty twenty six, Schufa launched what it called the world's first completely transparent credit score. The old percentage was replaced by a points scale from one hundred to nine hundred and ninety nine. Instead of roughly two hundred and fifty data attributes, it uses twelve published criteria. Payment problems are by far the strongest factor. And consumers got a free digital account to see their data and score at any time.",
+   "bilder": [
+    {
+     "karte": "100 TO 999",
+     "unter": "the new Schufa score"
+    },
+    {
+     "karte": "12 CRITERIA",
+     "unter": "instead of about 250"
+    },
+    {
+     "suche": [
+      "person checking app on smartphone",
+      "mobile banking app"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "But there were catches. At launch, only about a quarter of Schufa's business partners used the new score. Companies may keep using the old one until the end of twenty twenty eight. And critics called the reform, above all, a marketing success for Schufa. Transparency, but on Schufa's own terms?",
+   "bilder": [
+    {
+     "karte": "UNTIL 2028",
+     "unter": "old score still allowed"
+    },
+    {
+     "suche": [
+      "marketing billboard city",
+      "advertising screen"
+     ]
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 6",
+   "untertitel": "The Shadow Database"
+  },
+  {
+   "text": "Then came July twenty twenty six. A joint investigation by the public broadcaster NDR and the newspaper Süddeutsche Zeitung reported that Schufa keeps a separate archive of historical data on around sixty eight million people.",
+   "bilder": [
+    {
+     "karte": "JULY 2026",
+     "unter": "NDR and Süddeutsche Zeitung"
+    },
+    {
+     "suche": [
+      "dark server room",
+      "archive boxes storage"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "According to the reporting, it includes old loans, card debts, wage garnishments, private insolvencies, and debts that were paid off years ago. Data that, in the view of the journalists and the legal experts they quoted, Schufa should have deleted long ago. And when people requested their free data copy, this archive reportedly did not show up.",
+   "bilder": [
+    {
+     "suche": [
+      "old documents in boxes",
+      "stack of old files"
+     ]
+    },
+    {
+     "karte": "NOT IN YOUR COPY",
+     "unter": "according to the reporting"
+    }
+   ]
+  },
+  {
+   "text": "What was it for? According to the reports, Schufa uses the archive to test its models, by calculating what score a person would have received at an earlier point in time. Test results were reportedly passed on to business partners. Some customers could also retrieve historical scores.",
+   "bilder": [
+    {
+     "suche": [
+      "data scientist computer code",
+      "analytics on monitor"
+     ]
+    },
+    {
+     "suche": [
+      "rewind clock",
+      "old calendar"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Schufa confirmed that it holds historical data. But it rejects the term shadow database. It says the data is used only for purposes such as testing, quality control, model development and legal defence, that it does not affect anyone's current score, and that this storage is lawful.",
+   "bilder": [
+    {
+     "karte": "\"NOT A SHADOW DATABASE\"",
+     "unter": "Schufa's position"
+    },
+    {
+     "suche": [
+      "corporate office lobby",
+      "press statement microphone"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Critics see it very differently. In August twenty twenty six, noyb sent Schufa a formal cease and desist letter, demanding that it stop keeping data beyond the official deletion periods. In September, Schufa refused. It said it would defend its position in court, if necessary all the way to the Federal Court of Justice.",
+   "bilder": [
+    {
+     "karte": "AUGUST 2026",
+     "unter": "noyb's cease-and-desist letter"
+    },
+    {
+     "karte": "REFUSED",
+     "unter": "September 2026"
+    }
+   ]
+  },
+  {
+   "text": "noyb has announced a lawsuit and is collecting names for a possible class action for damages. According to media reports, it considers around five hundred euros per person conceivable, a little under six hundred dollars. When we made this video, we found no report that a lawsuit had been filed, and no court had ruled. Schufa maintains it acted lawfully.",
+   "bilder": [
+    {
+     "karte": "€500 EACH?",
+     "unter": "possible claim · nothing decided"
+    },
+    {
+     "suche": [
+      "class action lawsuit papers",
+      "crowd of people city"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Think about it. A person pays off a debt, waits for years, and the entry finally disappears from their file. Officially. But according to the reporting, a copy of their past may still exist somewhere. Is that quality control? Or is it a second memory nobody agreed to?",
+   "bilder": [
+    {
+     "suche": [
+      "shadow person window",
+      "silhouette in dark corridor"
+     ]
+    },
+    {
+     "karte": "A SECOND MEMORY?",
+     "unter": "quality control or more?"
+    }
+   ]
+  },
+  {
+   "kapitel": "Chapter 7",
+   "untertitel": "What It Means For You"
+  },
+  {
+   "text": "Last month, on the twenty first of October twenty twenty six, the Federal Court of Justice ruled in four parallel cases. Scoring can count as a decision under data protection law. But Schufa only has to explain a score in detail if a contract really depended on it.",
+   "bilder": [
+    {
+     "karte": "21 OCT 2026",
+     "unter": "four rulings, Federal Court of Justice"
+    },
+    {
+     "suche": [
+      "judge reading verdict",
+      "courtroom wooden benches"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "There is help for consumers, though. Anyone who can show that a score was sent to a company, and that a loan was refused shortly afterwards, benefits from a presumption in their favour. The cases were sent back to a lower court, so the final word is still open.",
+   "bilder": [
+    {
+     "suche": [
+      "person reviewing documents kitchen table",
+      "woman reading letter"
+     ]
+    },
+    {
+     "karte": "PRESUMPTION",
+     "unter": "in favour of the consumer"
+    }
+   ]
+  },
+  {
+   "text": "And since the twentieth of November twenty twenty six, exactly one week ago, a new German law applies. Section thirty seven a of the Federal Data Protection Act, passed together with the new European rules on consumer credit. According to legal analyses, it bans certain data from certain scores. Address data, account transactions, data from social networks, and sensitive personal data. And people can ask how the criteria are weighted.",
+   "bilder": [
+    {
+     "karte": "20 NOV 2026",
+     "unter": "new scoring law in force"
+    },
+    {
+     "suche": [
+      "law book on desk",
+      "social media on phone"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "So what does this mean for you? If you live in Germany, request your free data copy at least once a year. Check it for errors. If you are refused a loan or a contract, ask whether a score was decisive, and ask for an explanation. You are entitled to one.",
+   "bilder": [
+    {
+     "suche": [
+      "person writing letter at desk",
+      "filling out form"
+     ]
+    },
+    {
+     "karte": "ASK. CHECK. OBJECT.",
+     "unter": "your rights"
+    }
+   ]
+  },
+  {
+   "text": "And if you live elsewhere, credit scores decide who gets loans and apartments in your country too. The European rulings make one thing very clear. Being scored by a machine is not a neutral act. It is a decision about you.",
+   "bilder": [
+    {
+     "suche": [
+      "city crowd walking",
+      "people commuting street"
+     ]
+    },
+    {
+     "karte": "A DECISION",
+     "unter": "about you"
+    }
+   ]
+  },
+  {
+   "kapitel": "Epilogue",
+   "untertitel": "Who Watches the Scorekeepers?"
+  },
+  {
+   "text": "Schufa began almost a century ago with index cards and a simple idea. People who pay their electricity bill will probably pay for their stove. Today, it holds something like the financial memory of a nation.",
+   "bilder": [
+    {
+     "suche": [
+      "old filing cabinet",
+      "vintage typewriter office"
+     ]
+    },
+    {
+     "suche": [
+      "city lights night aerial",
+      "data network lights"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "And nearly every step towards transparency in recent years came from outside. Citizens who donated their data. Journalists who kept digging. A privacy activist from Austria. Judges in Luxembourg and in Karlsruhe. Schufa presents itself as a pioneer of transparency. Its critics say it only moved when it had to.",
+   "bilder": [
+    {
+     "suche": [
+      "journalist notebook",
+      "newspaper printing press"
+     ]
+    },
+    {
+     "suche": [
+      "courthouse steps",
+      "european flags"
+     ]
+    }
+   ]
+  },
+  {
+   "text": "So here is the question. Should a private company, owned largely by banks, hold the financial memory of an entire country? Or would you trust the state with it even less? Tell me in the comments. And if you want more stories about who really holds power over your money, subscribe.",
+   "bilder": [
+    {
+     "karte": "WHO SHOULD HOLD IT?",
+     "unter": "tell us in the comments"
+    },
+    {
+     "suche": [
+      "night city timelapse",
+      "bank tower lights night"
+     ]
+    }
+   ]
+  }
+ ]
+}
