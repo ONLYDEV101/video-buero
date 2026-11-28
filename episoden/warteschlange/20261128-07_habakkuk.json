@@ -1,0 +1,79 @@
+{
+  "id": "20261128-07_habakkuk",
+  "sprache": "en",
+  "label": "State Secret",
+  "titel": "The Aircraft Carrier Made Of Ice",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "Britain planned an aircraft carrier made of *ice.*",
+      "suche": [
+        "iceberg ocean",
+        "aircraft carrier"
+      ]
+    },
+    {
+      "text": "The material was *pykrete:* ice mixed with wood pulp.",
+      "suche": [
+        "ice block",
+        "sawdust"
+      ]
+    },
+    {
+      "text": "The idea came from inventor *Geoffrey Pyke.*",
+      "suche": [
+        "inventor workshop",
+        "old blueprint"
+      ]
+    },
+    {
+      "text": "It was code-named *Project Habakkuk.*",
+      "suche": [
+        "old documents",
+        "secret folder"
+      ]
+    },
+    {
+      "text": "*Mountbatten* showed Churchill a sample.",
+      "suche": [
+        "military officers meeting",
+        "war room"
+      ]
+    },
+    {
+      "text": "A *small prototype* was built on a Canadian lake in 1943.",
+      "suche": [
+        "frozen lake canada",
+        "ice construction"
+      ]
+    },
+    {
+      "text": "Costs rose. The project was *shelved* in 1943.",
+      "suche": [
+        "paperwork",
+        "closed folder"
+      ]
+    },
+    {
+      "text": "Genius or madness? Would you have funded it?",
+      "suche": [
+        "melting ice",
+        "ocean waves"
+      ]
+    }
+  ],
+  "caption": "Britain tested an ice-and-wood-pulp warship in WWII. It was shelved in 1943. Genius or madness? Would you have funded it? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#habakkuk",
+    "#pykrete",
+    "#ww2",
+    "#statesecret",
+    "#history"
+  ],
+  "quellen": [
+    "Combined Operations / combinedops.com: Pykrete and Project Habbakuk",
+    "99% Invisible: Project Habbakuk",
+    "Imperial War Museum / Canadian records on the Patricia Lake prototype"
+  ],
+  "story_frage": "Britain once planned a warship made of ice."
+}

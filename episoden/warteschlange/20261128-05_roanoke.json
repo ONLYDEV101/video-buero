@@ -1,0 +1,79 @@
+{
+  "id": "20261128-05_roanoke",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "115 Colonists Vanished",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "About *115 colonists* vanished from an American island.",
+      "suche": [
+        "dense forest fog",
+        "old settlement"
+      ]
+    },
+    {
+      "text": "They settled Roanoke in *1587.*",
+      "suche": [
+        "old sailing ship",
+        "coastline beach"
+      ]
+    },
+    {
+      "text": "Governor John White sailed home for *supplies.*",
+      "suche": [
+        "sailing ship ocean",
+        "old map"
+      ]
+    },
+    {
+      "text": "War with Spain delayed his return for *three years.*",
+      "suche": [
+        "old warship",
+        "stormy sea"
+      ]
+    },
+    {
+      "text": "In *1590,* he found houses gone and no one there.",
+      "suche": [
+        "abandoned village",
+        "empty cabin"
+      ]
+    },
+    {
+      "text": "One word was carved on a post: *CROATOAN.*",
+      "suche": [
+        "carved wood",
+        "wooden post"
+      ]
+    },
+    {
+      "text": "No bodies. No proof. The fate of the colony is *unknown.*",
+      "suche": [
+        "dark forest",
+        "island beach"
+      ]
+    },
+    {
+      "text": "Moved, assimilated, or lost at sea? What's your theory?",
+      "suche": [
+        "island shoreline",
+        "foggy forest"
+      ]
+    }
+  ],
+  "caption": "In 1590 John White returned to find Roanoke abandoned with one word carved: CROATOAN. Nobody knows for sure what happened. What's your theory? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#roanoke",
+    "#lostcolony",
+    "#unsolved",
+    "#mystery",
+    "#history"
+  ],
+  "quellen": [
+    "National Park Service, Fort Raleigh: 1590 Voyage",
+    "North Carolina Dept. of Natural and Cultural Resources: Origins of the Lost Colony mystery",
+    "Britannica: Lost Colony"
+  ],
+  "story_frage": "A whole colony disappeared and left one carved word."
+}

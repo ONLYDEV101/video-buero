@@ -1,0 +1,79 @@
+{
+  "id": "20261128-03_zimmermann",
+  "sprache": "en",
+  "label": "Declassified",
+  "titel": "A Telegram That Started A War",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "Germany secretly offered *Texas* to Mexico.",
+      "suche": [
+        "texas map",
+        "mexico border"
+      ]
+    },
+    {
+      "text": "It was a coded telegram, sent in *January 1917.*",
+      "suche": [
+        "telegraph machine",
+        "old telegram"
+      ]
+    },
+    {
+      "text": "Berlin wanted Mexico to attack the *United States.*",
+      "suche": [
+        "old map north america",
+        "soldiers marching"
+      ]
+    },
+    {
+      "text": "The reward: *Texas, New Mexico and Arizona.*",
+      "suche": [
+        "desert landscape",
+        "southwest map"
+      ]
+    },
+    {
+      "text": "British codebreakers in *Room 40* intercepted it.",
+      "suche": [
+        "codebreaking",
+        "old office desk"
+      ]
+    },
+    {
+      "text": "They hid their *source,* then passed it to Washington.",
+      "suche": [
+        "embassy building",
+        "secret letter"
+      ]
+    },
+    {
+      "text": "It hit U.S. newspapers in *March 1917.*",
+      "suche": [
+        "newspaper presses",
+        "headline"
+      ]
+    },
+    {
+      "text": "America declared war weeks later. Could one message do that today?",
+      "suche": [
+        "american flag",
+        "old newspaper"
+      ]
+    }
+  ],
+  "caption": "Germany's secret offer to Mexico, intercepted by British codebreakers, helped push the U.S. into World War I. Could one message change history today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#zimmermanntelegram",
+    "#ww1",
+    "#spies",
+    "#codebreaking",
+    "#history"
+  ],
+  "quellen": [
+    "UK National Archives / GCHQ: The Zimmermann Telegram and Room 40 (1917)",
+    "U.S. National Archives: Zimmermann Telegram",
+    "Smithsonian Magazine: What did the Zimmermann Telegram say?"
+  ],
+  "story_frage": "Germany once offered Texas to Mexico in a secret telegram."
+}

@@ -1,0 +1,79 @@
+{
+  "id": "20261128-04_thule_b52",
+  "sprache": "en",
+  "label": "Cold War Files",
+  "titel": "Four Nukes Crashed Into Ice",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "A B-52 carrying *four hydrogen bombs* crashed on ice.",
+      "suche": [
+        "bomber aircraft",
+        "arctic ice"
+      ]
+    },
+    {
+      "text": "It was *January 21, 1968,* near Thule, Greenland.",
+      "suche": [
+        "greenland ice",
+        "arctic snow storm"
+      ]
+    },
+    {
+      "text": "A *cabin fire* forced the crew to bail out.",
+      "suche": [
+        "cockpit",
+        "fire flames"
+      ]
+    },
+    {
+      "text": "Six of seven crew members *survived.*",
+      "suche": [
+        "parachute",
+        "rescue helicopter"
+      ]
+    },
+    {
+      "text": "The bombs' *explosives* detonated and spread radioactive material.",
+      "suche": [
+        "explosion",
+        "ice field"
+      ]
+    },
+    {
+      "text": "Cleanup was code-named *Crested Ice.*",
+      "suche": [
+        "workers snow",
+        "military base arctic"
+      ]
+    },
+    {
+      "text": "Records say parts of only *three bombs* were found.",
+      "suche": [
+        "searching ice",
+        "old documents"
+      ]
+    },
+    {
+      "text": "Where did the fourth one go? What do you think?",
+      "suche": [
+        "dark ocean",
+        "frozen sea"
+      ]
+    }
+  ],
+  "caption": "A B-52 with four hydrogen bombs crashed in Greenland in 1968. Accounts differ on what was recovered. What do you think happened to the fourth bomb? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#thule",
+    "#coldwar",
+    "#brokenarrow",
+    "#nuclear",
+    "#declassified"
+  ],
+  "quellen": [
+    "Lawrence Livermore National Laboratory: Operation Crested Ice",
+    "PBS NewsHour: 50 years ago a U.S. military jet crashed in Greenland with 4 nuclear bombs",
+    "Scientific American: Greenland B-52 crash, 1968"
+  ],
+  "story_frage": "A bomber loaded with H-bombs crashed on Greenland's ice."
+}

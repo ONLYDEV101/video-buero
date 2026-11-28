@@ -1,0 +1,79 @@
+{
+  "id": "20261128-02_oak_ridge",
+  "sprache": "en",
+  "label": "State Secret",
+  "titel": "A City That Wasn't On Maps",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "A city of *75,000* people was on no map.",
+      "suche": [
+        "aerial city view",
+        "old map"
+      ]
+    },
+    {
+      "text": "Its name: *Oak Ridge,* Tennessee.",
+      "suche": [
+        "tennessee hills",
+        "road sign"
+      ]
+    },
+    {
+      "text": "Built in *1942* for the Manhattan Project.",
+      "suche": [
+        "construction site vintage",
+        "factory building"
+      ]
+    },
+    {
+      "text": "Guards at *gates* checked every person entering.",
+      "suche": [
+        "security gate",
+        "guard booth"
+      ]
+    },
+    {
+      "text": "Most workers had *no idea* what they were making.",
+      "suche": [
+        "factory workers",
+        "industrial machinery"
+      ]
+    },
+    {
+      "text": "The product: *enriched uranium* for the first atomic bomb.",
+      "suche": [
+        "nuclear reactor",
+        "laboratory"
+      ]
+    },
+    {
+      "text": "The gates opened on *March 19, 1949.*",
+      "suche": [
+        "gate opening",
+        "crowd of cars"
+      ]
+    },
+    {
+      "text": "Imagine working years for a secret you couldn't name. Could you?",
+      "suche": [
+        "empty road",
+        "old house"
+      ]
+    }
+  ],
+  "caption": "A whole American city was hidden from the map to build the atomic bomb. Most people there never knew why. Could you keep a secret like that? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#manhattanproject",
+    "#oakridge",
+    "#statesecret",
+    "#history",
+    "#coldwar"
+  ],
+  "quellen": [
+    "National Park Service: Elza Gate, Oak Ridge (opened March 19, 1949)",
+    "Oak Ridge National Laboratory history archive",
+    "Atlas Obscura: How the Manhattan Project's Nuclear Suburb Stayed Secret"
+  ],
+  "story_frage": "Oak Ridge was a secret city built for the atomic bomb."
+}

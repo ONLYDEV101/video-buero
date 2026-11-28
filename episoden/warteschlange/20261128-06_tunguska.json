@@ -1,0 +1,79 @@
+{
+  "id": "20261128-06_tunguska",
+  "sprache": "en",
+  "label": "Unsolved Mystery",
+  "titel": "The Blast With No Crater",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "In 1908, something exploded over *Siberia.*",
+      "suche": [
+        "siberia forest",
+        "explosion sky"
+      ]
+    },
+    {
+      "text": "It flattened about *80 million trees.*",
+      "suche": [
+        "fallen trees forest",
+        "aerial forest"
+      ]
+    },
+    {
+      "text": "The area was over *2,000 square kilometers.*",
+      "suche": [
+        "aerial landscape",
+        "map siberia"
+      ]
+    },
+    {
+      "text": "The explosion was *June 30, 1908.*",
+      "suche": [
+        "night sky",
+        "calendar old"
+      ]
+    },
+    {
+      "text": "A scientist reached the site in *1927.*",
+      "suche": [
+        "expedition snow",
+        "wilderness hiking"
+      ]
+    },
+    {
+      "text": "He expected a crater. There was *none.*",
+      "suche": [
+        "swamp bog",
+        "forest clearing"
+      ]
+    },
+    {
+      "text": "Most scientists say an asteroid *exploded in the air.*",
+      "suche": [
+        "asteroid space",
+        "meteor sky"
+      ]
+    },
+    {
+      "text": "Asteroid or comet? Experts still debate. What do you think?",
+      "suche": [
+        "comet night sky",
+        "stars telescope"
+      ]
+    }
+  ],
+  "caption": "The Tunguska event flattened a huge forest but left no crater. Most scientists say an airburst. Asteroid or comet, what's your pick? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#tunguska",
+    "#unsolved",
+    "#mystery",
+    "#asteroid",
+    "#history"
+  ],
+  "quellen": [
+    "Britannica: Tunguska event",
+    "APS News: June 30, 1908, The Tunguska Event",
+    "Scientific American: What happened at Tunguska?"
+  ],
+  "story_frage": "A blast flattened a forest and left no crater."
+}

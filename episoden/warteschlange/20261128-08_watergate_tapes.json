@@ -1,0 +1,79 @@
+{
+  "id": "20261128-08_watergate_tapes",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "The Tape With A Gap",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "A president's tapes had an *18-minute gap.*",
+      "suche": [
+        "reel to reel tape",
+        "white house"
+      ]
+    },
+    {
+      "text": "It started with a *break-in* on June 17, 1972.",
+      "suche": [
+        "night office building",
+        "flashlight dark"
+      ]
+    },
+    {
+      "text": "Five men were *arrested* inside Democratic headquarters.",
+      "suche": [
+        "police lights",
+        "handcuffs"
+      ]
+    },
+    {
+      "text": "Nixon secretly *recorded* conversations in the White House.",
+      "suche": [
+        "old microphone",
+        "tape recorder"
+      ]
+    },
+    {
+      "text": "A subpoenaed tape from *June 20, 1972* had a gap.",
+      "suche": [
+        "audio tape",
+        "headphones"
+      ]
+    },
+    {
+      "text": "The White House revealed it in *November 1973.*",
+      "suche": [
+        "newspaper headline",
+        "press room"
+      ]
+    },
+    {
+      "text": "Another tape showed him *blocking the FBI.*",
+      "suche": [
+        "fbi building",
+        "old documents"
+      ]
+    },
+    {
+      "text": "He resigned on *August 9, 1974.* Could it happen again?",
+      "suche": [
+        "capitol building",
+        "podium"
+      ]
+    }
+  ],
+  "caption": "Watergate began with a break-in and ended with a presidential resignation. Could it happen again today? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#watergate",
+    "#nixon",
+    "#declassified",
+    "#conspiracy",
+    "#history"
+  ],
+  "quellen": [
+    "National Archives: Watergate tapes and White House recordings",
+    "Britannica: Watergate scandal",
+    "History.com: Watergate scandal timeline"
+  ],
+  "story_frage": "One tape had 18 minutes of missing audio."
+}

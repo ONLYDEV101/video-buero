@@ -1,0 +1,79 @@
+{
+  "id": "20261128-01_pentagon_papers",
+  "sprache": "en",
+  "label": "Conspiracy that was TRUE",
+  "titel": "They Lied For Decades, Then Leaked",
+  "klang": "voll",
+  "szenen": [
+    {
+      "text": "A secret study proved the government *lied* about Vietnam.",
+      "suche": [
+        "military documents",
+        "vietnam jungle helicopter"
+      ]
+    },
+    {
+      "text": "It was commissioned in *1967* by the Defense Secretary.",
+      "suche": [
+        "pentagon building",
+        "old documents"
+      ]
+    },
+    {
+      "text": "Top-secret. Never meant for the *public.*",
+      "suche": [
+        "classified folder",
+        "filing cabinet"
+      ]
+    },
+    {
+      "text": "A RAND analyst named Daniel Ellsberg secretly *copied* it.",
+      "suche": [
+        "photocopier",
+        "office desk night"
+      ]
+    },
+    {
+      "text": "On *June 13, 1971,* The New York Times began publishing it.",
+      "suche": [
+        "newspaper printing press",
+        "newspaper headline"
+      ]
+    },
+    {
+      "text": "The White House got a *court order* to stop it.",
+      "suche": [
+        "courthouse",
+        "gavel"
+      ]
+    },
+    {
+      "text": "But on *June 30,* the Supreme Court ruled 6 to 3 against the ban.",
+      "suche": [
+        "supreme court building",
+        "law books"
+      ]
+    },
+    {
+      "text": "The papers were fully *declassified* in 2011. Who decides what we should know?",
+      "suche": [
+        "archives shelves",
+        "old documents"
+      ]
+    }
+  ],
+  "caption": "The Pentagon Papers showed officials misled the public about Vietnam. The Supreme Court let the press publish them. Who should decide what the public gets to know? Send this to someone who doesn't believe it. AI voice & edit. Footage: Pixabay/Pexels.",
+  "hashtags": [
+    "#pentagonpapers",
+    "#declassified",
+    "#vietnam",
+    "#history",
+    "#truth"
+  ],
+  "quellen": [
+    "Supreme Court, New York Times Co. v. United States (1971)",
+    "National Archives: Pentagon Papers declassified 2011",
+    "Freedom Forum First Amendment Center: Pentagon Papers"
+  ],
+  "story_frage": "The Pentagon secretly studied Vietnam and the public never saw it."
+}
